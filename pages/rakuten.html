@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakuten Kobo Case Study - Louis Henrich</title>
+    <meta name="description" content="Senior UX Designer case study for Rakuten Kobo - Merging two digital reading platforms into a unified experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Case Studies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page">
+        <div class="container">
+            <!-- Project Header - Two Column Hero -->
+            <header class="cs-header cs-header-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <h1 class="cs-title">Rakuten Kobo</h1>
+                        <p class="cs-subtitle">Digital Reading</p>
+                        <p class="cs-description">This project documents the merger of Rakuten Kobo and German tolino brands into a unified digital reading platform, positioning them as Amazon Kindle competitors. I led the Design System team across distributed international offices in Japan, Canada, and Germany.</p>
+
+                        <div class="cs-role-box">
+                            <h3>My Role:</h3>
+                            <p>As Senior UX Designer and Design System Lead, my responsibilities included evaluating and merging two distinct digital products while implementing design consistency across geographically dispersed teams in Japan, Canada, and Germany.</p>
+                        </div>
+                    </div>
+                    <div class="cs-hero-right">
+                        <img src="../images/rakuten/rakuten-header.jpg" alt="Rakuten Kobo digital reading">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Problem Statement -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Problem Statement</h2>
+                </div>
+                <p class="cs-intro-text">Working with teams spread across different time zones and continents presented significant challenges in maintaining consistency and alignment. Design decisions made in one office were often lost in translation or implemented differently in another. To overcome these synchronization barriers, we decided to create a unified design system that would serve as a single source of truth for all teams.</p>
+
+                <!-- Global Teams Visualization -->
+                <div class="cs-teams-visual" style="display: flex; justify-content: center; align-items: center; gap: 0; margin: 50px 0; position: relative;">
+                    <!-- Germany -->
+                    <div class="cs-team-node" style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #000 33%, #DD0000 33%, #DD0000 66%, #FFCC00 66%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4 style="font-family: var(--font-mono); font-size: 16px; margin-top: 15px; margin-bottom: 5px;">Darmstadt</h4>
+                        <p style="font-size: 13px; color: var(--color-gray-dark); margin: 0;">Germany</p>
+                    </div>
+
+                    <!-- Connector Line -->
+                    <div style="flex: 0.5; height: 2px; background: linear-gradient(90deg, var(--color-gray-light), var(--color-black), var(--color-gray-light)); position: relative; top: -20px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 10px; height: 10px; background: var(--color-black); border-radius: 50%;"></div>
+                    </div>
+
+                    <!-- Canada -->
+                    <div class="cs-team-node" style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #FF0000 0%, #FF0000 25%, #FFFFFF 25%, #FFFFFF 75%, #FF0000 75%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4 style="font-family: var(--font-mono); font-size: 16px; margin-top: 15px; margin-bottom: 5px;">Toronto</h4>
+                        <p style="font-size: 13px; color: var(--color-gray-dark); margin: 0;">Canada</p>
+                    </div>
+
+                    <!-- Connector Line -->
+                    <div style="flex: 0.5; height: 2px; background: linear-gradient(90deg, var(--color-gray-light), var(--color-black), var(--color-gray-light)); position: relative; top: -20px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 10px; height: 10px; background: var(--color-black); border-radius: 50%;"></div>
+                    </div>
+
+                    <!-- Japan -->
+                    <div class="cs-team-node" style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: #FFFFFF; border: 2px solid #eee; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15); position: relative;">
+                            <div style="width: 30px; height: 30px; background: #BC002D; border-radius: 50%;"></div>
+                        </div>
+                        <h4 style="font-family: var(--font-mono); font-size: 16px; margin-top: 15px; margin-bottom: 5px;">Tokyo</h4>
+                        <p style="font-size: 13px; color: var(--color-gray-dark); margin: 0;">Japan</p>
+                    </div>
+                </div>
+
+                <!-- Design System Image with Benefits -->
+                <div style="background: var(--color-gray-light); padding: 40px; border-radius: 12px; margin-top: 40px;">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <img src="../images/rakuten/rakuten_designsystembig.jpg" alt="Design System Overview" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <p class="cs-comparison-label" style="margin-top: 15px;">Design System Overview</p>
+                    </div>
+
+                    <div class="cs-kano-grid" style="margin-top: 30px;">
+                        <div class="cs-kano-card" style="background: white;">
+                            <h3>Clarity</h3>
+                            <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Eliminates ambiguity. Enables people to see, understand, and act with confidence.</p>
+                        </div>
+                        <div class="cs-kano-card" style="background: white;">
+                            <h3>Consistency</h3>
+                            <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Creates familiarity and strengthens intuition by applying the same solution to the same problem.</p>
+                        </div>
+                        <div class="cs-kano-card" style="background: white;">
+                            <h3>Efficiency</h3>
+                            <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Streamlines and optimizes workflows intelligently.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Organizational Structure -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Organizational Structure</h2>
+                </div>
+
+                <!-- Design System Team -->
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <h3>Design System Team</h3>
+                        <p>To maintain quality and consistency across all teams, we established a dedicated Design System Team that acted as gatekeepers for the single source of truth. This team was responsible for reviewing, approving, and integrating new components into the system.</p>
+                        <p>We implemented a structured process where any new component had to go through a formal review before being added to the library. This included design review, accessibility checks, and documentation requirements. Using Git version control, we ensured that changes were tracked and could be rolled back if issues arose.</p>
+                        <p>After discovering that deleting nested elements caused cascading failures throughout the system, this governance process became essential for preventing breaking changes and maintaining system stability.</p>
+                    </div>
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center;">
+                        <img src="../images/rakuten/rakuten_team.png" alt="Design System Team Structure">
+                        <p class="cs-comparison-label" style="text-align: center;">Design System Team & Process</p>
+                    </div>
+                </div>
+
+                <!-- Atomic Design Principles -->
+                <div class="cs-two-column" style="margin-top: 50px;">
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center;">
+                        <img src="../images/rakuten/rakuten_atomic.png" alt="Atomic Design Structure">
+                        <p class="cs-comparison-label" style="text-align: center;">Atomic Design Component Layers</p>
+                    </div>
+                    <div class="cs-column">
+                        <h3>Atomic Design Principles</h3>
+                        <p>Inside the design system, we applied Atomic Design methodology to structure all component layers. This approach allowed us to build complex interfaces from simple, reusable building blocks while maintaining consistency across all platforms.</p>
+                        <p>The hierarchical structure ensured that changes to foundational elements automatically propagated to higher-level components:</p>
+                        <ul>
+                            <li><strong>Atoms:</strong> The smallest building blocks - icons, buttons, input fields, labels</li>
+                            <li><strong>Molecules:</strong> Simple combinations of atoms - navigation items, search bars, sliders</li>
+                            <li><strong>Organisms:</strong> Complex UI sections - headers, card grids, form sections</li>
+                            <li><strong>Templates:</strong> Complete page layouts defining content structure</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Thinking Workshop -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Design Thinking Workshop Findings</h2>
+                </div>
+                <p class="cs-intro-text">Research identified 15+ user pain points, including difficulty managing large libraries (1000+ items), poor content filtering and categorization, challenges with series/volume navigation, and regional reading preferences (right-to-left text, Manga formats).</p>
+
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <h3>Key Findings</h3>
+                        <ul>
+                            <li>Progress bars displayed too small (50% user misunderstanding)</li>
+                            <li>Color-dependent badge visibility problems</li>
+                            <li>Unclear bookmark iconography</li>
+                            <li>Colorful UI didn't convey functionality to 70%+ of users</li>
+                            <li>Positive reception to percentage progress indicators</li>
+                            <li>List views preferred on mobile; adaptive cards on wider screens</li>
+                            <li>Bottom navigation outperformed hamburger menus</li>
+                            <li>Users favored predictable recommendations over random suggestions</li>
+                        </ul>
+                    </div>
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center;">
+                        <img src="../images/rakuten/rakuten_ds_thinking.png" alt="Design Thinking Workshop">
+                        <p class="cs-comparison-label" style="text-align: center;">Design Thinking Workshop</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Testings -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>User Testings</h2>
+                </div>
+                <p class="cs-intro-text">We conducted some user testing to explore potential solutions during the design process or test the waters during the product design cycle. But also to evaluate already existing products and take the results as a kickoff to improvement. Watching users try to accomplish tasks on the products is the most effective and efficient way to uncover usability problems that we might have.</p>
+
+                <div class="cs-comparison-grid" style="margin-top: 40px;">
+                    <div class="cs-comparison-item">
+                        <img src="../images/rakuten/rakuten_usertest1.png" alt="User Testing Session 1">
+                        <p class="cs-comparison-label" style="text-align: center;">User Testing Session</p>
+                    </div>
+                    <div class="cs-comparison-item">
+                        <img src="../images/rakuten/rakuten_usertest2.png" alt="User Testing Session 2">
+                        <p class="cs-comparison-label" style="text-align: center;">User Testing Results</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Where We Came From -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Where we came from</h2>
+                </div>
+                <p class="cs-intro-text" style="text-align: center;">Because we had 2 apps we got insights on things that were performing better on one then on the other, kinda like an A/B test. Our new app needed a reading experience such as an Audiobook experience. The Tolino app was focused more on reading and had no great Audio experience, while Kobo's audiobook experience was great.</p>
+
+                <!-- Main Cards Row -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px;">
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <img src="../images/rakuten/rakuten_oldui_tolino.png" alt="Main Card Tolino" style="max-width: 280px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h3 style="margin-top: 20px; margin-bottom: 10px;">Main Card Tolino</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">The Progress bar shows in to small and is not understood by 50% of the users. Some of the batches are problematic depending on the colors of the book cover. The Bookmark Icon is not understood</p>
+                    </div>
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <img src="../images/rakuten/rakuten_oldui_kobo.png" alt="Main Card Kobo" style="max-width: 280px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h3 style="margin-top: 20px; margin-bottom: 10px;">Main Card Kobo</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">The idea kobo had was shown a consistent very present color UI throughout the app, the functionalities where not recognized by over 70% of the users. What was well received was the % information of the book progress.</p>
+                    </div>
+                </div>
+
+                <!-- List & Recos Row -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px;">
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <img src="../images/rakuten/rakuten_listelement.png" alt="List Elements" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h3 style="margin-top: 20px; margin-bottom: 10px;">List elements</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">In the tests we learned that users prefer list elements on smaller screens, while on wider screens they prefer to have adaptive item cards.</p>
+                    </div>
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <img src="../images/rakuten/rakuten_recos.png" alt="Recos & Navigation" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h3 style="margin-top: 20px; margin-bottom: 10px;">Recos & Navigation</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Book recommendations where random items. The Navigation was overall better received then the Hamburger menu.</p>
+                    </div>
+                </div>
+
+                <!-- App Screenshots -->
+                <p style="text-align: center; margin-top: 50px; margin-bottom: 20px; font-size: 14px; color: var(--color-gray-dark);">Starting from left 1. Tolino app home screen 2. Tolino book library 3. Kobo home screen 4. Kobo audiobook library</p>
+
+                <div style="text-align: center;">
+                    <img src="../images/rakuten/rakuten_oldapp.png" alt="App Screenshots" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+            </section>
+
+            <!-- New UX -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>New UX</h2>
+                </div>
+                <p class="cs-intro-text">Working on the Keyscreens for the App we kept it simple but more informative. By introducing tags, the user now can see the status of his books. We also pursuit a scalable approach to the screen, having in mind that the code will be shared in the database, we had to keep it fully responsive.</p>
+
+                <style>
+                    @keyframes fadeInOut {
+                        0%, 35% { opacity: 1; }
+                        45%, 85% { opacity: 0; }
+                        95%, 100% { opacity: 1; }
+                    }
+                    @keyframes fadeOutIn {
+                        0%, 35% { opacity: 0; }
+                        45%, 85% { opacity: 1; }
+                        95%, 100% { opacity: 0; }
+                    }
+                    .image-crossfade {
+                        position: relative;
+                        max-width: 80%;
+                    }
+                    .image-crossfade img {
+                        width: 100%;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                        transition: opacity 0.3s;
+                    }
+                    .image-crossfade img:first-child {
+                        animation: fadeInOut 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+                    }
+                    .image-crossfade img:last-child {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        animation: fadeOutIn 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+                    }
+                </style>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div class="image-crossfade">
+                            <img src="../images/rakuten/rakuten_newux1.png" alt="Home Screen Wireframe">
+                            <img src="../images/rakuten/rakuten_newui1.png" alt="Home Screen Final Design">
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text); margin-top: 20px; text-align: left;">We introduced a new feature for borrowing books and created a new tagging system to show the current status of the library items. We went with the bottom navigation and worked on the recommendations to display titles based on the user's library items.</p>
+                    </div>
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div class="image-crossfade">
+                            <img src="../images/rakuten/rakuten_newux2.png" alt="Books Grid View Wireframe">
+                            <img src="../images/rakuten/rakuten_newui2.png" alt="Books Grid View Final Design">
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text); margin-top: 20px; text-align: left;">We learned that users don't click on "Filters" instead they want to jump from single items to their collections. We let Authors in the design because we don't want to overwhelm existing customers with a new experience. but gradually we would get rid of the "Authors" folder.</p>
+                    </div>
+                    <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                        <div class="image-crossfade">
+                            <img src="../images/rakuten/rakuten_newux3.png" alt="Books List View Wireframe">
+                            <img src="../images/rakuten/rakuten_newui3.png" alt="Books List View Final Design">
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text); margin-top: 20px; text-align: left;">We had the hypothesis that users would only switch from grid to list view once in a while, we later found out that was not the case and implemented an extra icon for that in the User interface. You can see it in the ready-designed screens underneath.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Results -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Impact Results</h2>
+                </div>
+
+                <div class="cs-kano-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="cs-kano-card">
+                        <h3>Performance</h3>
+                        <ul class="cs-kano-list">
+                            <li>Significantly faster performance through database optimization</li>
+                            <li>Customer satisfaction regarding interface organization</li>
+                        </ul>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Business Impact</h3>
+                        <ul class="cs-kano-list">
+                            <li>Notable conversion increases through streamlined in-app purchasing</li>
+                            <li>Identified need for region-specific Manga navigation adaptations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="bdrowa.html">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                    Previous Project
+                </a>
+                <a href="telekom.html">
+                    Next Project
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's have a coffee and talk about your idea</h2>
+            <a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img src="../images/footer-heart.png" alt="" class="footer-heart">
+            <p>&copy; Louis Henrich - 2024</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

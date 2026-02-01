@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsche Telekom Case Study - Louis Henrich</title>
+    <meta name="description" content="Senior UX Designer case study for Deutsche Telekom - Creating the smartest home of all times with the Magenta Smart Home app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Case Studies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page">
+        <div class="container">
+            <!-- Project Header - Two Column Hero -->
+            <header class="cs-header cs-header-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <h1 class="cs-title">Deutsche Telekom</h1>
+                        <p class="cs-subtitle">Magenta Smart Home</p>
+                        <p class="cs-description">The Deutsche Telekom Magenta smart home distinguishes itself through cross-device compatibility, controlling nearly every smart home device type. My responsibilities included rethinking German consumer heating controls and rebuilding the complete smart home experience.</p>
+
+                        <div class="cs-role-box">
+                            <h3>My Role:</h3>
+                            <p>As Senior UX Designer, my responsibilities included user research, design thinking workshops, persona development, creating heating automation interfaces, and designing the scenes and automations features for the Magenta Smart Home app.</p>
+                        </div>
+                    </div>
+                    <div class="cs-hero-right" style="flex: 1.25;">
+                        <img src="../images/telekom/telekom_sh2.jpg" alt="Deutsche Telekom Smart Home" style="transform: scale(1.25); transform-origin: center right;">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Problem Statement -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Problem Statement</h2>
+                </div>
+                <p class="cs-intro-text">The initial challenge addressed automating temperature regulation while maintaining comfort - "the user should never get back to a cold home" - while achieving energy efficiency. To comply with my non-disclosure agreement, I have omitted and obfuscated confidential information in this case study.</p>
+
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <h3>Heating Behavior Analysis</h3>
+                        <p>Understanding German heating systems was crucial for designing an effective smart thermostat solution. Unlike U.S. electricity-based A/C systems, German homes use different heating sources:</p>
+                        <ul>
+                            <li><strong>Natural gas:</strong> 48% of German homes</li>
+                            <li><strong>Oil:</strong> 25% (primarily older buildings)</li>
+                            <li>Both systems heat water distributed to desired areas</li>
+                        </ul>
+                    </div>
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <img src="../images/telekom/telekom-heating.png" alt="German Heating Sources" style="max-width: 75%;">
+                        <p class="cs-comparison-label" style="text-align: center;">German Heating Sources Research</p>
+                    </div>
+                </div>
+
+                <div class="cs-kano-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 40px;">
+                    <div class="cs-kano-card">
+                        <h3>Digital Thermostat Creation</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Observation revealed users primarily desire three thermostat functions: turning on/off and temperature readjustment. The design featured an on/off switch per thermostat with optional temperature adjustment capability.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Heating Plans Feature</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Users wanted customizable temperature schedules across different rooms and times. The interface allowed viewing all rooms, accessing default programs, creating custom plans, and copying settings across rooms.</p>
+                    </div>
+                </div>
+
+                            </section>
+
+            <!-- Design Thinking Workshop -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Rethinking Smart Home Experience</h2>
+                </div>
+                <p class="cs-intro-text">Inspired by the IFTTT app model (conditional device combinations), the design challenge was creating powerful functionality without excessive complexity for broader audiences.</p>
+
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <h3>Design Thinking Workshops</h3>
+                        <p>Multiple iterative sessions addressed holistic user interaction approaches, app navigation structure and layering, and optimal information architecture.</p>
+                        <h3 style="margin-top: 30px;">Workshop Focus Areas</h3>
+                        <ul>
+                            <li>Holistic user interaction approaches</li>
+                            <li>App navigation structure and layering</li>
+                            <li>Optimal information architecture</li>
+                            <li>Device pairing and configuration flows</li>
+                        </ul>
+                    </div>
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <img src="../images/telekom/telekom-workshop.png" alt="Workshop Session" style="max-width: 75%;">
+                        <p class="cs-comparison-label" style="text-align: center;">Design Thinking Workshop</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <img src="../images/telekom/telekom_ideation.png" alt="Ideation Process" style="max-width: 100%; border-radius: 8px;">
+                </div>
+            </section>
+
+            <!-- Design Thinking Workshop -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Design Thinking Workshop</h2>
+                </div>
+                <p class="cs-intro-text">We organized multiple design thinking workshops, we set up an iterative process to consider all steps needed to create an innovative product. In the workshops, we had small task groups that focused on a specific part of the product. My team and I worked on the holistic interaction approach for the users, how many layers should the app have to be understandable. How will users navigate through the different sections and so on.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_dynamic1.png" alt="Dynamic Workshop 1" style="width: 100%; border-radius: 8px;">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_dynamic2.png" alt="Dynamic Workshop 2" style="width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_workshop1.png" alt="Workshop Session 1" style="width: 100%; border-radius: 8px;">
+                        <p class="cs-comparison-label" style="text-align: center;">Design Thinking Workshop</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_workshop2.png" alt="Workshop Session 2" style="width: 100%; border-radius: 8px;">
+                        <p class="cs-comparison-label" style="text-align: center;">How might we... Exercise</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Journeys -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Customer Journeys</h2>
+                </div>
+
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <p>Because we had different user types we created some personae specifically for the Magenta smart home app. We created the technological enthusiast Harald which already had experience with smart home apps and is interested in extremely customizable experiences. And on the other hand, we created Maike, which had a small sense of smart home technology and needed help throughout her configuration time.</p>
+                        <p style="margin-top: 20px;">We then studied Harald and Maike with a Customer Journey for each of them, in this way we can explore what the pain points are and if there are unexplored possibilities.</p>
+                        <p style="margin-top: 20px;">One of the main findings for Maike was that she needed help from the beginning. We came up with the Idea of adding recommendations based on her paired devices. In this way, she would skip the difficult configuration process. On the other way, we needed to position the recommendations in a non-disturbing way to not interrupt the navigation from Harald. These 2 Personas helped us to create a product that suits all the special needs of the different customers.</p>
+                    </div>
+                    <div class="cs-column" style="display: flex; flex-direction: column; justify-content: center;">
+                        <a href="../images/telekom/telekom_customerjourney.png" target="_blank" style="cursor: zoom-in;">
+                            <img src="../images/telekom/telekom_customerjourney.png" alt="Customer Journey Map" style="width: 100%; border-radius: 8px; transition: transform 0.3s ease;">
+                        </a>
+                        <p class="cs-comparison-label" style="text-align: center;">Customer Journey Map (click to expand)</p>
+                    </div>
+                </div>
+
+                <div class="cs-kano-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 40px;">
+                    <div class="cs-kano-card">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <circle cx="12" cy="7" r="4"/>
+                                    <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">Harald - Tech Enthusiast</h3>
+                                <p class="cs-kano-subtitle" style="margin: 5px 0 0 0;">Power User</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Technology enthusiast seeking extremely customizable experiences with existing smart home knowledge. Wants full control over automations and device configurations without hand-holding.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #e91e8c, #f472b6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                    <circle cx="12" cy="7" r="4"/>
+                                    <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/>
+                                    <path d="M9 7c0-1 .5-2 1.5-2.5" stroke="white" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0;">Maike - Newcomer</h3>
+                                <p class="cs-kano-subtitle" style="margin: 5px 0 0 0;">Beginner User</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Minimal smart home background requiring configuration assistance. Needed device-based recommendations to bypass complicated setup and guided onboarding experiences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Features -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>New Features Implementation</h2>
+                </div>
+
+                <!-- Digital Thermostat -->
+                <h3 style="margin-bottom: 15px;">Digital Thermostat for European Market</h3>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 30px;">We designed a digital thermostat interface specifically tailored for the European heating market. Unlike US-based AC systems, European homes primarily use water-based heating distributed through radiators. The interface needed to accommodate different heating sources while providing intuitive temperature control and scheduling capabilities.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 50px;">
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <img src="../images/telekom/telekom_thermostat1.png" alt="Thermostat Interface 1" style="max-width: 80%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <img src="../images/telekom/telekom_thermostat2.png" alt="Thermostat Interface 2" style="max-width: 80%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <img src="../images/telekom/telekom_thermostat3.png" alt="Thermostat Interface 3" style="max-width: 80%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+                <!-- Making Thermostats Smart -->
+                <h3 style="margin-bottom: 15px;">Making Thermostats Smart</h3>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 30px;">Now that we had the individual control of a single thermostat we wanted to include a heating plan. Users wanted different temperatures in different rooms at different times of the day. So we had to design a completely adjustable program that the user can create depending on his individual needs. The Heating panel opens when the user pairs a new thermostat or he navigates to the device recommendation screen and clicks on heating.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 50px;">
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_heating1.png" alt="Heating Plan 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 12px; line-height: 1.6; color: var(--color-text); margin-top: 12px; text-align: left;">In the Heating section, the user sees all rooms that have at least 1 thermostat. 2 default programs are already available so the user can experiment with them first.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_heating2.png" alt="Heating Plan 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 12px; line-height: 1.6; color: var(--color-text); margin-top: 12px; text-align: left;">When he clicks in the upper right corner he can add a new plan besides having some settings for the heating system itself.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_heating3.png" alt="Heating Plan 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 12px; line-height: 1.6; color: var(--color-text); margin-top: 12px; text-align: left;">Users can add a new plan with customized heating times. They can easily add or remove heating periods such as copying a complete day or week and re-use it in different rooms.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_heating4.png" alt="Heating Plan 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-size: 12px; line-height: 1.6; color: var(--color-text); margin-top: 12px; text-align: left;">Once the user has finished editing he's a customized profile, this will appear as a new program in the Heating system screen, He can easily switch between heating programs.</p>
+                    </div>
+                </div>
+
+                <!-- Adding Scenes Feature -->
+                <h3 style="margin-bottom: 15px;">Adding 'Scenes' Feature to combine devices</h3>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 30px;">If we think about the most common devices we use in a group we think about devices from the same species, e.g. Lightbulbs, shutters, or thermostats. But what if we wanted to mix lightbulbs with shutters? This is exactly what we wanted to give our customers, extreme customization. When activating a Scene there is something that goes into a certain status. So the user needs to configure the status that will be activated with the scene and having the option to create a second trigger in the same scene that then will activate a second status. In this form, you can use a scene to turn on a lamp to 88% brightness and put the shutter to 20%, and optionally set an off trigger. This way you can now trigger your 2 defined configurations with only 1 device card.</p>
+
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <img src="../images/telekom/telekom_heatflow.png" alt="Scenes Feature Flow" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+
+                <!-- Adding Automations -->
+                <h3 style="margin-bottom: 15px;">Adding Automations to overlord of smart home customization</h3>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 20px;">The term Human-centered is what drove us to create this concept for the maximum customization feature "Automations" To reduce the complexity and decreasing the learning curve significantly we decided to create a screen where the user always returns to see the configuration of his automation to see what he already has programmed. By having the dialog "If this - Then that - but only when" it made it easier to understand.</p>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 20px;">So by adding something in "If this" the user can select what will start his automation, this can be a device, a certain time, or even a specific location the user reaches. In the section "then that" the user sets what will happen when it activates, and optional is the section "only when" that represents a status that needed to be fulfilled to activate the automation.</p>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 30px;">In this example the user selects 2 devices as trigger, if the Netatmo rain sensor "detects rain for over 10 minutes" and the thermostat 1 "temperature is over 25°" then the living room shutter "is 80% closed".</p>
+
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <img src="../images/telekom/telefom_automation.png" alt="Automations Feature" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+
+                <!-- Final Implementation -->
+                <h3 style="margin-bottom: 15px;">Final Implementation</h3>
+                <p style="font-size: 15px; line-height: 1.8; margin-bottom: 30px;">After all the iterations we had in the Ideation and creation phase we started to generate some content for the recommendation automation. The idea was to inspire users to set up some automation even if the necessary devices are not paired yet, this way users see what's possible and consider buying devices based on generated needs through the recommendations. We also had to remove the "Only When" feature from automation because from the technology side it was not feasible at the moment, but in the long term, it is still desired to implement.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 50px;">
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_ui1.png" alt="Final UI 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_ui2.png" alt="Final UI 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_ui3.png" alt="Final UI 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../images/telekom/telekom_ui4.png" alt="Final UI 4" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Product Impact -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Product Impact</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 40px; align-items: center; margin-bottom: 40px;">
+                    <img src="../images/telekom/telekom_ifdesign.png" alt="IF Design Award 2017" style="width: 100px;">
+                    <p class="cs-intro-text" style="margin-bottom: 0;">The app was well received by customers overall, but demanding customers that have multiple smart home applications at home were amazed by the flexibility this new system gave them. The product ended up winning the <a href="https://ifdesign.com/de/winner-ranking/project/magenta-smarthome-app/202896" target="_blank" style="color: #2563EB; text-decoration: underline;">IF Design Award 2017</a>.</p>
+                </div>
+
+                <div class="cs-kano-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="cs-kano-card">
+                        <h3>35% Heating Cost Reduction</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">Documented savings over one year through smart heating automation and optimized temperature scheduling.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Broader Audience Reach</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--color-text);">The redesigned experience broadened audience accessibility through improved marketing and user-friendly onboarding.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="rakuten.html">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                    Previous Project
+                </a>
+                <a href="immoscout24.html">
+                    Next Project
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's have a coffee and talk about your idea</h2>
+            <a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img src="../images/footer-heart.png" alt="" class="footer-heart">
+            <p>&copy; Louis Henrich - 2024</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
