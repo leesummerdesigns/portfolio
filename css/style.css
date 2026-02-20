@@ -395,7 +395,7 @@ ul {
 ======================================== */
 .ai-process {
     padding: 80px 0;
-    background: var(--color-black);
+    background: #2a2a2a;
 }
 
 .ai-process .section-header {
@@ -411,22 +411,15 @@ ul {
 .ai-step {
     flex: 1;
     padding: 35px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     position: relative;
     transition: var(--transition);
 }
 
 .ai-step:hover {
     border-color: var(--color-primary);
-    background: rgba(198, 255, 92, 0.04);
-}
-
-.ai-step-number {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--color-primary);
-    margin-bottom: 18px;
+    background: rgba(198, 255, 92, 0.07);
 }
 
 .ai-step-tools {
@@ -440,7 +433,7 @@ ul {
     display: inline-block;
     padding: 4px 10px;
     background: rgba(198, 255, 92, 0.12);
-    border: 1px solid rgba(198, 255, 92, 0.25);
+    border: 1px solid rgba(198, 255, 92, 0.3);
     color: var(--color-primary);
     font-family: var(--font-mono);
     font-size: 11px;
@@ -450,10 +443,10 @@ ul {
 
 .ai-step-title {
     font-family: var(--font-mono);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--color-white);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .ai-step-desc {
@@ -461,7 +454,7 @@ ul {
     font-size: 13px;
     font-weight: 300;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
 }
 
@@ -472,7 +465,7 @@ ul {
     color: var(--color-primary);
     font-size: 20px;
     padding: 10px 0;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 @media (min-width: 768px) {
@@ -502,7 +495,7 @@ ul {
     }
 
     .ai-step-title {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .ai-step-desc {
