@@ -626,7 +626,7 @@ ul {
 .testimonials {
     position: relative;
     padding: 80px 0;
-    background: var(--color-white);
+    background: var(--color-primary);
 }
 
 .dot-pattern-left {
