@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialSlider();
     initScrollAnimations();
     initSmoothScroll();
+    initRotatingText();
 });
 
 // ========================================
@@ -267,6 +268,35 @@ if ('loading' in HTMLImageElement.prototype) {
 
         lazyImages.forEach(img => lazyLoad.observe(img));
     }
+}
+
+// ========================================
+// Rotating Hero Text
+// ========================================
+function initRotatingText() {
+    const el = document.getElementById('rotating-text');
+    if (!el) return;
+
+    const words = [
+        'Artificial Intelligence',
+        'User Experience',
+        'Design Leadership',
+        'Strategy & Innovation'
+    ];
+    let index = 0;
+
+    setInterval(() => {
+        // Fade out
+        el.classList.add('fade-out');
+
+        setTimeout(() => {
+            // Advance to next word and swap
+            index = (index + 1) % words.length;
+            el.textContent = words[index];
+            // Fade back in
+            el.classList.remove('fade-out');
+        }, 300); // matches CSS transition duration
+    }, 2000);
 }
 
 // ========================================

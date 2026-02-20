@@ -254,6 +254,16 @@ ul {
     display: inline;
 }
 
+#rotating-text {
+    display: inline;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#rotating-text.fade-out {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
 .hero-text {
     font-family: var(--font-body);
     font-size: 14px;
