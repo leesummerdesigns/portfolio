@@ -469,6 +469,16 @@ ul {
     opacity: 0.5;
 }
 
+.ai-step-arrow::before {
+    content: '↓';
+}
+
+@media (min-width: 768px) {
+    .ai-step-arrow::before {
+        content: '→';
+    }
+}
+
 @media (min-width: 768px) {
     .ai-process-flow {
         flex-direction: row;
