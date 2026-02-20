@@ -391,6 +391,126 @@ ul {
 }
 
 /* ========================================
+   AI Working Process Section
+======================================== */
+.ai-process {
+    padding: 80px 0;
+    background: var(--color-black);
+}
+
+.ai-process .section-header {
+    margin-bottom: 60px;
+}
+
+.ai-process-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ai-step {
+    flex: 1;
+    padding: 35px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    transition: var(--transition);
+}
+
+.ai-step:hover {
+    border-color: var(--color-primary);
+    background: rgba(198, 255, 92, 0.04);
+}
+
+.ai-step-number {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.ai-step-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.ai-tool-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(198, 255, 92, 0.12);
+    border: 1px solid rgba(198, 255, 92, 0.25);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+}
+
+.ai-step-title {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.ai-step-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.ai-step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 20px;
+    padding: 10px 0;
+    opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+    .ai-process-flow {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .ai-step-arrow {
+        flex-shrink: 0;
+        padding: 0 5px;
+        writing-mode: horizontal-tb;
+    }
+
+    .ai-step {
+        padding: 35px 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .ai-process {
+        padding: 100px 0;
+    }
+
+    .ai-step {
+        padding: 40px 30px;
+    }
+
+    .ai-step-title {
+        font-size: 18px;
+    }
+
+    .ai-step-desc {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
    Publications Section
 ======================================== */
 .publications {
