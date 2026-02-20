@@ -518,7 +518,7 @@ ul {
    Services Page
 ======================================== */
 .services-page {
-    background: #2a2a2a;
+    background: var(--color-white);
     padding: 80px 0;
     min-height: 80vh;
 }
@@ -528,20 +528,12 @@ ul {
     margin-bottom: 60px;
 }
 
-.services-page-header .section-line {
-    background: var(--color-primary);
-}
-
-.services-page-header .section-title {
-    color: var(--color-white);
-}
-
 .services-intro {
     font-family: var(--font-body);
     font-size: 17px;
     font-weight: 300;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
+    color: #555555;
     max-width: 700px;
     margin-top: 20px;
 }
@@ -561,45 +553,31 @@ ul {
 
 .service-card {
     padding: 35px 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--color-white);
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
     transition: var(--transition);
 }
 
 .service-card:hover {
     border-color: var(--color-primary);
-    background: rgba(198, 255, 92, 0.07);
-}
-
-.service-number {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-    background: rgba(198, 255, 92, 0.12);
-    border: 1px solid rgba(198, 255, 92, 0.3);
-    padding: 4px 10px;
-    border-radius: 3px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .service-title {
-    font-family: var(--font-mono);
-    font-size: 20px;
+    font-family: var(--font-heading);
+    font-size: 22px;
     font-weight: 400;
-    color: var(--color-white);
+    color: #333333;
     margin-bottom: 14px;
 }
 
 .service-desc {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.8;
+    color: #555555;
     margin-bottom: 20px;
 }
 
@@ -610,7 +588,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #eeeeee;
     padding-top: 18px;
 }
 
@@ -618,10 +596,9 @@ ul {
     font-family: var(--font-mono);
     font-size: 11px;
     letter-spacing: 0.5px;
-    color: var(--color-primary);
+    color: #666666;
     padding: 4px 10px;
-    background: rgba(198, 255, 92, 0.12);
-    border: 1px solid rgba(198, 255, 92, 0.3);
+    border: 1px solid #e0e0e0;
     border-radius: 3px;
 }
 
@@ -634,7 +611,7 @@ ul {
     font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 400;
-    color: var(--color-white);
+    color: #333333;
     margin-bottom: 14px;
 }
 
@@ -642,19 +619,19 @@ ul {
     font-family: var(--font-body);
     font-size: 15px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
+    color: #555555;
     max-width: 600px;
     margin: 0 auto 30px;
 }
 
 .services-cta .btn-primary {
     color: #333333;
-    border-color: var(--color-primary);
-    background: var(--color-primary);
+    border-color: #333333;
+    background: transparent;
 }
 
 .services-cta .btn-primary:hover {
-    background: transparent;
+    background: #333333;
     color: var(--color-primary);
 }
 
