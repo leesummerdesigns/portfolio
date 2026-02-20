@@ -515,6 +515,102 @@ ul {
 }
 
 /* ========================================
+   Services Page
+======================================== */
+.services-page-header {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.services-intro {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555555;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.service-card {
+    padding: 36px 32px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: var(--color-white);
+    transition: var(--transition);
+    position: relative;
+}
+
+.service-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.service-number {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    background: rgba(198, 255, 92, 0.2);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.service-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 14px;
+}
+
+.service-desc {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.service-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 18px;
+}
+
+.service-tags li {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #777777;
+    padding: 4px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+/* ========================================
    Publications Section
 ======================================== */
 .publications {
