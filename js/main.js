@@ -295,8 +295,8 @@ function initRotatingText() {
             el.textContent = words[index];
             // Fade back in
             el.classList.remove('fade-out');
-        }, 300); // matches CSS transition duration
-    }, 2000);
+        }, 500); // matches CSS transition duration
+    }, 2800);
 }
 
 // ========================================
