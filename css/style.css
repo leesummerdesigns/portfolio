@@ -1164,6 +1164,8 @@ ul {
 
     .nav-menu {
         position: relative;
+        right: auto;
+        top: auto;
         width: auto;
         max-width: none;
         height: auto;
