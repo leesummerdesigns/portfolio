@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavigation();
+    initMotionHighlight();
     initTestimonialSlider();
     initScrollAnimations();
     initSmoothScroll();
@@ -297,6 +298,55 @@ function initRotatingText() {
             el.classList.remove('fade-out');
         }, 500); // matches CSS transition duration
     }, 2800);
+}
+
+// ========================================
+// Motion Highlight Navigation
+// ========================================
+function initMotionHighlight() {
+    const navMenu = document.querySelector('.nav-menu');
+    const highlight = document.querySelector('.nav-highlight');
+    if (!navMenu || !highlight) return;
+
+    const links = navMenu.querySelectorAll('a');
+    const activeLink = navMenu.querySelector('a.active');
+
+    function moveHighlightTo(el) {
+        if (window.innerWidth < 992) return;
+        const menuRect = navMenu.getBoundingClientRect();
+        const elRect = el.getBoundingClientRect();
+        highlight.style.left = (elRect.left - menuRect.left - 10) + 'px';
+        highlight.style.width = (elRect.width + 20) + 'px';
+        highlight.classList.add('visible');
+    }
+
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => moveHighlightTo(link));
+    });
+
+    navMenu.addEventListener('mouseleave', () => {
+        if (activeLink && window.innerWidth >= 992) {
+            moveHighlightTo(activeLink);
+        } else {
+            highlight.classList.remove('visible');
+        }
+    });
+
+    // Set on active link at page load
+    if (activeLink) {
+        requestAnimationFrame(() => {
+            if (window.innerWidth >= 992) moveHighlightTo(activeLink);
+        });
+    }
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 992) {
+            highlight.classList.remove('visible');
+        } else if (activeLink) {
+            moveHighlightTo(activeLink);
+        }
+    });
 }
 
 // ========================================
