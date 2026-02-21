@@ -1188,9 +1188,6 @@ ul {
         letter-spacing: 1px;
     }
 
-    .nav-menu a:hover {
-        color: #1a1a1a;
-    }
 
     .nav-highlight {
         display: block;
@@ -1198,7 +1195,7 @@ ul {
         top: 50%;
         transform: translateY(-50%);
         height: 26px;
-        background: var(--color-primary);
+        background: #e8e8e8;
         border-radius: 4px;
         pointer-events: none;
         opacity: 0;
