@@ -1589,8 +1589,7 @@ ul {
     overflow: hidden;
     background: var(--color-white);
     flex-shrink: 0;
-    width: 72px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -1602,6 +1601,22 @@ ul {
     max-height: 52px;
     object-fit: contain;
     transition: transform 0.4s ease;
+}
+
+.project-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.project-logo-mobile {
+    height: 36px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
 }
 
 .project-showcase-card:hover .project-showcase-image img {
@@ -1677,6 +1692,7 @@ ul {
     }
 
     .project-showcase-image {
+        display: flex;
         width: 180px;
         padding: 15px;
     }
@@ -1713,6 +1729,14 @@ ul {
         font-size: 13px;
         margin-top: 10px;
         gap: 8px;
+    }
+
+    .project-logo-mobile {
+        display: none;
+    }
+
+    .project-title-row {
+        display: block;
     }
 }
 
