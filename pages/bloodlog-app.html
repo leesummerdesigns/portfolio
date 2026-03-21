@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Test Tracker - AI-Powered Health Insights | Track Your Blood Work</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Upload your blood tests and get instant AI-powered insights, personalized recommendations, and comprehensive health tracking. Free 7-day trial. Available on iOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/favico_lh.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --green: #10b981;
+            --green-dark: #059669;
+            --black: #0a0a0a;
+            --gray-900: #1a1a1a;
+            --gray-600: #6b7280;
+            --gray-400: #9ca3af;
+            --gray-100: #f3f4f6;
+            --gray-50: #f9fafb;
+            --orange: #f59e0b;
+            --red: #ef4444;
+            --border: #e8e8e4;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            background: var(--white);
+            color: var(--gray-900);
+            line-height: 1.7;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-logo span {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-cta {
+            background: var(--black);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
+
+        .nav-cta:hover { opacity: 0.8; }
+
+        /* HERO */
+        .hero {
+            padding: 100px 40px 80px;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #dcfce7;
+            color: var(--green-dark);
+            border-radius: 100px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+
+        .hero h1 .highlight {
+            color: var(--green);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--black);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary:hover { opacity: 0.85; }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-100);
+            color: var(--gray-900);
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 400;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover { background: #e5e7eb; }
+
+        .trial-note {
+            font-size: 12px;
+            color: var(--gray-400);
+            margin-top: 14px;
+        }
+
+        /* FEATURES */
+        .section {
+            padding: 80px 40px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            text-align: center;
+            margin-bottom: 14px;
+            color: var(--black);
+        }
+
+        .section-sub {
+            font-size: 16px;
+            color: var(--gray-600);
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto 56px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--gray-50);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* HOW IT WORKS */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--black);
+            color: white;
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .step h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* PRICING */
+        .pricing-section {
+            background: var(--black);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .pricing-section .section-label {
+            color: var(--green);
+        }
+
+        .pricing-section .section-title {
+            color: white;
+        }
+
+        .pricing-section .section-sub {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pricing-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .pricing-card .trial-badge {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .pricing-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .feature-list li:last-child { border-bottom: none; }
+
+        .check { color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+        .pricing-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-option {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .pricing-option strong {
+            display: block;
+            color: white;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .cancel-note {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: var(--gray-50);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .stars {
+            color: var(--orange);
+            font-size: 14px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.65;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* WHY SECTION */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--gray-50);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .why-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: var(--green);
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 14px;
+        }
+
+        .cta-banner p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 36px;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: var(--black);
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-white:hover { opacity: 0.9; }
+
+        /* FOOTER */
+        footer {
+            background: var(--black);
+            color: rgba(255,255,255,0.5);
+            padding: 48px 40px;
+        }
+
+        .footer-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        .footer-brand .nav-icon {
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            line-height: 1.6;
+            max-width: 220px;
+        }
+
+        .footer-links h4 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        .footer-bottom {
+            max-width: 960px;
+            margin: 32px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .disclaimer {
+            background: var(--gray-50);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 28px;
+            max-width: 960px;
+            margin: 0 auto;
+            font-size: 13px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .disclaimer strong {
+            color: var(--gray-900);
+        }
+
+        @media (max-width: 640px) {
+            nav { padding: 14px 20px; }
+            .hero { padding: 60px 20px 60px; }
+            .section { padding: 60px 20px; }
+            .pricing-section { padding: 60px 20px; }
+            .cta-banner { padding: 60px 20px; }
+            footer { padding: 40px 20px; }
+            .pricing-options { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-logo">
+        <div class="nav-icon">🩸</div>
+        <span>BloodLog</span>
+    </div>
+    <a href="#download" class="nav-cta">Download Free</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-badge">✦ Now Available on iOS</div>
+    <h1>Take Control of Your Health with <span class="highlight">AI-Powered</span> Blood Test Tracking</h1>
+    <p>Upload your blood test results and get instant AI-powered insights, personalized recommendations, and comprehensive health tracking—all in one beautifully designed app.</p>
+    <div class="hero-actions">
+        <a href="#download" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on the App Store
+        </a>
+        <a href="#features" class="btn-secondary">Learn More →</a>
+    </div>
+    <p class="trial-note">Free 7-day trial · No credit card required · Cancel anytime</p>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features" style="background: var(--gray-50); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything You Need to Understand Your Blood Work</h2>
+    <p class="section-sub">Powerful tools designed to make blood test tracking simple, insightful, and actionable.</p>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Smart Blood Test Analysis</h3>
+            <p>Simply upload your blood test results and let our AI technology do the rest. Get instant analysis of all your parameters with clear categorization—normal, below range, or above range.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>AI-Powered Health Insights</h3>
+            <p>Receive personalized health insights powered by advanced artificial intelligence. Easy-to-understand summaries and actionable recommendations tailored to your unique health profile.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Advanced Parameter Tracking</h3>
+            <p>Track individual blood parameters over time with beautiful interactive charts. See how your cholesterol, glucose, vitamins, and other markers change with each test.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Compare Multiple Tests</h3>
+            <p>Select and compare multiple blood tests side by side to see how your health has evolved. Understand the impact of lifestyle changes, medications, or treatments.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3>Personalized Recommendations</h3>
+            <p>Get tailored recommendations based on your specific blood test results—dietary suggestions, lifestyle changes, or areas to discuss with your healthcare provider.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy-First Approach</h3>
+            <p>Your health data is yours alone. All blood test information is stored securely on your device using Apple's SwiftData technology. We never share or sell your personal health information.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Beautiful, Intuitive Design</h3>
+            <p>Enjoy a clean, modern interface designed with your experience in mind. Easy to navigate, understand your results, and track your health journey.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Personal Health Dashboard</h3>
+            <p>Monitor your health score, track key metrics, and get a comprehensive overview of your health status—all from your personalized dashboard.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title">From Upload to Insights in Seconds</h2>
+    <p class="section-sub">Getting started is simple. Here's how BloodLog works.</p>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Upload Your Blood Test</h3>
+            <p>Take a photo or upload a digital copy of your blood test results. Our app accepts various formats and makes uploading quick and easy.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Get AI Analysis</h3>
+            <p>Our advanced AI instantly analyzes your results, categorizing each parameter and calculating your overall health score based on normal ranges.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Receive Insights</h3>
+            <p>Get a comprehensive summary of your results with personalized recommendations. Understand what your numbers mean in plain language.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Track Over Time</h3>
+            <p>Save your results and track changes over time. See trends, compare tests, and monitor your progress toward better health.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHY -->
+<section class="section" style="background: var(--gray-50); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <p class="section-label">Who It's For</p>
+    <h2 class="section-title">Built for Anyone Who Cares About Their Health</h2>
+    <p class="section-sub">Whether you're proactively monitoring wellness or managing a condition, BloodLog works for you.</p>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>Health-Conscious Individuals</h3>
+            <p>Take an active role in your health journey. Understand your blood work, track your progress, and make informed decisions about your wellness.</p>
+        </div>
+        <div class="why-card">
+            <h3>Managing Chronic Conditions</h3>
+            <p>Keep all your blood tests organized in one place. Monitor important markers, track medication effectiveness, and share reports with your healthcare team.</p>
+        </div>
+        <div class="why-card">
+            <h3>Fitness Enthusiasts</h3>
+            <p>Optimize your performance by tracking how your nutrition and training affect your bloodwork. Monitor vitamins, minerals, hormones, and recovery markers.</p>
+        </div>
+        <div class="why-card">
+            <h3>Anyone Wanting Better Insights</h3>
+            <p>Stop wondering what your blood test numbers mean. Get clear, actionable insights that help you understand and improve your health.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Unlock Your Full Health Potential</h2>
+    <p class="section-sub">Start free. Upgrade when you're ready. Cancel anytime.</p>
+
+    <div class="pricing-card">
+        <span class="trial-badge">7-Day Free Trial</span>
+        <h3>Everything Included with Premium</h3>
+
+        <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Unlimited Blood Tests</strong> — Upload and store as many tests as you need</li>
+            <li><span class="check">✓</span> <strong>AI-Powered Insights</strong> — Personalized health insights for every test</li>
+            <li><span class="check">✓</span> <strong>Advanced Tracking</strong> — Follow all parameters over time</li>
+            <li><span class="check">✓</span> <strong>Compare Tests</strong> — Side-by-side comparison of multiple tests</li>
+            <li><span class="check">✓</span> <strong>Priority Support</strong> — Get help when you need it</li>
+            <li><span class="check">✓</span> <strong>Future Features</strong> — Access to all upcoming premium features</li>
+        </ul>
+
+        <div class="pricing-options">
+            <div class="pricing-option">
+                <strong>Monthly</strong>
+                Billed monthly
+            </div>
+            <div class="pricing-option">
+                <strong>Yearly</strong>
+                Best value · Save more
+            </div>
+        </div>
+
+        <a href="#download" class="btn-white" style="width: 100%; justify-content: center; margin-bottom: 14px;">
+            Start Free Trial
+        </a>
+        <p class="cancel-note">No credit card required · Cancel anytime · No hidden fees</p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="reviews">
+    <p class="section-label">Reviews</p>
+    <h2 class="section-title">What Our Users Say</h2>
+    <p class="section-sub">Real people getting real insights from their blood work.</p>
+
+    <div class="testimonials-grid">
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Finally, an app that makes sense of my blood work! The AI insights are incredibly helpful and the tracking features help me stay on top of my health."</p>
+            <div class="testimonial-author">Sarah M.</div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"I love being able to see all my parameters in one place and track how they change over time. The comparison feature is a game-changer for monitoring my progress."</p>
+            <div class="testimonial-author">Michael R.</div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"As someone managing a chronic condition, this app has become essential. It's so much easier than trying to compare paper results from different labs."</p>
+            <div class="testimonial-author">Jennifer K.</div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background: var(--gray-50); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>Is my health data secure?</h3>
+            <p>Absolutely. All your blood test data is stored locally on your device using Apple's secure SwiftData framework. We never transmit, store, or have access to your personal health information on external servers (except for AI analysis, which is processed securely and not retained).</p>
+        </div>
+        <div class="faq-item">
+            <h3>How does the AI analysis work?</h3>
+            <p>Our AI analyzes your blood test parameters against standard medical ranges and provides insights based on established medical knowledge. However, this app is not a substitute for professional medical advice.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What types of blood tests can I upload?</h3>
+            <p>Our app supports most standard blood test formats, including CBC (Complete Blood Count), CMP (Comprehensive Metabolic Panel), lipid panels, thyroid panels, vitamin levels, and more.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do I need a subscription?</h3>
+            <p>The app offers a free version with limited functionality. Premium features require a subscription, but you can try them free for 7 days with no credit card required.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I cancel my subscription anytime?</h3>
+            <p>Yes, you can cancel at any time through your App Store account settings. If you cancel during the free trial, you won't be charged.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What happens to my data if I cancel?</h3>
+            <p>Your data remains on your device even if you cancel your subscription. You can continue to view your stored tests, though some premium features will be limited.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What iOS version do I need?</h3>
+            <p>BloodLog requires iOS 17.0 or later. Compatible with iPhone and iPad.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MEDICAL DISCLAIMER -->
+<section class="section" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="disclaimer">
+        <strong>Medical Disclaimer:</strong> Blood Test Tracker is designed for informational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" id="download">
+    <h2>Download BloodLog Today</h2>
+    <p>Try Premium free for 7 days. No credit card required.</p>
+    <a href="#" class="btn-white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-icon" style="margin-bottom: 12px;">🩸</div>
+            <p>AI-powered blood test tracking for better health understanding.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#download">Download</a>
+        </div>
+        <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="https://leesummerdesigns.github.io/portfolio/pages/privacy-policy.html" target="_blank">Privacy Policy</a>
+            <a href="https://leesummerdesigns.github.io/portfolio/pages/terms-conditions.html" target="_blank">Terms of Service</a>
+        </div>
+        <div class="footer-links">
+            <h4>Support</h4>
+            <a href="mailto:leesummerdesigns@gmail.com">Contact Us</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 BloodLog. All rights reserved.</span>
+        <span>Version 1.0.0</span>
+    </div>
+</footer>
+
+</body>
+</html>
