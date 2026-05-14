@@ -3117,8 +3117,8 @@ ul {
 ======================================== */
 .blog-header {
     padding: 150px 30px 80px;
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-text);
     text-align: center;
 }
 
@@ -3127,7 +3127,7 @@ ul {
     font-size: 42px;
     font-weight: 400;
     margin-bottom: 15px;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .blog-header .subtitle {
