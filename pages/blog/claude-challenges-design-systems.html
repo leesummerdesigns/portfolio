@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Claude Is Challenging Traditional Design Systems | Louis Henrich</title>
+    <meta name="description" content="Design systems were built on the premise that consistency equals good UX. Conversational AI breaks that premise. Here's what needs to change.">
+    <meta name="author" content="Louis Henrich">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://leesummerdesigns.github.io/portfolio/pages/blog/claude-challenges-design-systems.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://leesummerdesigns.github.io/portfolio/pages/blog/claude-challenges-design-systems.html">
+    <meta property="og:title" content="How Claude Is Challenging Traditional Design Systems | Louis Henrich">
+    <meta property="og:description" content="Design systems were built on the premise that consistency equals good UX. Conversational AI breaks that premise. Here's what needs to change.">
+    <meta property="og:image" content="https://leesummerdesigns.github.io/portfolio/images/team_workshop.png">
+    <meta property="og:site_name" content="Louis Henrich">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css?v=6">
+    <link rel="icon" type="image/png" href="../../images/favico_lh.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Case Studies</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <header class="blog-post-header">
+        <div class="blog-card-meta">
+            <span class="blog-card-tag">Design Systems</span>
+            <span class="blog-card-date">April 2026</span>
+        </div>
+        <h1>When the Interface Thinks for Itself: How Claude Is Challenging the Design System Model</h1>
+        <p class="subtitle">Design systems were built on a contract of consistency. Conversational AI is rewriting the terms.</p>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="blog-post-cover">
+        <!-- Image will be replaced when provided -->
+        <img src="../../images/team_workshop.png" alt="Claude and design systems">
+    </div>
+
+    <!-- Post Body -->
+    <article class="blog-post-body">
+        <a href="../blog.html" class="blog-back-link">← Back to Blog</a>
+
+        <p>The design system, in its classical form, is a contract. Design defines the tokens, the components, the permitted variations, and the rules for how everything connects. Engineering implements them. Every surface in the product honours the contract. The user experiences consistency, and consistency — the logic goes — is what makes an interface trustworthy.</p>
+
+        <p>It's a model that served us well for roughly two decades. Then Claude arrived. Not just Claude specifically, but the class of large language models that generate interface content, adapt to context, and respond to natural language in real time. And they are, quietly and thoroughly, breaking the assumptions the traditional design system was built on.</p>
+
+        <h2>The consistency problem</h2>
+
+        <p>Traditional design systems achieve consistency through constraint. A button looks the same everywhere because the component is the same everywhere. An error message follows the same structure because it's drawn from the same pattern library. The designer's job is to define the rules; the system enforces them.</p>
+
+        <p>Now consider what happens when Claude writes the error message. The text adapts to what the user just tried to do, their apparent level of technical sophistication, and the conversational tone established earlier in the session. Two users encountering the same error state will read different messages — both accurate, both helpful, neither identical. The output is probabilistic by design.</p>
+
+        <p>This is not a bug. It's often a better user experience than a static, one-size-fits-all message. But it fundamentally challenges the consistency model. You cannot put a generative AI response into a component library. You can't version-control it or audit it in the same way. The traditional governance model has no good answer for outputs it didn't specify in advance.</p>
+
+        <blockquote>The design system used to define what the interface would say. Now it has to define how the interface should think — and those are very different documents.</blockquote>
+
+        <h2>Tokens, components, and the problem of behavior</h2>
+
+        <p>Design tokens — the named values for colour, spacing, typography — were a genuine leap forward in design system thinking. They abstracted visual decisions from their implementations, making it possible to change a product's visual language without touching every individual component.</p>
+
+        <p>In an AI-native product, the equivalent abstraction is behavioral. What tone should the product take when a user is frustrated? How much should it explain versus assume? When should it be direct and when should it hedge? These are not visual decisions, but they shape the user experience just as powerfully as colour and spacing.</p>
+
+        <p>I've started calling these "behavior tokens" — named, reusable decisions about how an AI-powered interface should act in different contexts. They live in system prompts and evaluation criteria rather than Figma files and code variables. But they serve the same function: they make behavioral decisions consistent, auditable, and changeable without rewriting everything from scratch.</p>
+
+        <h2>Evaluation as a design artifact</h2>
+
+        <p>One of the most underappreciated shifts in AI-native product work is the rise of evaluation as a design discipline. When your interface generates its own content, you cannot manually review every output. Instead, you define what "good" looks like — and build systems to check whether the AI is meeting that bar.</p>
+
+        <p>This is design work. Deciding what constitutes a high-quality AI response, what failure modes are unacceptable, what the edge cases look like — these are design decisions that require the same kind of rigorous thinking that goes into defining component states or writing a content style guide. They just live in a different place.</p>
+
+        <p>Design system teams that aren't yet thinking about evaluation rubrics as part of their remit are missing a significant part of what their product's quality actually depends on.</p>
+
+        <h2>What a design system looks like in an AI-native product</h2>
+
+        <p>The design system isn't going away. Visual consistency still matters. Accessibility still requires defined standards. Brand expression still needs to be coherent across surfaces. But the scope of what a design system needs to cover has expanded significantly:</p>
+
+        <ul>
+            <li><strong>Visual layer:</strong> tokens, components, layout patterns — same as before, still essential.</li>
+            <li><strong>Content layer:</strong> voice and tone guidelines written as behavioral constraints for the AI, not just advice for human copywriters.</li>
+            <li><strong>Behavior layer:</strong> named decisions about how AI-powered surfaces should respond to context, including explicit rules for edge cases and failure states.</li>
+            <li><strong>Evaluation layer:</strong> criteria for assessing whether AI outputs meet the product's quality and safety standards, with examples and counter-examples.</li>
+        </ul>
+
+        <p>None of this replaces what came before. But the design system teams who will be most valuable in the next few years are the ones who understand that their scope now extends into territory that wasn't theirs to own two years ago.</p>
+
+        <h2>A practical starting point</h2>
+
+        <p>If you're working on a product that already has AI-generated content somewhere — a recommendation, a generated message, an adaptive UI copy — ask yourself: who defined how that content should behave? Is that definition written down anywhere? Could a new team member understand it?</p>
+
+        <p>In most cases, the answer is no. Someone made a decision in a system prompt, or in a model fine-tuning run, or in a product requirements document that nobody has looked at since the feature shipped. That's the gap your design system needs to close.</p>
+
+        <p>Start there. Document the behavioral decisions that already exist. Make them visible, reviewable, and changeable through a process. That's not a complete answer to the challenge conversational AI poses — but it's a more honest starting point than pretending the traditional model still covers everything it used to.</p>
+    </article>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; Louis Henrich 2026</p>
+            <img src="../../images/footer-heart.png" alt="" class="footer-heart">
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
