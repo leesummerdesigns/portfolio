@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leesummerdesigns.github.io/portfolio/sitemap.xml
+Sitemap: https://louishenrich.com/sitemap.xml
