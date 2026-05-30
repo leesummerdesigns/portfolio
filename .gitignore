@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Claude Code / Superpowers scratch artifacts (not part of the site)
+.superpowers/
