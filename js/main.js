@@ -280,6 +280,8 @@ function initRotatingText() {
 
     const words = [
         'Artificial Intelligence',
+        'AI Business Strategy',
+        'Design Systems',
         'User Experience',
         'Design Leadership',
         'Strategy & Innovation'
