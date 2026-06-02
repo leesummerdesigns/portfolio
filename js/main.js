@@ -30,6 +30,8 @@ function initNavigation() {
     // Close menu when clicking a link
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
+            // Don't interfere with mailto: or external links
+            if (this.href.startsWith('mailto:') || this.target === '_blank') return;
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.style.overflow = '';
