@@ -1603,6 +1603,10 @@ ul {
     transition: transform 0.4s ease;
 }
 
+.project-showcase-image img.smg-showcase-logo {
+    max-height: 94px;
+}
+
 .project-header-row {
     display: flex;
     align-items: center;
