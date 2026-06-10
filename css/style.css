@@ -1605,6 +1605,7 @@ ul {
 
 .project-showcase-image img.smg-showcase-logo {
     max-height: 94px;
+    width: 100%;
 }
 
 .project-header-row {
