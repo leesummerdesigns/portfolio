@@ -662,41 +662,44 @@ ul {
 }
 
 .publication-card {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 25px;
     background: var(--color-white);
-    border: 1px solid var(--color-gray);
-    border-radius: 8px;
+    border: 2.5px solid var(--color-black);
+    border-radius: 0;
     padding: 25px 30px;
-    transition: var(--transition);
+    box-shadow: 8px 8px 0 var(--color-black);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .publication-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 5px 20px rgba(198, 255, 92, 0.3);
-    transform: translateY(-2px);
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0 var(--color-black);
 }
 
 .publication-icon {
     flex-shrink: 0;
     width: 50px;
     height: 50px;
-    background: var(--color-gray-light);
-    border-radius: 8px;
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text);
+    color: var(--color-black);
 }
 
 .publication-card:hover .publication-icon {
-    background: var(--color-primary);
-    color: var(--color-black);
+    background: var(--color-black);
+    color: var(--color-white);
 }
 
 .publication-content {
     flex: 1;
+    padding-right: 40px;
 }
 
 .publication-source {
@@ -725,14 +728,24 @@ ul {
 }
 
 .publication-arrow {
+    position: absolute;
+    top: 18px;
+    right: 18px;
     flex-shrink: 0;
-    color: var(--color-gray-dark);
-    transition: var(--transition);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 2px solid var(--color-black);
+    transform: rotate(-3deg);
+    transition: transform 0.25s ease;
 }
 
 .publication-card:hover .publication-arrow {
-    color: var(--color-primary-dark);
-    transform: translate(3px, -3px);
+    transform: rotate(0deg) translate(2px, -2px);
 }
 
 .publication-tags {
@@ -744,13 +757,15 @@ ul {
 
 .publication-tag {
     display: inline-block;
-    padding: 4px 10px;
-    background: rgba(198, 255, 92, 0.2);
-    color: var(--color-text);
+    padding: 4px 9px;
+    background: transparent;
+    color: var(--color-black);
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.5px;
-    border-radius: 8px;
+    text-transform: uppercase;
+    border: 1.5px solid var(--color-black);
+    border-radius: 0;
 }
 
 /* ========================================
@@ -3324,29 +3339,47 @@ ul {
 }
 
 .blog-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--color-gray);
-    border-radius: 8px;
+    border: 2.5px solid var(--color-black);
+    border-radius: 0;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: var(--transition);
     background: var(--color-white);
+    box-shadow: 8px 8px 0 var(--color-black);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .blog-card:hover {
-    border-color: var(--color-gray-dark);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0 var(--color-black);
 }
 
 .blog-card-image {
+    position: relative;
     width: 100%;
     height: 220px;
     overflow: hidden;
     background: var(--color-gray-light);
     flex-shrink: 0;
+}
+
+.blog-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 9px;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 2px solid var(--color-black);
+    transform: rotate(-3deg);
 }
 
 .blog-card-image img {
@@ -3392,6 +3425,34 @@ ul {
     letter-spacing: 0.5px;
 }
 
+/* Blog grid meta (hard-shadow card variant) — kept separate from
+   .blog-card-meta/tag/date above since those are shared with the
+   individual post header */
+.bp-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bp-tag {
+    display: inline-block;
+    padding: 4px 9px;
+    background: transparent;
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1.5px solid var(--color-black);
+}
+
+.bp-date {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--color-gray-dark);
+    letter-spacing: 0.5px;
+}
+
 .blog-card-title {
     font-family: var(--font-heading);
     font-size: 20px;
@@ -3415,18 +3476,14 @@ ul {
     align-items: center;
     gap: 6px;
     font-family: var(--font-mono);
+    font-weight: 700;
     font-size: 11px;
-    color: #333;
+    color: var(--color-black);
     margin-top: 8px;
-    transition: var(--transition);
 }
 
 .blog-read-more .arrow {
     transition: transform 0.3s ease;
-}
-
-.blog-card:hover .blog-read-more {
-    color: var(--color-primary-dark);
 }
 
 .blog-card:hover .blog-read-more .arrow {
