@@ -66,9 +66,7 @@ body,
 .hero-image img{
   display:block;position:relative;z-index:2;
   clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
-  transition:clip-path .6s cubic-bezier(.16,1,.3,1);
 }
-.hero-image:hover img{clip-path:polygon(0 0,100% 0,100% 100%,0 85%)}
 
 /* triangle counterform */
 .hero-shape{
@@ -159,7 +157,3 @@ body,
 
 /* footer */
 .main-footer{border-top:2.5px solid var(--color-black)}
-
-@media (prefers-reduced-motion:reduce){
-  .hero-image img{transition:none}
-}

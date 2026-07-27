@@ -3044,7 +3044,7 @@ ul {
    Blog Listing Page
 ======================================== */
 .blog-header {
-    padding: 150px 30px 80px;
+    padding: 150px 30px 40px;
     background: var(--color-white);
     color: var(--color-text);
     text-align: center;
@@ -3067,11 +3067,15 @@ ul {
     line-height: 1.7;
 }
 
+.blog-header + .page-content {
+    padding-top: 0;
+}
+
 .blog-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 80px;
 }
 
