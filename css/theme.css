@@ -1,0 +1,169 @@
+/* ============================================================
+   SITE THEME — black & white on paper
+   Loaded by every page, after style.css. Typography is left
+   completely untouched; this layer only changes colour,
+   surfaces and corners.
+
+   Rules:
+   - no green anywhere
+   - no pure #000 backgrounds — everything soft black (#333)
+   - square corners and hard shadows instead of soft radii
+   ============================================================ */
+
+:root{
+  /* the accent token now resolves to soft black, which neutralises
+     every var(--color-primary) usage across the site in one move */
+  --color-primary:#333333;
+  --color-primary-dark:#333333;
+  --paper:#f4f3ef;
+}
+
+/* --- surfaces ------------------------------------------------ */
+body,
+.page-content,
+.services-page,
+.blog-header,
+.blog-post-header,
+.clients,
+.main-footer{background:var(--paper)}
+
+.main-nav,
+.main-nav.scrolled{background:var(--paper)}
+
+.main-footer{border-top:2.5px solid var(--color-black)}
+.clients{border-top:2.5px solid var(--color-black)}
+
+/* --- the purple dot patterns don't belong to this style ----- */
+.dot-pattern,
+.dot-pattern-hero,
+.dot-pattern-left,
+.dot-pattern-about{display:none}
+.hero-image-container::after{background-image:none}
+
+/* --- section marker: the thin rule becomes a small square --- */
+.section-line{width:12px;height:12px;background:var(--color-black);
+  border:2px solid var(--color-black)}
+
+/* --- the lime tints that were hard-coded, now neutral -------- */
+.text-highlight{
+  background:linear-gradient(180deg,transparent 60%,rgba(51,51,51,.16) 60%)}
+
+.about-quote{
+  background:rgba(51,51,51,.05);
+  border-radius:0;
+  border-left:2.5px solid var(--color-black)}
+.about-quote::before{color:var(--color-black);opacity:.25}
+
+.about-highlight-box{
+  background:var(--color-white);
+  border:2.5px solid var(--color-black);
+  border-left-width:2.5px;
+  border-radius:0;
+  box-shadow:6px 6px 0 var(--color-black)}
+
+.blog-post-body blockquote{
+  background:rgba(51,51,51,.05);
+  border-left:3px solid var(--color-black)}
+
+/* tag pill on the blog post header */
+.blog-card-tag{
+  background:transparent;
+  color:var(--color-black);
+  border:1.5px solid var(--color-black);
+  border-radius:0;
+  text-transform:uppercase}
+
+/* --- resume ------------------------------------------------- */
+.cv-download-section{
+  background:var(--color-black);
+  border:2.5px solid var(--color-black);
+  border-radius:0;
+  box-shadow:8px 8px 0 var(--color-black);
+  color:var(--color-white)}
+.cv-download-section h3,
+.cv-download-section p{color:var(--color-white)}
+
+/* white button on the dark panel — was black-on-black */
+.cv-download-btn{
+  background:var(--color-white);
+  color:var(--color-black);
+  border-radius:0;
+  box-shadow:none}
+.cv-download-btn:hover{
+  background:var(--paper);
+  color:var(--color-black)}
+
+/* --- Appearances / Press list ------------------------------- */
+.press-list{
+  background:var(--color-white);
+  border:2.5px solid var(--color-black)}
+
+.press-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:16px 18px;
+  border-bottom:1.5px solid var(--color-black);
+  text-decoration:none;
+  color:var(--color-black);
+  transition:background .18s ease}
+.press-item:last-child{border-bottom:none}
+.press-item:hover{background:rgba(51,51,51,.06)}
+
+.press-item-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+
+.press-source{
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#666}
+
+.press-title{
+  font-family:var(--font-body);
+  font-size:14px;
+  font-weight:500;
+  color:var(--color-black);
+  line-height:1.4}
+
+.press-arrow{
+  flex-shrink:0;
+  font-size:16px;
+  transition:transform .25s ease}
+.press-item:hover .press-arrow{transform:translate(3px,-3px)}
+
+/* --- stray brand colours left over from the old palette ----- */
+.certificate-link{color:var(--color-black);text-decoration:underline}
+.certificate-link:hover{color:var(--color-black);opacity:.6}
+
+/* the case-study header photo overlay was indigo */
+.case-study-header::before{background:rgba(51,51,51,.85)}
+
+/* case-study components that carried a lime tint */
+.cs-goal-principles{background:rgba(51,51,51,.06)}
+.cs-competitor:hover{box-shadow:0 4px 15px rgba(51,51,51,.2)}
+
+/* --- buttons ------------------------------------------------ */
+.btn-primary{
+  background:var(--color-black);
+  color:var(--color-white);
+  border:2.5px solid var(--color-black);
+  border-radius:0;
+  box-shadow:6px 6px 0 var(--color-black);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn-primary:hover{
+  background:var(--color-white);
+  color:var(--color-black);
+  transform:translate(-3px,-3px);
+  box-shadow:9px 9px 0 var(--color-black)}
+
+.services-cta .btn-primary{color:var(--color-white)}
+.services-cta .btn-primary:hover{background:var(--color-white);color:var(--color-black)}
+
+/* --- misc rounded surfaces squared off ---------------------- */
+.highlight-box{
+  background:var(--color-white);
+  border:2.5px solid var(--color-black);
+  border-radius:0;
+  box-shadow:6px 6px 0 var(--color-black)}

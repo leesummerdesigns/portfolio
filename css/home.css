@@ -1,0 +1,165 @@
+/* ============================================================
+   HOME PAGE
+   Black-and-white treatment for index.html — paper background,
+   hard-shadow cards, and the "constructivist cut" hero.
+   Loaded after style.css and only by index.html, so the rest
+   of the site is untouched.
+   All blacks come from --color-black (#333).
+   ============================================================ */
+
+/* --- no green on the home page ------------------------------
+   --color-primary drives the hero panel, the testimonial band
+   and the form accents, so remapping it here turns all of them
+   into the same soft black in one move. --------------------- */
+:root{
+  --color-primary:var(--color-black);
+  --color-primary-dark:var(--color-black);
+  --paper:#f4f3ef;
+}
+
+/* --- paper background --- */
+body,
+.hero,
+.case-studies,
+.publications,
+.faq-section,
+.contact-section,
+.main-footer{background:var(--paper)}
+
+/* the spacer above the footer carries an inline white background */
+.contact-section + div{background:var(--paper)!important}
+
+/* cards stay white so they read as objects on the paper */
+.project-card,
+.ai-step,
+.faq-item,
+.testimonial-slider,
+.publication-card,
+.contact-form input,
+.contact-form textarea{background:var(--color-white)}
+
+/* the two dark break bands — soft black, never pure #000 */
+.ai-process,
+.testimonials{background:var(--color-black)}
+
+/* no dot patterns anywhere on the home page */
+.dot-pattern,
+.dot-pattern-left{display:none}
+
+/* the hero panel runs to the top of the page, so the nav needs an
+   opaque band — otherwise the right-hand links sit dark-on-dark */
+.main-nav,
+.main-nav.scrolled{background:var(--paper)}
+
+/* ============================================================
+   HERO — "constructivist cut"
+   The photo is sliced on a hard diagonal, a triangle answers it
+   from below, a circle sits over the top corner and a hairline
+   runs off the left edge.
+   ============================================================ */
+.hero h1 .highlight{background:var(--color-black);color:var(--color-white);padding:2px 10px;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.social-link-vertical:hover{color:var(--color-black)}
+
+.hero-image{position:relative;background:none;padding:0;box-shadow:none}
+
+.hero-image img{
+  display:block;position:relative;z-index:2;
+  clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+  transition:clip-path .6s cubic-bezier(.16,1,.3,1);
+}
+.hero-image:hover img{clip-path:polygon(0 0,100% 0,100% 100%,0 85%)}
+
+/* triangle counterform */
+.hero-shape{
+  position:absolute;
+  left:-80px;bottom:-30px;
+  width:250px;height:250px;
+  background:var(--color-black);
+  clip-path:polygon(0 100%,100% 100%,0 0);
+  z-index:1;
+}
+
+/* outlined circle over the top corner */
+.hero-image-container::after{
+  content:'';
+  position:absolute;
+  top:-22px;left:-58px;
+  right:auto;bottom:auto;
+  width:150px;height:150px;
+  background:none;
+  background-image:none;
+  border:2.5px solid var(--color-black);
+  border-radius:50%;
+  z-index:3;
+}
+
+/* hairline running off to the left */
+.hero-image::before{
+  content:'';
+  position:absolute;
+  left:-190px;top:34%;
+  width:190px;height:2px;
+  background:var(--color-black);
+  z-index:1;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+/* section marker: the thin rule becomes a small square */
+.section-line{width:12px;height:12px;background:var(--color-black);
+  border:2px solid var(--color-black)}
+.ai-process .section-line{background:var(--color-white)!important;border-color:var(--color-white)}
+
+/* case study logos: a clean 3x2 of hard-shadow cards */
+.projects-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+@media (min-width:768px){.projects-grid{grid-template-columns:repeat(3,1fr);gap:28px}}
+.project-card{border:2.5px solid var(--color-black);border-radius:0;aspect-ratio:3/2;
+  box-shadow:8px 8px 0 var(--color-black);
+  transition:transform .18s ease,box-shadow .18s ease}
+.project-card:hover{background:var(--color-white);border-color:var(--color-black);
+  transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--color-black)}
+
+/* AI process: white cards on the dark band */
+.ai-process-flow{gap:12px}
+.ai-step-arrow{padding:0 10px;opacity:1;color:var(--color-white)}
+.ai-step{background:var(--color-white);border:2.5px solid var(--color-black);border-radius:0;
+  box-shadow:8px 8px 0 var(--color-white);
+  transition:transform .18s ease,box-shadow .18s ease}
+.ai-step:hover{background:var(--color-white);border-color:var(--color-black);
+  transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--color-white)}
+.ai-step-title{color:var(--color-black)}
+.ai-step-desc{color:#555}
+.ai-tool-tag{background:transparent;border:1.5px solid var(--color-black);color:var(--color-black);
+  border-radius:0;text-transform:uppercase;font-size:10px}
+
+/* testimonials: white card on the dark band */
+.testimonial-slider{background:var(--color-white);border:2.5px solid var(--color-black);
+  box-shadow:8px 8px 0 var(--color-white);padding:34px 26px;max-width:760px}
+.slider-arrow{color:var(--color-black)}
+.slider-arrow:hover{color:var(--color-black);opacity:.5}
+
+/* FAQ */
+.faq-item{border:2.5px solid var(--color-black)!important;padding:18px 22px!important;
+  box-shadow:6px 6px 0 var(--color-black);margin-bottom:18px}
+
+/* contact form: bordered boxes instead of underlines */
+.contact-form input,.contact-form textarea{border:2.5px solid var(--color-black);padding:12px 14px}
+.contact-form textarea{min-height:120px;padding-top:14px}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--color-black);
+  box-shadow:4px 4px 0 var(--color-black)}
+.btn-submit{background:var(--color-black);color:var(--color-white);
+  border:2.5px solid var(--color-black);border-radius:0;
+  box-shadow:6px 6px 0 var(--color-black);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn-submit:hover{background:var(--color-white);color:var(--color-black);
+  transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--color-black)}
+
+/* footer */
+.main-footer{border-top:2.5px solid var(--color-black)}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-image img{transition:none}
+}
