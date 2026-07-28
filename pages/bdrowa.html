@@ -219,7 +219,7 @@
             </section>
 
             <!-- Sitemap Adaptation -->
-            <section class="cs-section">
+            <section class="cs-section" id="sitemap-adaptation">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
                     <h2>Sitemap Adaptation</h2>
@@ -235,16 +235,50 @@
                             <li>Simplified primary menu</li>
                             <li>Removed industry designation as primary navigation driver</li>
                         </ul>
-                        <img loading="lazy" decoding="async" src="../images/rowa_sitemapadaptation.png" alt="Sitemap Adaptation" style="width: 100%; margin-top: 30px; border-radius: 8px;">
                     </div>
                     <div class="cs-column">
                         <div class="cs-slider" data-slider>
-                            <div class="cs-slider-container">
-                                <div class="cs-slider-slide active">
-                                    <img loading="lazy" decoding="async" src="../images/rowa_sitemap1.png" alt="Sitemap Version 1" style="width: 100%; border-radius: 8px;">
+                            <div class="cs-slider-container" aria-live="polite">
+                                <div class="cs-slider-slide active" aria-hidden="false">
+                                    <div class="ia-diagram ia-diagram--sitemap" role="img" aria-label="Before sitemap organized into four separate audience branches, each repeating products, services, and support">
+                                        <div class="ia-diagram__heading">
+                                            <span class="ia-diagram__step">Before</span>
+                                            <h3>Audience-first sitemap</h3>
+                                        </div>
+                                        <div class="ia-tree">
+                                            <span class="ia-node ia-node--root">Home</span>
+                                            <span class="ia-tree__trunk" aria-hidden="true"></span>
+                                            <div class="ia-tree__branches">
+                                                <div class="ia-branch"><span class="ia-node">Pharmacies</span><small>Products · Services · Support</small></div>
+                                                <div class="ia-branch"><span class="ia-node">Hospitals</span><small>Products · Services · Support</small></div>
+                                                <div class="ia-branch"><span class="ia-node">Wholesalers</span><small>Products · Services · Support</small></div>
+                                                <div class="ia-branch"><span class="ia-node">Packaging centers</span><small>Products · Services · Support</small></div>
+                                            </div>
+                                        </div>
+                                        <p class="ia-diagram__note">Similar topics repeat inside audience-specific journeys.</p>
+                                    </div>
                                 </div>
-                                <div class="cs-slider-slide">
-                                    <img loading="lazy" decoding="async" src="../images/rowa_sitemap2.png" alt="Sitemap Version 2" style="width: 100%; border-radius: 8px;">
+                                <div class="cs-slider-slide" aria-hidden="true">
+                                    <div class="ia-diagram ia-diagram--sitemap" role="img" aria-label="After sitemap organized around products, services, and support, with audience selection available as filters">
+                                        <div class="ia-diagram__heading">
+                                            <span class="ia-diagram__step">After</span>
+                                            <h3>Topic-led sitemap</h3>
+                                        </div>
+                                        <div class="ia-filter-row ia-filter-row--above">
+                                            <span class="ia-diagram__label">Audience filters</span>
+                                            <div><span>Pharmacies</span><span>Hospitals</span><span>Wholesalers</span><span>Packaging centers</span></div>
+                                        </div>
+                                        <div class="ia-tree ia-tree--after">
+                                            <span class="ia-node ia-node--root">Home</span>
+                                            <span class="ia-tree__trunk" aria-hidden="true"></span>
+                                            <div class="ia-tree__branches">
+                                                <div class="ia-branch ia-branch--accent"><span class="ia-node">Products</span><small>Explore solutions</small></div>
+                                                <div class="ia-branch ia-branch--accent"><span class="ia-node">Services</span><small>Plan and maintain</small></div>
+                                                <div class="ia-branch ia-branch--accent"><span class="ia-node">Support</span><small>Find assistance</small></div>
+                                            </div>
+                                        </div>
+                                        <p class="ia-diagram__note">Shared topics lead; audience context refines the result.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="cs-slider-controls">
@@ -254,8 +288,8 @@
                                     </svg>
                                 </button>
                                 <div class="cs-slider-dots">
-                                    <span class="cs-slider-dot active"></span>
-                                    <span class="cs-slider-dot"></span>
+                                    <button class="cs-slider-dot active" type="button" aria-label="Show audience-first sitemap" aria-current="true"></button>
+                                    <button class="cs-slider-dot" type="button" aria-label="Show topic-led sitemap" aria-current="false"></button>
                                 </div>
                                 <button class="cs-slider-btn cs-slider-next" aria-label="Next slide">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -340,5 +374,30 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        document.querySelectorAll('[data-slider]').forEach((slider) => {
+            const slides = Array.from(slider.querySelectorAll('.cs-slider-slide'));
+            const dots = Array.from(slider.querySelectorAll('.cs-slider-dot'));
+            let current = Math.max(0, slides.findIndex((slide) => slide.classList.contains('active')));
+
+            const showSlide = (index) => {
+                current = (index + slides.length) % slides.length;
+                slides.forEach((slide, slideIndex) => {
+                    const isActive = slideIndex === current;
+                    slide.classList.toggle('active', isActive);
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                });
+                dots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === current;
+                    dot.classList.toggle('active', isActive);
+                    dot.setAttribute('aria-current', String(isActive));
+                });
+            };
+
+            slider.querySelector('.cs-slider-prev')?.addEventListener('click', () => showSlide(current - 1));
+            slider.querySelector('.cs-slider-next')?.addEventListener('click', () => showSlide(current + 1));
+            dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
+        });
+    </script>
 </body>
 </html>

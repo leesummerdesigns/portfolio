@@ -3095,6 +3095,8 @@ ul {
 }
 
 .cs-slider-dot {
+    padding: 0;
+    border: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -3105,6 +3107,262 @@ ul {
 
 .cs-slider-dot.active {
     background: var(--color-black);
+}
+
+/* BD Rowa information architecture story */
+.ia-diagram {
+    --ia-ink: #171717;
+    --ia-paper: #f7f3e9;
+    --ia-accent: #6446e8;
+    width: 100%;
+    margin-top: 30px;
+    padding: clamp(8px, 2vw, 18px);
+    overflow: hidden;
+    color: var(--ia-ink);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cs-slider .ia-diagram {
+    margin-top: 0;
+}
+
+.ia-diagram__heading {
+    margin-bottom: 26px;
+}
+
+.ia-diagram__heading h3 {
+    max-width: 360px;
+    margin: 7px 0 0;
+    font-family: var(--font-mono);
+    font-size: clamp(18px, 2.3vw, 23px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.ia-diagram__step,
+.ia-diagram__label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.ia-diagram__step {
+    color: var(--ia-accent);
+}
+
+.ia-transition {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+}
+
+.ia-transition__group {
+    min-width: 0;
+}
+
+.ia-node-stack {
+    display: grid;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.ia-node {
+    display: block;
+    min-width: 0;
+    padding: 8px 9px;
+    overflow-wrap: anywhere;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--ia-ink);
+    border-radius: 4px;
+}
+
+.ia-node--accent,
+.ia-node--root {
+    color: #fff;
+    background: var(--ia-accent);
+    border-color: var(--ia-accent);
+}
+
+.ia-transition__arrow {
+    align-self: start;
+    margin-top: 35px;
+    color: var(--ia-accent);
+    font-family: var(--font-mono);
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.ia-diagram__note {
+    margin: 24px 0 0;
+    padding-top: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    border-top: 1px dashed rgba(23, 23, 23, 0.35);
+}
+
+.ia-diagram--sitemap {
+    min-height: 380px;
+}
+
+.ia-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ia-node--root {
+    width: min(170px, 70%);
+}
+
+.ia-tree__trunk {
+    width: 1px;
+    height: 24px;
+    background: var(--ia-ink);
+}
+
+.ia-tree__branches {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    padding-top: 18px;
+}
+
+.ia-tree__branches::before {
+    position: absolute;
+    top: 0;
+    left: 12.5%;
+    right: 12.5%;
+    content: "";
+    border-top: 1px solid var(--ia-ink);
+}
+
+.ia-branch {
+    position: relative;
+    min-width: 0;
+    padding: 8px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.ia-branch::before {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    width: 1px;
+    height: 26px;
+    content: "";
+    background: var(--ia-ink);
+}
+
+.ia-branch .ia-node {
+    position: relative;
+    z-index: 1;
+}
+
+.ia-branch small {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.ia-tree--after .ia-tree__branches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ia-tree--after .ia-tree__branches::before {
+    left: 16.666%;
+    right: 16.666%;
+}
+
+.ia-branch--accent .ia-node {
+    border-color: var(--ia-accent);
+}
+
+.ia-filter-row {
+    min-width: 0;
+}
+
+.ia-filter-row > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.ia-filter-row > div span {
+    padding: 5px 7px;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    background: rgba(100, 70, 232, 0.08);
+    border: 1px solid rgba(100, 70, 232, 0.45);
+    border-radius: 20px;
+}
+
+.ia-filter-row--above {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.ia-filter-row--above > div {
+    margin-top: 0;
+}
+
+@media (max-width: 480px) {
+    .ia-transition {
+        grid-template-columns: 1fr;
+    }
+
+    .ia-transition__arrow {
+        justify-self: center;
+        margin-top: 0;
+        transform: rotate(90deg);
+    }
+
+    .ia-diagram--sitemap {
+        min-height: 0;
+    }
+
+    .ia-tree__branches,
+    .ia-tree--after .ia-tree__branches {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .ia-tree__branches::before,
+    .ia-branch::before {
+        display: none;
+    }
+
+    .ia-filter-row--above {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .ia-filter-row--above > div {
+        justify-content: center;
+    }
 }
 
 /* Desktop Breakpoint */
