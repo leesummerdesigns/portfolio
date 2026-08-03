@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich</title>
+    <meta name="description" content="Self-initiated case study: designing and shipping The Social Hub, a bilingual community events platform on React 19, tRPC, Drizzle and Supabase. By Louis Henrich, AI Product Specialist in Zürich.">
+    <meta name="author" content="Louis Henrich">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://louishenrich.com/pages/socialhub.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://louishenrich.com/pages/socialhub.html">
+    <meta property="og:title" content="The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich">
+    <meta property="og:description" content="A private project built to learn the newest stack the hard way: design, code, payments, SEO and two languages, shipped to a live domain.">
+    <meta property="og:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
+    <meta property="og:site_name" content="Louis Henrich">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Social Hub — Building a Full-Stack Community Platform Solo">
+    <meta name="twitter:description" content="Self-initiated product case study by Louis Henrich: React 19, tRPC, Drizzle, Supabase, Stripe Connect, bilingual by default.">
+    <meta name="twitter:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "The Social Hub — Self-Initiated Product Case Study",
+      "description": "Designing and building The Social Hub, a bilingual community events platform with a minimum-attendance mechanic, from platform export to a live domain.",
+      "url": "https://louishenrich.com/pages/socialhub.html",
+      "image": "https://louishenrich.com/images/socialhub/home-desktop.jpg",
+      "author": { "@id": "https://louishenrich.com/#louis-henrich" },
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "about": ["Product Design", "Full-Stack Development", "React", "tRPC", "Design Systems", "Internationalization", "Technical SEO"]
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css?v=6">
+    <link rel="stylesheet" href="../css/theme.css?v=1">
+    <link rel="icon" type="image/png" href="../images/favico_lh.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Case Studies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page sh-case-study">
+        <div class="container">
+            <!-- Hero -->
+            <header class="cs-header cs-header-hero sh-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <p class="sh-eyebrow">Self-initiated product · design, code and operations</p>
+                        <h1 class="cs-title">The Social Hub</h1>
+                        <p class="cs-subtitle">Plans that actually happen</p>
+                        <p class="cs-description">A community events platform with one stubborn rule: every event has a minimum crowd. If not enough people say yes before the deadline, the event cancels itself and nobody wastes their evening. I designed it, built it, deployed it, and broke it a few times on the way — alone, in public, on my own domain.</p>
+
+                        <div class="sh-meta-grid">
+                            <div>
+                                <span>Role</span>
+                                Everything. Product, design system, frontend, backend, database, payments, deployment.
+                            </div>
+                            <div>
+                                <span>Why</span>
+                                A private project to force myself through the newest stack end to end, with a real product as the exam.
+                            </div>
+                            <div>
+                                <span>Stack</span>
+                                React 19 · TypeScript · Hono + tRPC 11 · Drizzle ORM · Supabase Postgres · Stripe Connect
+                            </div>
+                            <div>
+                                <span>Status</span>
+                                Live at joinsocialhub.app · bilingual · running on demo seed data before launch
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-hero-right">
+                        <img class="sh-shot cs-media--framed" loading="eager" decoding="async" fetchpriority="high" src="../images/socialhub/home-desktop.jpg" alt="The Social Hub home page: German hero headline, search bar and tilted event cards showing how many people are still missing">
+                    </div>
+                </div>
+
+                <div class="sh-stat-strip">
+                    <div class="sh-stat">
+                        <strong>1</strong>
+                        <span>person on the project</span>
+                    </div>
+                    <div class="sh-stat">
+                        <strong>9</strong>
+                        <span>Postgres tables behind it</span>
+                    </div>
+                    <div class="sh-stat">
+                        <strong>2</strong>
+                        <span>languages shipped</span>
+                    </div>
+                    <div class="sh-stat">
+                        <strong>5</strong>
+                        <span>days from export to live URL</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Why -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Why I gave myself this problem</h2>
+                </div>
+                <p class="cs-intro-text">Twenty years of product work teaches you how to brief engineers extremely well. It does not teach you what it feels like when your own deploy silently drops half its traffic at three in the afternoon. I wanted that feeling. So instead of another prototype that dies in Figma, I picked a product idea with real moving parts — accounts, money, scheduling, two languages, search engines — and gave myself one condition: it has to be publicly reachable on its own domain, not a demo I show on my laptop.</p>
+
+                <div class="cs-kano-grid cs-kano-grid--two">
+                    <div class="cs-kano-card">
+                        <h3>The learning goal</h3>
+                        <p class="cs-kano-subtitle">Newest stack, no training wheels</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">React 19, Vite, tRPC 11 with end-to-end type safety, Drizzle ORM, a hosted Postgres, Stripe Connect, server-side SEO for a client-rendered app. Each of those is a blog post. Wiring all of them into one product that a stranger can use is a different exercise entirely.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>The product goal</h3>
+                        <p class="cs-kano-subtitle">A mechanic worth building</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Every events platform has the same quiet failure: five people say maybe, two show up, the host stops hosting. A minimum crowd with a deadline turns that from an awkward evening into a clean cancellation — and gives everyone a reason to invite one more person.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The mechanic -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>One rule, visible everywhere</h2>
+                </div>
+                <p class="cs-intro-text">The threshold is not a setting buried in a form. It is the interface. A card does not say "3 attending", it says how many people are still missing and how long they have. An event page leads with the same sentence. The progress bar is the product promise rendered in eight pixels of colour, and every state in the system — needs people, almost there, happening, cancelled — is a state a visitor can read at a glance.</p>
+
+                <div class="cs-comparison-grid">
+                    <div class="cs-comparison-item">
+                        <img class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/home-nearby-desktop.jpg" alt="Event cards near you, each showing how many more people are needed and a progress bar toward the minimum">
+                        <p class="cs-comparison-label">Browsing: every card counts down to its minimum</p>
+                    </div>
+                    <div class="cs-comparison-item">
+                        <img class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/event-desktop.jpg" alt="Event detail page with the headline this event still needs nine people to happen, plus date, location and RSVP deadline">
+                        <p class="cs-comparison-label">Deciding: the event page says exactly what is missing</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p>The threshold logic lives in one shared contract file used by both the server and the browser, and it deliberately returns translation <em>keys</em> rather than sentences. That single decision is why adding a second language later cost days instead of weeks — the rules never knew what language they were speaking.</p>
+                </div>
+            </section>
+
+            <!-- From export to owned repo -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>From a platform export to a repository I own</h2>
+                </div>
+                <p class="cs-intro-text">The first version was generated on an AI app platform. It looked finished, which is the most expensive kind of finished. Getting it off that platform was the first real week of work, and it is the part of the story I find most useful: everything that made it convenient there made it non-portable everywhere else.</p>
+
+                <div class="cs-kano-grid">
+                    <div class="cs-kano-card">
+                        <h3>Ripped out the platform login</h3>
+                        <p class="cs-kano-subtitle">Auth</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The hosted OAuth was welded to the platform. It came out completely and was replaced with signed JWT session cookies, scrypt password hashing, and later Google Sign-In verified server-side — because a Google button that renders proves nothing at all.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Converted the schema to Postgres</h3>
+                        <p class="cs-kano-subtitle">Database</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The schema was written in a MySQL dialect. Nine tables were rewritten for Postgres with Drizzle, raw SQL requoted, migrations generated, and demo data seeded so the thing had something to show while it was still empty.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Made deployment boring</h3>
+                        <p class="cs-kano-subtitle">Infrastructure</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Own private GitHub repo, Supabase Postgres in Frankfurt, a Render blueprint, push to main equals deploy. Boring is the goal: the interesting parts of a side project should be the product, not the release ritual.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>How it is built</h2>
+                </div>
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <p>Client and server are one TypeScript project and one Node process. The browser calls tRPC procedures directly, so a renamed field in the database surfaces as a red squiggle in a React component rather than as a runtime surprise in production. There is no separate API contract to keep in sync, because there is no separate API contract.</p>
+                        <p>The interface is built on a token-driven component layer — shadcn/ui primitives on Tailwind, with motion handled centrally so animation stays consistent instead of being reinvented per screen. Old habits: I gave a personal project a design system, and it paid for itself the first time the mobile shell needed rebuilding.</p>
+                        <p>Shared business rules — thresholds, deadlines, filter logic — sit in a <em>contracts</em> folder imported by both sides. One implementation, two runtimes, no drift.</p>
+                    </div>
+                    <div class="cs-column">
+                        <div class="sh-stack">
+                            <div class="sh-stack-tier">
+                                <span class="sh-stack-label">Client</span>
+                                <div class="sh-stack-items">
+                                    <span>React 19</span>
+                                    <span>TypeScript</span>
+                                    <span>Vite 7</span>
+                                    <span>Tailwind</span>
+                                    <span>shadcn/ui</span>
+                                    <span>Framer Motion</span>
+                                    <span>i18next</span>
+                                </div>
+                            </div>
+                            <div class="sh-stack-tier">
+                                <span class="sh-stack-label">Server · same Node process</span>
+                                <div class="sh-stack-items">
+                                    <span>Hono</span>
+                                    <span>tRPC 11</span>
+                                    <span>JWT sessions</span>
+                                    <span>Google Identity</span>
+                                    <span>Stripe Connect</span>
+                                    <span>SEO injection</span>
+                                    <span>hourly cleanup job</span>
+                                </div>
+                            </div>
+                            <div class="sh-stack-tier sh-stack-tier--data">
+                                <span class="sh-stack-label">Data &amp; delivery</span>
+                                <div class="sh-stack-items">
+                                    <span>Drizzle ORM</span>
+                                    <span>Supabase Postgres</span>
+                                    <span>9 tables</span>
+                                    <span>Render (Frankfurt)</span>
+                                    <span>push to main = deploy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="sh-stack-note">Shared contracts sit between client and server — one rulebook, imported twice.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bugs -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>The bugs that turned it into a product</h2>
+                </div>
+                <p class="cs-intro-text">A side project becomes a real product the moment it starts failing in ways your laptop cannot reproduce. These are the four I keep telling people about, because each one was invisible locally and expensive in production.</p>
+
+                <div class="cs-kano-grid cs-kano-grid--two">
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Half the traffic vanished</h3>
+                        <p class="cs-kano-subtitle">Symptom: randomly broken images</p>
+                        <p>The server bound to an IPv6 socket instead of <em>0.0.0.0</em>, so the host's proxy quietly discarded roughly half of all requests. Locally it was invisible, because macOS resolves both stacks happily. The visible symptom was images failing at random — the kind of bug you blame on the CDN, the browser and your own eyesight before you blame the socket.</p>
+                    </div>
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Google was about to be told the site lives on localhost</h3>
+                        <p class="cs-kano-subtitle">Symptom: none, until it is too late</p>
+                        <p>While wiring canonical URLs for the domain move I found the public URL falling back to <em>http://localhost:3000</em>. One deploy without the environment variable set would have published localhost as the canonical, in every Open Graph tag and across the whole sitemap. Caught the day before the move; the production default is now the real domain.</p>
+                    </div>
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>A fake event could have collected the money</h3>
+                        <p class="cs-kano-subtitle">Symptom: a passing test suite</p>
+                        <p>Payouts were released when the start date had passed — not when the event had actually taken place. Create an event, let the calendar do its thing, get paid. Now release depends on the event ending, a holding period, no open report and no cancellation. Found while writing the payment flow, before a single real franc touched it.</p>
+                    </div>
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Housekeeping was deleting the evidence</h3>
+                        <p class="cs-kano-subtitle">Symptom: a tidy database</p>
+                        <p>A cleanup job hard-deleted bookings a day after their deadline. Harmless with demo data; with real payments it would have destroyed refund proof and chargeback records that Swiss law expects you to keep for ten years. Replaced with a soft delete. "Tidy" is not a requirement — retrievable is.</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p><strong>Honourable mention.</strong> One server file contained a real NUL byte used to mask HTML comments. It worked perfectly, and it made every tool treat the file as binary — so <em>grep</em> returned nothing at all instead of complaining. I lost a good half hour to a file that was lying by staying silent.</p>
+                </div>
+            </section>
+
+            <!-- Money -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Money I deliberately never hold</h2>
+                </div>
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <p>Paid events meant deciding where ticket money sits between purchase and event. The comfortable answer is "our account". The correct answer, in Switzerland, is nowhere near it: holding other people's money can count as taking deposits or as financial intermediation, and that is a regulated activity with a regulator attached.</p>
+                        <p>So the architecture is <em>separate charges and transfers</em>. Buyers are charged on the platform account, the funds stay in the payment provider's balance, and they only ever move in two directions: refunded to the buyer, or transferred to the organiser after the event has actually happened. The regulated party stays the payment provider.</p>
+                        <p>Three invariants hold the whole thing together: only a signed webhook can turn a booking into a paid ticket, the demo checkout disables itself the moment real keys exist, and every operation is idempotent because webhooks arrive more than once. The card form itself was replaced with a hosted payment element, so raw card numbers never touch my DOM.</p>
+                    </div>
+                    <div class="cs-column">
+                        <div class="sh-callout" style="margin-top: 0;">
+                            <p><strong>Built, then switched off.</strong> The entire payment layer — onboarding, payment intents, signed webhooks, refunds, payout batches, dispute reporting — ships in the codebase and stays dormant without a secret key. Until the company registration number comes through, the platform runs a clearly labelled demo checkout instead.</p>
+                            <p>Shipping a finished feature in the off position is an underrated move. The alternative is a half-built integration that has to be remembered six weeks later.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Search and sharing for an app that renders in the browser</h2>
+                </div>
+                <p class="cs-intro-text">A single-page app has a specific blind spot: the crawlers that generate link previews do not run JavaScript. Paste an event link into a chat and you get an empty box — which, for a product whose entire growth loop is "invite one more person", is not a cosmetic problem.</p>
+
+                <div class="cs-kano-grid">
+                    <div class="cs-kano-card">
+                        <h3>Meta injected per route</h3>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">The server writes title, description, canonical and Open Graph tags into the HTML shell before it leaves, so every route has a real preview without giving up client rendering.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Event structured data</h3>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">Event pages carry JSON-LD in the schema.org Event format — the prerequisite for event rich results, and the single largest organic lever this product category has.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Robots, sitemap, share card</h3>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">A dynamic bilingual sitemap with hreflang, finished <em>before</em> the first crawl so the structure never had to be relearned, plus a hand-built 1200×630 share image.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 34px;">One find in this block was pure comedy: requests that did not send <em>text/html</em> in their accept header received a JSON 404. Several link unfurlers send wildcards, so the previews that mattered most were being handed an error page by a server doing exactly what it was told.</p>
+            </section>
+
+            <!-- i18n -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>German owns the short URLs</h2>
+                </div>
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <p>The market is German-speaking, so the product had to be. The tempting shortcut is a few German landing pages bolted onto an English app. I went for full internationalisation instead, with one opinionated decision: <strong>German owns the bare paths and English moved to <em>/en/</em></strong>. The short, shareable URL should be the one most readers can actually read.</p>
+                        <p>The move that kept it small: React Router's <em>basename</em> carries the language prefix, so not a single link in the application had to be touched. Eleven hard-coded date formatters were taught to read the active language — until then, the German site cheerfully printed English weekday names and twelve-hour times on every card.</p>
+                    </div>
+                    <div class="cs-column">
+                        <h3>What I would tell myself earlier</h3>
+                        <ul>
+                            <li><strong>Keys, not sentences.</strong> Shared logic should return translation keys. Anything that returns a sentence has quietly chosen a language for the whole system.</li>
+                            <li><strong>Hard-coded English hides in states.</strong> Not in headlines — in toasts, empty states, dialogs and error messages. Those are the last screens anyone reviews.</li>
+                            <li><strong>Ship hreflang before the crawl.</strong> Teaching a search engine the right structure once is cheaper than making it unlearn the wrong one.</li>
+                            <li><strong>Review every change twice.</strong> Once in each language. A translation audit is not done when the home page looks right.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobile -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Mobile is not a narrower desktop</h2>
+                </div>
+                <p class="cs-intro-text">The brief I gave myself was "have a quick look at the mobile view". The audit was less quick than hoped: the navigation collided with itself on every page, one event card was around 450 pixels tall so exactly one event fitted on a screen, the explore filters scrolled sideways into invisibility, and a single page carried 33 tap targets under the 44-pixel minimum. It was a desktop site holding its breath.</p>
+
+                <div class="sh-mobile-shots">
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The Social Hub mobile home screen with a compact hero, stacked search fields and category chips">
+                        <p class="cs-comparison-label">Rebuilt mobile home: search pulled up, hero condensed</p>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/socialhub/event-mobile.jpg" alt="Mobile event detail page with a fact card for date, location and attendance, and a fixed RSVP bar at the bottom">
+                        <p class="cs-comparison-label">Event detail: facts consolidated, RSVP bar pinned in reach</p>
+                    </figure>
+                </div>
+
+                <div class="cs-kano-grid cs-kano-grid--two" style="margin-top: 50px;">
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Every safe-area padding was worth nothing</h3>
+                        <p class="cs-kano-subtitle">iPhone only</p>
+                        <p>The viewport meta tag was missing <em>viewport-fit=cover</em>, which silently turns every safe-area inset in the project into zero. The carefully built RSVP bar was sitting underneath the home indicator on the exact devices it was designed for.</p>
+                    </div>
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Inputs zoomed in and never came back</h3>
+                        <p class="cs-kano-subtitle">iPhone only</p>
+                        <p>Form fields at 14 pixels make iOS Safari zoom the page on focus — and it does not zoom back out. Two lines of CSS, and a reminder that a narrow browser window is not a phone. Both bugs are invisible on a desktop at 375 pixels wide.</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p>Verification did not happen by squinting at screenshots. I measured it in the browser: zero overflowing elements, document width exactly 375 pixels, every filter segment inside the visible area. After the deploy I searched the delivered bundle on the live domain instead of trusting the build log — production is only correct when you have checked what actually shipped.</p>
+                </div>
+            </section>
+
+            <!-- Where it stands -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Where it stands, honestly</h2>
+                </div>
+                <p class="cs-intro-text">It is live, bilingual, indexable and payment-ready. It is also a private project with demo data in it, and pretending otherwise would defeat the point of writing this down.</p>
+
+                <div class="cs-two-column">
+                    <div class="cs-column">
+                        <h3>Done and running</h3>
+                        <ul class="sh-status-list">
+                            <li>Live on its own domain, German by default, English under <em>/en/</em></li>
+                            <li>Email and Google sign-in, both verified server-side</li>
+                            <li>Event creation with image upload, groups, RSVPs, threshold cancellation</li>
+                            <li>Server-side meta, event structured data, bilingual sitemap</li>
+                            <li>Purpose-built mobile experience, consent-gated analytics, privacy and terms in both languages</li>
+                        </ul>
+                    </div>
+                    <div class="cs-column">
+                        <h3>Deliberately not done</h3>
+                        <ul class="sh-status-list">
+                            <li>Payments stay dormant until the company registration number arrives</li>
+                            <li>Around 570 strings in signed-in and admin areas are still English — a running audit, not a finished one</li>
+                            <li>City and category landing pages, the actual ranking lever, do not exist yet</li>
+                            <li>Demo seed data still shares a database with development; a wipe comes before real traffic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p><strong>What I took away.</strong> Not the frameworks — those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed". I brief engineers better now, mostly because I have finally been the one on the other end of my own briefs.</p>
+                </div>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="telekom.html">
+                    <span>Previous</span>
+                    Deutsche Telekom
+                </a>
+                <a href="smg.html">
+                    <span>Next</span>
+                    SMG · Tomodachi
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's have a coffee and talk about your idea</h2>
+            <a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart">
+            <p>&copy; Louis Henrich - 2026</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
