@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary SEO -->
     <title>The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich</title>
-    <meta name="description" content="Self-initiated case study: designing and shipping The Social Hub, a bilingual community events platform on React 19, tRPC, Drizzle and Supabase. By Louis Henrich, AI Product Specialist in Zürich.">
+    <meta name="description" content="Self-initiated case study: designing and shipping The Social Hub, a community platform for people who need a crowd to do the thing they love — every event has a minimum, or it cancels. By Louis Henrich, AI Product Specialist in Zürich.">
     <meta name="author" content="Louis Henrich">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://louishenrich.com/pages/socialhub.html">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://louishenrich.com/pages/socialhub.html">
     <meta property="og:title" content="The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich">
-    <meta property="og:description" content="A private project built to learn the newest stack the hard way: design, code, payments, SEO and two languages, shipped to a live domain.">
+    <meta property="og:description" content="You cannot play football with two people. A community platform where every event has a minimum crowd — designed, built and shipped solo to a live domain.">
     <meta property="og:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
     <meta property="og:site_name" content="Louis Henrich">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Social Hub — Building a Full-Stack Community Platform Solo">
-    <meta name="twitter:description" content="Self-initiated product case study by Louis Henrich: React 19, tRPC, Drizzle, Supabase, Stripe Connect, bilingual by default.">
+    <meta name="twitter:description" content="Some hobbies need a crowd. A self-initiated product case study by Louis Henrich on building a platform where every event has a minimum — and cancels honestly if it misses.">
     <meta name="twitter:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CreativeWork",
       "name": "The Social Hub — Self-Initiated Product Case Study",
-      "description": "Designing and building The Social Hub, a bilingual community events platform with a minimum-attendance mechanic, from platform export to a live domain.",
+      "description": "Designing and building The Social Hub, a community platform for hobbies that need a crowd: every event carries a minimum attendance and cancels itself if the deadline passes without it.",
       "url": "https://louishenrich.com/pages/socialhub.html",
       "image": "https://louishenrich.com/images/socialhub/home-desktop.jpg",
       "author": { "@id": "https://louishenrich.com/#louis-henrich" },
@@ -83,20 +83,20 @@
                         <p class="sh-eyebrow">Self-initiated product · design, code and operations</p>
                         <h1 class="cs-title">The Social Hub</h1>
                         <p class="cs-subtitle">Plans that actually happen</p>
-                        <p class="cs-description">A community events platform with one stubborn rule: every event has a minimum crowd. If not enough people say yes before the deadline, the event cancels itself and nobody wastes their evening. I designed it, built it, deployed it, and broke it a few times on the way — alone, in public, on my own domain.</p>
+                        <p class="cs-description">Some things you simply cannot do on your own. The Social Hub helps people find the others who make their hobby possible — and it has one stubborn rule: every event has a minimum crowd. If not enough people say yes before the deadline, the event cancels itself, and nobody spends their Saturday standing in a park waiting for a team that was never going to show up.</p>
 
                         <div class="sh-meta-grid">
+                            <div>
+                                <span>For</span>
+                                Anyone who has moved city, changed jobs, or run out of friends who are free on a Saturday.
+                            </div>
                             <div>
                                 <span>Role</span>
                                 Everything. Product, design system, frontend, backend, database, payments, deployment.
                             </div>
                             <div>
-                                <span>Why</span>
-                                A private project to force myself through the newest stack end to end, with a real product as the exam.
-                            </div>
-                            <div>
-                                <span>Stack</span>
-                                React 19 · TypeScript · Hono + tRPC 11 · Drizzle ORM · Supabase Postgres · Stripe Connect
+                                <span>Why I built it</span>
+                                A private project to force myself through an unfamiliar stack end to end, with a real product as the exam.
                             </div>
                             <div>
                                 <span>Status</span>
@@ -129,6 +129,39 @@
                 </div>
             </header>
 
+            <!-- The human problem -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>You cannot play football with two people</h2>
+                </div>
+                <p class="cs-intro-text">Some hobbies have a floor. A football match needs about ten people. A board-game night needs four. A language exchange needs at least one person who speaks the other language. Below that number the activity does not get worse — it stops existing. And the people who feel that most are exactly the ones with the least room to fix it: you moved to a new city, or changed jobs, or your old crowd all have kids now, and the three friends you have left are busy on Saturday.</p>
+
+                <p class="cs-intro-text">What you need in that moment is not a bigger social network. It is seven more people who also want to play at three o'clock on Saturday, in the same part of town, this week. That is a very specific kind of matchmaking, and almost nobody builds for it — because it is much easier to build a platform where attendance is a number that goes up than one where attendance is a condition that has to be met.</p>
+
+                <div class="cs-kano-grid">
+                    <div class="cs-kano-card">
+                        <h3>Joining stops being a gamble</h3>
+                        <p class="cs-kano-subtitle">For the person who knows nobody</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Turning up alone to a thing that might not happen is a lot to ask of a stranger. Here you can see whether it is going to happen before you commit — and if it does not, it is cancelled properly instead of quietly shrinking to four awkward people in a park.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>Hosting stops being lonely</h3>
+                        <p class="cs-kano-subtitle">For the person with the idea</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The host says up front: this only works with ten. From then on everyone who has already said yes has a reason to invite one more person — the countdown is on their evening too. Recruiting stops being one person's unpaid job.</p>
+                    </div>
+                    <div class="cs-kano-card">
+                        <h3>The maybe disappears</h3>
+                        <p class="cs-kano-subtitle">For everyone</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Five people say maybe, two turn up, the host stops hosting. That is how hobby groups die. A deadline replaces the maybe with an answer, and a clean cancellation costs a group far less than a disappointing evening.</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p>The whole product is that one sentence, taken seriously: <strong>a gathering has a minimum crowd, and everybody can see how close it is.</strong> Everything else in this case study — the interface, the database, the payments, the two languages — exists to make that sentence true for a stranger on a phone.</p>
+                </div>
+            </section>
+
             <!-- Why -->
             <section class="cs-section">
                 <div class="cs-section-header">
@@ -139,14 +172,14 @@
 
                 <div class="cs-kano-grid cs-kano-grid--two">
                     <div class="cs-kano-card">
-                        <h3>The learning goal</h3>
-                        <p class="cs-kano-subtitle">Newest stack, no training wheels</p>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">React 19, Vite, tRPC 11 with end-to-end type safety, Drizzle ORM, a hosted Postgres, Stripe Connect, server-side SEO for a client-rendered app. Each of those is a blog post. Wiring all of them into one product that a stranger can use is a different exercise entirely.</p>
+                        <h3>The condition I set</h3>
+                        <p class="cs-kano-subtitle">Reachable, not demonstrable</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Anyone can make a screen look finished. A product only starts teaching you things when a stranger can reach it on a URL you do not control the network conditions of — so that was the bar, and everything below counts as the tuition I paid for it.</p>
                     </div>
                     <div class="cs-kano-card">
-                        <h3>The product goal</h3>
-                        <p class="cs-kano-subtitle">A mechanic worth building</p>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Every events platform has the same quiet failure: five people say maybe, two show up, the host stops hosting. A minimum crowd with a deadline turns that from an awkward evening into a clean cancellation — and gives everyone a reason to invite one more person.</p>
+                        <h3>Why this idea and not a to-do app</h3>
+                        <p class="cs-kano-subtitle">Real moving parts</p>
+                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Accounts, scheduling, money, two languages and search engines are the parts of a product that get built badly when nobody has felt the consequences. A minimum-crowd platform needs all five, which is precisely why I chose it over something comfortable.</p>
                     </div>
                 </div>
             </section>
