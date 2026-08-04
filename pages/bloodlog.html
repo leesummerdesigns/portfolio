@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=15">
+    <link rel="stylesheet" href="../css/style.css?v=18">
     <link rel="stylesheet" href="../css/theme.css?v=1">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
@@ -126,20 +126,40 @@
 
                 <p class="cs-intro-text">So the app has one job, and it is a hierarchy job. Out-of-range values come first, by name, with the distance from the range shown as a position on a bar rather than as a second number to hold in your head. Everything normal collapses into a category row you can open if you want it. A parameter you care about can be pinned and watched across tests.</p>
 
-                <div class="bl-shots bl-shots--three">
-                    <figure>
-                        <img loading="lazy" decoding="async" src="../images/bloodlog/dashboard.jpg" alt="Dashboard with health score ring and a Needs Attention grid, each card showing a value, a range bar and an Above or Below badge">
-                        <figcaption>Abnormal values are the first thing on the screen, colour-coded and sorted above everything else</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" decoding="async" src="../images/bloodlog/groups.jpg" alt="Parameter cards for the complete blood count above collapsed category rows for electrolytes, hormones and lipids">
-                        <figcaption>Everything in range collapses into category rows — closed by default, counted in the header</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" decoding="async" src="../images/bloodlog/ai-summary.jpg" alt="Expanded AI health overview paragraph followed by three numbered recommendations">
-                        <figcaption>A plain-language summary and a short list of actions, both expandable rather than always-on</figcaption>
-                    </figure>
-                </div>
+                <figure class="bl-anim">
+                    <div class="bl-anim-stage">
+                        <div class="bl-anim-phone">
+                            <div class="bl-anim-screen" role="img" aria-label="The BloodLog dashboard scrolling from the health score through the out-of-range parameter cards down to the collapsed category rows, then returning to the top where the AI Health Overview is tapped open to reveal a plain-language summary, followed by Recommendations opening to reveal three numbered action items.">
+                                <div class="bl-anim-scroll">
+                                    <img loading="lazy" decoding="async" width="800" height="271" src="../images/bloodlog/anim/head.jpg" alt="">
+                                    <img loading="lazy" decoding="async" width="800" height="178" src="../images/bloodlog/anim/score.jpg" alt="">
+                                    <div class="bl-anim-swap bl-anim-swap--ai">
+                                        <img class="is-closed" loading="lazy" decoding="async" width="800" height="96" src="../images/bloodlog/anim/ai-row-closed.jpg" alt="">
+                                        <img class="is-open" loading="lazy" decoding="async" width="800" height="96" src="../images/bloodlog/anim/ai-row-open.jpg" alt="">
+                                    </div>
+                                    <div class="bl-anim-reveal bl-anim-reveal--ai">
+                                        <img loading="lazy" decoding="async" width="800" height="385" src="../images/bloodlog/anim/ai-text.jpg" alt="">
+                                    </div>
+                                    <img loading="lazy" decoding="async" width="800" height="47" src="../images/bloodlog/anim/ai-cap.jpg" alt="">
+                                    <div class="bl-anim-swap bl-anim-swap--rec">
+                                        <img class="is-closed" loading="lazy" decoding="async" width="800" height="108" src="../images/bloodlog/anim/rec-closed.jpg" alt="">
+                                        <img class="is-open" loading="lazy" decoding="async" width="800" height="108" src="../images/bloodlog/anim/rec-open.jpg" alt="">
+                                    </div>
+                                    <div class="bl-anim-reveal bl-anim-reveal--rec">
+                                        <img loading="lazy" decoding="async" width="800" height="470" src="../images/bloodlog/anim/rec-items.jpg" alt="">
+                                    </div>
+                                    <img loading="lazy" decoding="async" width="800" height="40" src="../images/bloodlog/anim/rec-cap.jpg" alt="">
+                                    <img loading="lazy" decoding="async" width="800" height="622" src="../images/bloodlog/anim/needs.jpg" alt="">
+                                    <img loading="lazy" decoding="async" width="800" height="1235" src="../images/bloodlog/anim/more.jpg" alt="">
+                                </div>
+                                <img class="bl-anim-tabbar" loading="lazy" decoding="async" width="800" height="194" src="../images/bloodlog/anim/tabbar.jpg" alt="">
+                                <span class="bl-anim-tap bl-anim-tap--ai"></span>
+                                <span class="bl-anim-tap bl-anim-tap--rec"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>Out-of-range values sit at the top, everything in range folds into counted category rows, and the two AI panels stay shut until you ask for them.</figcaption>
+                </figure>
 
                 <div class="sh-callout">
                     <p>The screenshots run on demo data. Real results stay on the device in SwiftData and are never uploaded anywhere I control — which is also why the paywall and the analysis backend had to be designed around a payload that carries values but no identity.</p>
@@ -281,5 +301,19 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // The dashboard walkthrough loops forever; only let it run while it is on screen.
+        (function () {
+            var screen = document.querySelector('.bl-anim-screen');
+            if (!screen || !('IntersectionObserver' in window)) return;
+            var parts = screen.querySelectorAll('.bl-anim-scroll, .bl-anim-swap .is-open, .bl-anim-reveal, .bl-anim-tap');
+            new IntersectionObserver(function (entries) {
+                var state = entries[0].isIntersecting ? 'running' : 'paused';
+                Array.prototype.forEach.call(parts, function (el) {
+                    el.style.animationPlayState = state;
+                });
+            }, { rootMargin: '150px' }).observe(screen);
+        })();
+    </script>
 </body>
 </html>
