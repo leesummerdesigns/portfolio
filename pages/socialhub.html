@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=8">
+    <link rel="stylesheet" href="../css/style.css?v=9">
     <link rel="stylesheet" href="../css/theme.css?v=1">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
@@ -128,7 +128,7 @@
             <section class="cs-section">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
-                    <h2>You cannot play football with two people</h2>
+                    <h2>Because you cannot play a football match with two people</h2>
                 </div>
                 <p class="cs-intro-text">Some hobbies have a floor. A football match needs about ten people. A board-game night needs four. A language exchange needs at least one person who speaks the other language. Below that number the activity does not get worse — it stops existing. And the people who feel that most are exactly the ones with the least room to fix it: you moved to a new city, or changed jobs, or your old crowd all have kids now, and the three friends you have left are busy on Saturday.</p>
 
@@ -137,17 +137,14 @@
                 <div class="cs-kano-grid">
                     <div class="cs-kano-card">
                         <h3>Joining stops being a gamble</h3>
-                        <p class="cs-kano-subtitle">For the person who knows nobody</p>
                         <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Turning up alone to a thing that might not happen is a lot to ask of a stranger. Here you can see whether it is going to happen before you commit — and if it does not, it is cancelled properly instead of quietly shrinking to four awkward people in a park.</p>
                     </div>
                     <div class="cs-kano-card">
                         <h3>Hosting stops being lonely</h3>
-                        <p class="cs-kano-subtitle">For the person with the idea</p>
                         <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The host says up front: this only works with ten. From then on everyone who has already said yes has a reason to invite one more person — the countdown is on their evening too. Recruiting stops being one person's unpaid job.</p>
                     </div>
                     <div class="cs-kano-card">
                         <h3>The maybe disappears</h3>
-                        <p class="cs-kano-subtitle">For everyone</p>
                         <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Five people say maybe, two turn up, the host stops hosting. That is how hobby groups die. A deadline replaces the maybe with an answer, and a clean cancellation costs a group far less than a disappointing evening.</p>
                     </div>
                 </div>
@@ -233,37 +230,6 @@
                     <div class="cs-comparison-item">
                         <img class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/event-desktop.jpg" alt="Event detail page with the headline this event still needs nine people to happen, plus date, location and RSVP deadline">
                         <p class="cs-comparison-label">Deciding: the event page says exactly what is missing</p>
-                    </div>
-                </div>
-
-                <div class="sh-callout">
-                    <p>The threshold logic lives in one shared contract file used by both the server and the browser, and it deliberately returns translation <em>keys</em> rather than sentences. That single decision is why adding a second language later cost days instead of weeks — the rules never knew what language they were speaking.</p>
-                </div>
-            </section>
-
-            <!-- From export to owned repo -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>From a platform export to a repository I own</h2>
-                </div>
-                <p class="cs-intro-text">The first version was generated on an AI app platform. It looked finished, which is the most expensive kind of finished. Getting it off that platform was the first real week of work, and it is the part of the story I find most useful: everything that made it convenient there made it non-portable everywhere else.</p>
-
-                <div class="cs-kano-grid">
-                    <div class="cs-kano-card">
-                        <h3>Ripped out the platform login</h3>
-                        <p class="cs-kano-subtitle">Auth</p>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The hosted OAuth was welded to the platform. It came out completely and was replaced with signed JWT session cookies, scrypt password hashing, and later Google Sign-In verified server-side — because a Google button that renders proves nothing at all.</p>
-                    </div>
-                    <div class="cs-kano-card">
-                        <h3>Converted the schema to Postgres</h3>
-                        <p class="cs-kano-subtitle">Database</p>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">The schema was written in a MySQL dialect. Nine tables were rewritten for Postgres with Drizzle, raw SQL requoted, migrations generated, and demo data seeded so the thing had something to show while it was still empty.</p>
-                    </div>
-                    <div class="cs-kano-card">
-                        <h3>Made deployment boring</h3>
-                        <p class="cs-kano-subtitle">Infrastructure</p>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text);">Own private GitHub repo, Supabase Postgres in Frankfurt, a Render blueprint, push to main equals deploy. Boring is the goal: the interesting parts of a side project should be the product, not the release ritual.</p>
                     </div>
                 </div>
             </section>
@@ -382,23 +348,6 @@
                         <img loading="lazy" decoding="async" src="../images/socialhub/event-mobile.jpg" alt="Mobile event detail page with a fact card for date, location and attendance, and a fixed RSVP bar at the bottom">
                         <p class="cs-comparison-label">Event detail: facts consolidated, RSVP bar pinned in reach</p>
                     </figure>
-                </div>
-
-                <div class="cs-kano-grid cs-kano-grid--two" style="margin-top: 50px;">
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Every safe-area padding was worth nothing</h3>
-                        <p class="cs-kano-subtitle">iPhone only</p>
-                        <p>The viewport meta tag was missing <em>viewport-fit=cover</em>, which silently turns every safe-area inset in the project into zero. The carefully built RSVP bar was sitting underneath the home indicator on the exact devices it was designed for.</p>
-                    </div>
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Inputs zoomed in and never came back</h3>
-                        <p class="cs-kano-subtitle">iPhone only</p>
-                        <p>Form fields at 14 pixels make iOS Safari zoom the page on focus — and it does not zoom back out. Two lines of CSS, and a reminder that a narrow browser window is not a phone. Both bugs are invisible on a desktop at 375 pixels wide.</p>
-                    </div>
-                </div>
-
-                <div class="sh-callout">
-                    <p>Verification did not happen by squinting at screenshots. I measured it in the browser: zero overflowing elements, document width exactly 375 pixels, every filter segment inside the visible area. After the deploy I searched the delivered bundle on the live domain instead of trusting the build log — production is only correct when you have checked what actually shipped.</p>
                 </div>
 
                 <div class="sh-callout sh-callout--coral">
