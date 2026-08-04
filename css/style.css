@@ -6204,3 +6204,78 @@ ul {
         padding: 0 14px;
     }
 }
+
+/* ========================================
+   BloodLog Case Study
+   Reuses the .sh-* case-study structure and only swaps the palette
+   for the app's own dark/neon tokens.
+======================================== */
+.bl-case-study {
+    --hub-cream: #fafaf7;
+    --hub-sand: #ecece5;
+    --hub-ink: #0d0d0d;
+    --hub-ink-soft: #4a4a4a;
+    --hub-ink-faint: #8a8a85;
+    --hub-line: #e2e2dc;
+    --hub-violet: #4d7c0f;
+    --hub-violet-tint: #f3fce3;
+    --hub-coral: #ff8c00;
+    --hub-coral-tint: #fff2df;
+    --hub-gold: #a8ff3e;
+    --hub-green: #15803d;
+    --hub-green-bg: #e4f4e8;
+    --hub-amber: #d97706;
+}
+
+/* Three phone screens side by side */
+.bl-shots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px;
+    margin-top: 10px;
+}
+
+.bl-shots figure {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.bl-shots img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow:
+        0 36px 62px -20px rgba(13, 13, 13, 0.55),
+        0 12px 24px -8px rgba(13, 13, 13, 0.2);
+}
+
+.bl-shots figcaption {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+    color: var(--hub-ink-faint);
+    text-align: center;
+    margin-top: 18px;
+}
+
+@media (min-width: 700px) {
+    .bl-shots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bl-shots--three {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Hero glow retinted to BloodLog's own accents */
+.bl-case-study .sh-devices::before {
+    background: rgba(168, 255, 62, 0.32);
+}
+
+.bl-case-study .sh-devices::after {
+    background: rgba(124, 92, 246, 0.24);
+}

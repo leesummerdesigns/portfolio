@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>BloodLog — Designing and Shipping an iOS Health App Solo | Louis Henrich</title>
+    <meta name="description" content="Self-initiated iOS case study: BloodLog turns a lab PDF into something a patient can actually read. SwiftUI, SwiftData, on-device storage — researched, designed and built solo by Louis Henrich.">
+    <meta name="author" content="Louis Henrich">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://louishenrich.com/pages/bloodlog.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://louishenrich.com/pages/bloodlog.html">
+    <meta property="og:title" content="BloodLog — Designing and Shipping an iOS Health App Solo">
+    <meta property="og:description" content="A lab report tells you 38 numbers and nothing else. BloodLog turns it into a reading. An iOS case study in SwiftUI and SwiftData, built end to end by one person.">
+    <meta property="og:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
+    <meta property="og:site_name" content="Louis Henrich">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BloodLog — Designing and Shipping an iOS Health App Solo">
+    <meta name="twitter:description" content="Turning a lab PDF into something a patient can read. SwiftUI, SwiftData, shipped to the App Store by one person.">
+    <meta name="twitter:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "BloodLog — iOS Health App Case Study",
+      "description": "Designing and building BloodLog, an iOS app that turns a blood test PDF into a readable, trackable health record. Built solo in SwiftUI and SwiftData with on-device storage.",
+      "url": "https://louishenrich.com/pages/bloodlog.html",
+      "image": "https://louishenrich.com/images/bloodlog/dashboard.jpg",
+      "author": { "@id": "https://louishenrich.com/#louis-henrich" },
+      "datePublished": "2026-08-04",
+      "dateModified": "2026-08-04",
+      "about": ["iOS Development", "SwiftUI", "Product Design", "Health Technology", "Mobile UX", "Information Design"]
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css?v=13">
+    <link rel="stylesheet" href="../css/theme.css?v=1">
+    <link rel="icon" type="image/png" href="../images/favico_lh.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Case Studies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page sh-case-study bl-case-study">
+        <div class="container">
+            <!-- Hero -->
+            <header class="cs-header cs-header-hero sh-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <p class="sh-eyebrow">Self-initiated product · iOS, design and development</p>
+                        <h1 class="cs-title">BloodLog</h1>
+                        <p class="cs-subtitle">A lab report you can actually read</p>
+                        <p class="cs-description">A blood test comes back as a PDF with thirty-eight numbers, a reference range in six-point type, and no indication of which of them matter. BloodLog takes that file and turns it into a reading: what is out of range, by how much, and whether it is moving. I built it to get properly fluent in Swift and the Apple toolchain — research, product decisions, design system and code, all solo.</p>
+
+                        <dl class="sh-facts">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Everything — research, product, design system, SwiftUI, data layer, App Store submission.</dd>
+                            </div>
+                            <div>
+                                <dt>Why</dt>
+                                <dd>To stop briefing iOS engineers from the outside and learn what the constraints actually feel like.</dd>
+                            </div>
+                            <div>
+                                <dt>Platform</dt>
+                                <dd>iOS · SwiftUI · SwiftData · dark interface only.</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Live on the App Store. V2 approved July 2026.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="cs-hero-right">
+                        <div class="sh-devices">
+                            <div class="sh-phone" style="position: static; width: 62%; margin: 0 auto;">
+                                <span class="sh-phone-screen">
+                                    <img loading="eager" decoding="async" fetchpriority="high" src="../images/bloodlog/dashboard.jpg" alt="BloodLog dashboard: a health score ring reading 84% normal, a collapsed AI summary, and a Needs Attention grid of out-of-range parameters">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- The problem -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>The information design problem</h2>
+                </div>
+                <p class="cs-intro-text">A lab report is optimised for the doctor who ordered it, not the person it describes. It is a flat table: every parameter given equal weight, ranges printed next to values with no visual relationship between the two, and no memory of the last test. The patient reads it once, understands roughly none of it, and files it. Three months later the next one arrives and the comparison that would actually be informative never happens.</p>
+
+                <p class="cs-intro-text">So the app has one job, and it is a hierarchy job. Out-of-range values come first, by name, with the distance from the range shown as a position on a bar rather than as a second number to hold in your head. Everything normal collapses into a category row you can open if you want it. A parameter you care about can be pinned and watched across tests.</p>
+
+                <div class="bl-shots bl-shots--three">
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/dashboard.jpg" alt="Dashboard with health score ring and a Needs Attention grid, each card showing a value, a range bar and an Above or Below badge">
+                        <figcaption>Abnormal values are the first thing on the screen, colour-coded and sorted above everything else</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/groups.jpg" alt="Parameter cards for the complete blood count above collapsed category rows for electrolytes, hormones and lipids">
+                        <figcaption>Everything in range collapses into category rows — closed by default, counted in the header</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/ai-summary.jpg" alt="Expanded AI health overview paragraph followed by three numbered recommendations">
+                        <figcaption>A plain-language summary and a short list of actions, both expandable rather than always-on</figcaption>
+                    </figure>
+                </div>
+
+                <div class="sh-callout">
+                    <p>The screenshots run on demo data. Real results stay on the device in SwiftData and are never uploaded anywhere I control — which is also why the paywall and the analysis backend had to be designed around a payload that carries values but no identity.</p>
+                </div>
+            </section>
+
+            <!-- The rebuild -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Two complaints that rebuilt the app</h2>
+                </div>
+                <p class="cs-intro-text">V1 shipped and two pieces of feedback came back: deleting a test did not work, and scrolling through the parameters was miserable. Both turned out to be my own cleverness rather than missing features, and both were worth the rewrite.</p>
+
+                <div class="cs-kano-grid cs-kano-grid--two">
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>The delete gesture nobody could find</h3>
+                        <p class="cs-kano-subtitle">Roughly ninety lines, deleted</p>
+                        <p>I had built a custom swipe-to-delete: a three-layer ZStack, a DragGesture, and <em>allowsHitTesting</em> juggling. It was disabled while a folder was open — and the newest folder is always open, so for most people there was no delete at all. The gesture that did work fought the scroll view and jittered. It came out and was replaced by a visible ⋯ menu in the folder header, plus a five-second undo toast that hides the row immediately and only commits the delete when the timer runs out.</p>
+                    </div>
+                    <div class="cs-kano-card sh-bug-card">
+                        <h3>Forty cards in a flat grid</h3>
+                        <p class="cs-kano-subtitle">Scrolling as a symptom</p>
+                        <p>"Scrolling is annoying" was a hierarchy complaint wearing a scrolling costume. Forty-plus parameter cards were rendered in one flat grid with no ranking, so finding the two that mattered meant reading all of them. Grouping them into Needs Attention plus collapsed categories removed most of the scroll entirely. Collapsing now also holds its position — a ScrollViewReader scrolls back to the folder ID instead of letting the list jump.</p>
+                    </div>
+                </div>
+
+                <p class="cs-intro-text" style="margin-top: 46px;">The third fix was smaller and more embarrassing. Submitting a test dismissed the sheet before the analysis ran, so every backend error was raised into a view that no longer existed. Failures looked like nothing happening. The error now surfaces as a banner on the dashboard with a retry button attached, which is the only place the user is actually looking.</p>
+            </section>
+
+            <!-- Detail and tracking -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>One value, in context and over time</h2>
+                </div>
+                <p class="cs-intro-text">Tapping a parameter is where the app earns its place over the PDF. The gauge puts the reading inside its reference range instead of beside it, so "47.1" and "43 – 49" become one shape rather than two numbers. Below it, the same value across previous tests. Below that, a plain description of what the marker is — served by the analysis backend, with a local dictionary of sixty-odd parameters as the fallback so the screen is never empty offline.</p>
+
+                <div class="bl-shots">
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/parameter-detail.jpg" alt="Parameter detail sheet: a semicircular gauge showing the value inside its reference range, a change-over-time chart, and an explanatory description">
+                        <figcaption>Parameter detail — a sheet with detents and a drag indicator, not a full-screen dead end</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/tracking.jpg" alt="Tracking tab with selectable parameter chips and a line chart showing hemoglobin across two tests with min and max reference lines">
+                        <figcaption>Tracking — pinned parameters, with the reference band drawn into the chart</figcaption>
+                    </figure>
+                </div>
+
+                <div class="sh-callout sh-callout--coral">
+                    <p><strong>A navigation decision worth naming.</strong> Parameter detail was originally a <em>fullScreenCover</em> with a back arrow, which reads as a page you have travelled to and must travel back from. Swapping it for a sheet with detents made it a glance you dismiss — one swipe, no aiming at a target in the top-left corner. Same content, considerably less friction, and it is the change people noticed most.</p>
+                </div>
+            </section>
+
+            <!-- Build -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>How it is built</h2>
+                </div>
+                <p class="cs-intro-text">SwiftUI throughout, SwiftData for persistence, and a single theme file holding every colour, radius and type step so the V2 dark redesign was a token change rather than a repaint of each screen. Analysis runs on a small serverless endpoint; everything else, including the entire history, stays on the phone. StoreKit handles the subscription, with the first test free.</p>
+
+                <div class="sh-arch">
+                    <div class="sh-arch-row">
+                        <div class="sh-arch-node">
+                            <span class="sh-arch-kicker">On the phone</span>
+                            <strong>SwiftUI</strong>
+                            <ul>
+                                <li>One theme file, dark only</li>
+                                <li>Four tabs and a floating action button</li>
+                                <li>Charts drawn with Swift Charts</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>stored locally</span></div>
+                        <div class="sh-arch-node sh-arch-node--server">
+                            <span class="sh-arch-kicker">Never leaves the device</span>
+                            <strong>SwiftData</strong>
+                            <ul>
+                                <li>Tests, parameters and ranges</li>
+                                <li>Soft delete behind the undo toast</li>
+                                <li>No account, no sync, no server copy</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>values only</span></div>
+                        <div class="sh-arch-node sh-arch-node--data">
+                            <span class="sh-arch-kicker">Serverless</span>
+                            <strong>Analysis</strong>
+                            <ul>
+                                <li>Summary and recommendations</li>
+                                <li>Comparison briefing between tests</li>
+                                <li>Local descriptions as fallback</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sh-arch-shared">
+                        <span>What I actually learned</span>
+                        That most of the difficulty in a small app is not the language. It is state that outlives the view that owns it, gestures competing for the same pixels, and error paths that render into screens the user has already dismissed. None of that is visible from a design file.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="socialhub.html">
+                    <span>Previous</span>
+                    The Social Hub
+                </a>
+                <a href="smg.html">
+                    <span>Next</span>
+                    SMG · Tomodachi
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's have a coffee and talk about your idea</h2>
+            <a href="mailto:leesummerdesigns@gmail.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart">
+            <p>&copy; Louis Henrich - 2026</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
