@@ -44,9 +44,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css?v=12">
     <link rel="stylesheet" href="../css/theme.css?v=1">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
+    <style>
+      /* Live threshold demo card (ported from thesocialhub/threshold-demo.html, scoped) */
+      #sh-threshold-demo{
+        --hub-ink:#221C2B; --hub-ink-soft:#5C5468; --hub-line:#EAE0D4;
+        --hub-sand:#F3EBE0; --hub-violet:#6C4CF1;
+        --amber:#D97706; --amber-bg:#FDF0DC; --green:#15803D; --green-bg:#E2F4E8;
+        width:100%; max-width:360px; margin:0 auto;
+        font-family:'Manrope',sans-serif; text-align:left;
+      }
+      #sh-threshold-demo .card{width:100%; background:#fff; border:1px solid var(--hub-line); border-radius:20px; overflow:hidden;
+        box-shadow:0 12px 32px -12px rgba(34,28,43,.18)}
+      #sh-threshold-demo .card-media{position:relative; margin:8px 8px 0; border-radius:16px; overflow:hidden}
+      #sh-threshold-demo .card-media img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+      #sh-threshold-demo .badge-stack{position:absolute; left:10px; top:10px}
+      #sh-threshold-demo .badge{display:inline-flex; align-items:center; gap:6px; border-radius:9999px; padding:4px 10px; font-size:12px; font-weight:700}
+      #sh-threshold-demo .badge svg{width:12px; height:12px}
+      #sh-threshold-demo .badge-amber{background:var(--amber-bg); color:var(--amber)}
+      #sh-threshold-demo .badge-green{background:var(--green-bg); color:var(--green)}
+      #sh-threshold-demo [data-demo="badge-2"], #sh-threshold-demo [data-demo="badge-3"]{position:absolute; left:0; top:0; opacity:0}
+      #sh-threshold-demo .confetti{position:absolute; left:50%; top:50%; width:6px; height:6px; border-radius:9999px; opacity:0}
+      #sh-threshold-demo .date-chip{position:absolute; bottom:10px; left:10px; background:#fff; border-radius:9999px; padding:4px 10px;
+        font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:var(--hub-ink); box-shadow:0 2px 8px rgba(34,28,43,.12)}
+      #sh-threshold-demo .card-body{display:flex; flex-direction:column; gap:6px; padding:12px 16px}
+      #sh-threshold-demo .card-cat{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--hub-violet)}
+      #sh-threshold-demo .card-title{font-family:'Bricolage Grotesque',sans-serif; font-size:20px; font-weight:600; letter-spacing:-.01em; color:var(--hub-ink); margin:0}
+      #sh-threshold-demo .card-group{font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .avatar-row{display:flex; align-items:center; margin-top:6px}
+      #sh-threshold-demo .avatar{display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:9999px;
+        font-size:11px; font-weight:700; color:#fff; box-shadow:0 0 0 2px #fff; flex-shrink:0}
+      #sh-threshold-demo .going{margin-left:8px; font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .card-foot{border-top:1px solid var(--hub-line); padding:12px 16px}
+      #sh-threshold-demo .foot-row{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+      #sh-threshold-demo .counter{font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--hub-ink)}
+      #sh-threshold-demo .deadline{display:inline-flex; align-items:center; gap:6px; background:var(--hub-sand); border-radius:9999px; padding:4px 10px;
+        font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .deadline svg{width:14px; height:14px}
+      #sh-threshold-demo .track{height:6px; width:100%; border-radius:9999px; background:var(--hub-sand); overflow:hidden}
+      #sh-threshold-demo .bar{height:100%; width:37.5%; border-radius:9999px; background:var(--amber)}
+      #sh-threshold-demo .hidden{display:none}
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -140,7 +181,37 @@
                         <p>Turning up alone to a thing that might not happen is a lot to ask of a stranger. Here you can see whether it is going to happen before you commit — and if it does not, it is cancelled properly instead of quietly shrinking to four awkward people in a park.</p>
                     </div>
                     <div class="sh-collage-media">
-                        <img class="sh-live-demo-gif" loading="lazy" src="../images/socialhub/threshold-demo.gif" alt="Screen recording from joinsocialhub.app: an event card animating from 'Needs 3 more' through a filling progress bar to full, confirmed and celebrating with confetti">
+                        <div class="sh-threshold-demo" id="sh-threshold-demo" role="img" aria-label="Live demo of a Social Hub event card: the attendee count rises from 3 of 8 to full, the badge flips from 'Needs 5 more' to 'Happening' and confetti celebrates">
+<div class="card">
+    <div class="card-media">
+      <img src="../images/socialhub/threshold-demo-card.jpg" alt="Saturday Sunrise Hike" />
+      <div class="badge-stack">
+        <span class="badge badge-amber" data-demo="badge-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Needs 5 more</span>
+        <span class="badge badge-amber" data-demo="badge-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Needs 3 more</span>
+        <span class="badge badge-green" data-demo="badge-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Happening</span>
+        <span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span>
+      </div>
+      <span class="date-chip">SAT &middot; 7:00 AM</span>
+    </div>
+    <div class="card-body">
+      <span class="card-cat">Outdoors</span>
+      <h3 class="card-title">Saturday Sunrise Hike</h3>
+      <span class="card-group">Trail Mix Hiking Crew</span>
+      <span class="avatar-row"><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#6C4CF1,#9D86F7);margin-left:0">IR</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#FF7A59,#FFAB90);margin-left:-9px">TB</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#E8B04B,#F2CD8A);margin-left:-9px">AB</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#5537D6,#FF7A59);margin-left:-9px">MS</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#D97706,#E8B04B);margin-left:-9px">JL</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#6C4CF1,#FF7A59);margin-left:-9px">PN</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#15803D,#7BC98F);margin-left:-9px">HS</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#8B7BD8,#E8B04B);margin-left:-9px">LF</span><span class="going"><span data-demo="count">3</span> going</span></span>
+    </div>
+    <div class="card-foot">
+      <div class="foot-row">
+        <span class="counter">
+          <span data-demo="counter-1">3 of 8 needed</span><span data-demo="counter-2" class="hidden">5 of 8 needed</span><span data-demo="counter-3" class="hidden">8 of 8 minimum</span>
+        </span>
+        <span class="deadline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span data-demo="deadline-1">Closes in 2d</span><span data-demo="deadline-2" class="hidden">Closes in 1d</span><span data-demo="deadline-3" class="hidden">Closes tonight</span>
+        </span>
+      </div>
+      <div class="track"><div class="bar" data-demo="bar"></div></div>
+    </div>
+  </div>
+                        </div>
                     </div>
                     <div class="sh-collage-card sh-collage-left">
                         <h3>Hosting stops being lonely</h3>
@@ -365,6 +436,56 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var root = document.getElementById('sh-threshold-demo');
+      if (!root || !window.gsap) return;
+      var q = function (sel) { return Array.prototype.slice.call(root.querySelectorAll(sel)); };
+
+      var tl = gsap.timeline({ repeat: -1, repeatDelay: 1.6, defaults: { ease: 'power1.inOut' } });
+
+      // phase 1: bar fills to 62.5%, avatars 4-5 arrive
+      tl.to(q('[data-demo="bar"]'), { width: '62.5%', duration: 2.2 }, 0.4);
+      q('[data-demo="avatar"]').forEach(function (el, i) {
+        if (i < 3) return;
+        var at = i < 5 ? 1.4 + (i - 3) * 0.35 : 6.8 + (i - 5) * 0.35;
+        tl.fromTo(el, { scale: 0 }, { scale: 1, duration: 0.4, ease: 'back.out(2.5)' }, at);
+      });
+
+      // t=3: 5 of 8, deadline shortens, badge updates
+      tl.set(q('[data-demo="counter-1"]'), { display: 'none' }, 3);
+      tl.set(q('[data-demo="counter-2"]'), { display: 'inline' }, 3);
+      tl.set(q('[data-demo="count"]'), { innerText: '5' }, 3);
+      tl.set(q('[data-demo="deadline-1"]'), { display: 'none' }, 3);
+      tl.set(q('[data-demo="deadline-2"]'), { display: 'inline' }, 3);
+      tl.to(q('[data-demo="badge-1"]'), { opacity: 0, duration: 0.25 }, 3);
+      tl.fromTo(q('[data-demo="badge-2"]'), { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)' }, 3.1);
+
+      // t=6.4: last call, bar to 100%
+      tl.set(q('[data-demo="deadline-2"]'), { display: 'none' }, 6.4);
+      tl.set(q('[data-demo="deadline-3"]'), { display: 'inline' }, 6.4);
+      tl.to(q('[data-demo="bar"]'), { width: '100%', duration: 2.2 }, 6.8);
+
+      // t=9: the flip — green, badge pop, confetti
+      tl.to(q('[data-demo="bar"]'), { backgroundColor: '#15803D', duration: 0.2 }, 9);
+      tl.set(q('[data-demo="counter-2"]'), { display: 'none' }, 9);
+      tl.set(q('[data-demo="counter-3"]'), { display: 'inline' }, 9);
+      tl.set(q('[data-demo="count"]'), { innerText: '8' }, 9);
+      tl.to(q('[data-demo="badge-2"]'), { opacity: 0, duration: 0.25 }, 9);
+      tl.fromTo(q('[data-demo="badge-3"]'), { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)' }, 9.1);
+      tl.set(q('[data-demo="confetti"]'), { opacity: 1 }, 9);
+      q('[data-demo="confetti"]').forEach(function (el, i) {
+        var angle = (i / 24) * Math.PI * 2 + (i % 5) * 0.13;
+        var dist = 34 + ((i * 17) % 40);
+        tl.to(el, { x: Math.cos(angle) * dist, y: Math.sin(angle) * dist - 10, opacity: 0, scale: 0.4, duration: 0.9, ease: 'power1.out' }, 9);
+      });
+      tl.set(q('[data-demo="confetti"]'), { opacity: 0 }, 10.2);
+
+      tl.to({}, { duration: 0.1 }, 11);
+    })();
+    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>
