@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=6">
+    <link rel="stylesheet" href="../css/style.css?v=7">
     <link rel="stylesheet" href="../css/theme.css?v=1">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
@@ -85,46 +85,42 @@
                         <p class="cs-subtitle">Plans that actually happen</p>
                         <p class="cs-description">Some things you simply cannot do on your own. The Social Hub helps people find the others who make their hobby possible — and it has one stubborn rule: every event has a minimum crowd. If not enough people say yes before the deadline, the event cancels itself, and nobody spends their Saturday standing in a park waiting for a team that was never going to show up.</p>
 
-                        <div class="sh-meta-grid">
+                        <dl class="sh-facts">
                             <div>
-                                <span>For</span>
-                                Anyone who has moved city, changed jobs, or run out of friends who are free on a Saturday.
+                                <dt>For</dt>
+                                <dd>Anyone who has moved city, changed jobs, or run out of friends who are free on a Saturday.</dd>
                             </div>
                             <div>
-                                <span>Role</span>
-                                Everything. Product, design system, frontend, backend, database, payments, deployment.
+                                <dt>Role</dt>
+                                <dd>Everything — product, design system, frontend, backend, database, payments, deployment.</dd>
                             </div>
                             <div>
-                                <span>Why I built it</span>
-                                A private project to force myself through an unfamiliar stack end to end, with a real product as the exam.
+                                <dt>Why</dt>
+                                <dd>A private project to force myself through an unfamiliar stack end to end, with a real product as the exam.</dd>
                             </div>
                             <div>
-                                <span>Status</span>
-                                Live at joinsocialhub.app · bilingual · running on demo seed data before launch
+                                <dt>Status</dt>
+                                <dd>Live at joinsocialhub.app · bilingual · demo seed data before launch.</dd>
                             </div>
-                        </div>
+                        </dl>
                     </div>
                     <div class="cs-hero-right">
-                        <img class="sh-shot cs-media--framed" loading="eager" decoding="async" fetchpriority="high" src="../images/socialhub/home-desktop.jpg" alt="The Social Hub home page: German hero headline, search bar and tilted event cards showing how many people are still missing">
-                    </div>
-                </div>
-
-                <div class="sh-stat-strip">
-                    <div class="sh-stat">
-                        <strong>1</strong>
-                        <span>person on the project</span>
-                    </div>
-                    <div class="sh-stat">
-                        <strong>9</strong>
-                        <span>Postgres tables behind it</span>
-                    </div>
-                    <div class="sh-stat">
-                        <strong>2</strong>
-                        <span>languages shipped</span>
-                    </div>
-                    <div class="sh-stat">
-                        <strong>5</strong>
-                        <span>days from export to live URL</span>
+                        <div class="sh-devices">
+                            <div class="sh-laptop">
+                                <div class="sh-laptop-lid">
+                                    <span class="sh-laptop-screen">
+                                        <img loading="eager" decoding="async" fetchpriority="high" src="../images/socialhub/home-desktop.jpg" alt="The Social Hub home page on a laptop: German hero headline, search bar and tilted event cards showing how many people are still missing">
+                                    </span>
+                                </div>
+                                <div class="sh-laptop-base"></div>
+                            </div>
+                            <div class="sh-phone">
+                                <span class="sh-phone-screen">
+                                    <img loading="eager" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The same home page on a phone, with a condensed hero and stacked search fields">
+                                </span>
+                            </div>
+                        </div>
+                        <p class="sh-devices-caption">One product, two shells — the phone is not the desktop made narrow</p>
                     </div>
                 </div>
             </header>
@@ -157,8 +153,46 @@
                     </div>
                 </div>
 
+                <div class="sh-threshold">
+                    <div class="sh-threshold-card">
+                        <span class="sh-threshold-label">Thursday · five-a-side</span>
+                        <div class="sh-dots" role="img" aria-label="Six of ten places filled">
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="sh-meter"><i style="width: 60%;"></i></div>
+                        <p class="sh-threshold-state">6 of 10 · needs 4 more · closes Wednesday</p>
+                    </div>
+                    <div class="sh-threshold-arrow" aria-hidden="true">→</div>
+                    <div class="sh-threshold-card is-go">
+                        <span class="sh-threshold-label">Thursday · five-a-side</span>
+                        <div class="sh-dots" role="img" aria-label="All ten places filled">
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                        </div>
+                        <div class="sh-meter"><i style="width: 100%;"></i></div>
+                        <p class="sh-threshold-state">10 of 10 · the match is on</p>
+                    </div>
+                </div>
+
                 <div class="sh-callout">
-                    <p>The whole product is that one sentence, taken seriously: <strong>a gathering has a minimum crowd, and everybody can see how close it is.</strong> Everything else in this case study — the interface, the database, the payments, the two languages — exists to make that sentence true for a stranger on a phone.</p>
+                    <p>The whole product is that one sentence, taken seriously: <strong>a gathering has a minimum crowd, and everybody can see how close it is.</strong> Everything else in this case study — the interface, the database, the payments — exists to make that sentence true for a stranger on a phone.</p>
                 </div>
             </section>
 
@@ -241,87 +275,48 @@
                     <span class="cs-section-line"></span>
                     <h2>How it is built</h2>
                 </div>
-                <div class="cs-two-column">
-                    <div class="cs-column">
-                        <p>Client and server are one TypeScript project and one Node process. The browser calls tRPC procedures directly, so a renamed field in the database surfaces as a red squiggle in a React component rather than as a runtime surprise in production. There is no separate API contract to keep in sync, because there is no separate API contract.</p>
-                        <p>The interface is built on a token-driven component layer — shadcn/ui primitives on Tailwind, with motion handled centrally so animation stays consistent instead of being reinvented per screen. Old habits: I gave a personal project a design system, and it paid for itself the first time the mobile shell needed rebuilding.</p>
-                        <p>Shared business rules — thresholds, deadlines, filter logic — sit in a <em>contracts</em> folder imported by both sides. One implementation, two runtimes, no drift.</p>
-                    </div>
-                    <div class="cs-column">
-                        <div class="sh-stack">
-                            <div class="sh-stack-tier">
-                                <span class="sh-stack-label">Client</span>
-                                <div class="sh-stack-items">
-                                    <span>React 19</span>
-                                    <span>TypeScript</span>
-                                    <span>Vite 7</span>
-                                    <span>Tailwind</span>
-                                    <span>shadcn/ui</span>
-                                    <span>Framer Motion</span>
-                                    <span>i18next</span>
-                                </div>
-                            </div>
-                            <div class="sh-stack-tier">
-                                <span class="sh-stack-label">Server · same Node process</span>
-                                <div class="sh-stack-items">
-                                    <span>Hono</span>
-                                    <span>tRPC 11</span>
-                                    <span>JWT sessions</span>
-                                    <span>Google Identity</span>
-                                    <span>Stripe Connect</span>
-                                    <span>SEO injection</span>
-                                    <span>hourly cleanup job</span>
-                                </div>
-                            </div>
-                            <div class="sh-stack-tier sh-stack-tier--data">
-                                <span class="sh-stack-label">Data &amp; delivery</span>
-                                <div class="sh-stack-items">
-                                    <span>Drizzle ORM</span>
-                                    <span>Supabase Postgres</span>
-                                    <span>9 tables</span>
-                                    <span>Render (Frankfurt)</span>
-                                    <span>push to main = deploy</span>
-                                </div>
-                            </div>
+                <p class="cs-intro-text">Client and server are one TypeScript project running as one process. The browser calls server procedures directly, so a renamed database field turns into a red squiggle in a React component instead of a runtime surprise in production. There is no separate API contract to keep in sync, because there is no separate API contract.</p>
+
+                <div class="sh-arch">
+                    <div class="sh-arch-row">
+                        <div class="sh-arch-node">
+                            <span class="sh-arch-kicker">In the browser</span>
+                            <strong>React interface</strong>
+                            <ul>
+                                <li>One token-driven component system</li>
+                                <li>Separate desktop and mobile shells</li>
+                                <li>German and English from the same screens</li>
+                            </ul>
                         </div>
-                        <p class="sh-stack-note">Shared contracts sit between client and server — one rulebook, imported twice.</p>
+                        <div class="sh-arch-link" aria-hidden="true"><span>typed calls</span></div>
+                        <div class="sh-arch-node sh-arch-node--server">
+                            <span class="sh-arch-kicker">One Node process</span>
+                            <strong>Hono + tRPC</strong>
+                            <ul>
+                                <li>Sessions, email and Google sign-in</li>
+                                <li>Payments, built and dormant</li>
+                                <li>Housekeeping on an hourly job</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>queries</span></div>
+                        <div class="sh-arch-node sh-arch-node--data">
+                            <span class="sh-arch-kicker">Hosted in Frankfurt</span>
+                            <strong>Postgres</strong>
+                            <ul>
+                                <li>Drizzle ORM, nine tables</li>
+                                <li>Generated, reviewable migrations</li>
+                                <li>Push to main deploys the lot</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Bugs -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>The bugs that turned it into a product</h2>
-                </div>
-                <p class="cs-intro-text">A side project becomes a real product the moment it starts failing in ways your laptop cannot reproduce. These are the four I keep telling people about, because each one was invisible locally and expensive in production.</p>
-
-                <div class="cs-kano-grid cs-kano-grid--two">
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Half the traffic vanished</h3>
-                        <p class="cs-kano-subtitle">Symptom: randomly broken images</p>
-                        <p>The server bound to an IPv6 socket instead of <em>0.0.0.0</em>, so the host's proxy quietly discarded roughly half of all requests. Locally it was invisible, because macOS resolves both stacks happily. The visible symptom was images failing at random — the kind of bug you blame on the CDN, the browser and your own eyesight before you blame the socket.</p>
-                    </div>
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Google was about to be told the site lives on localhost</h3>
-                        <p class="cs-kano-subtitle">Symptom: none, until it is too late</p>
-                        <p>While wiring canonical URLs for the domain move I found the public URL falling back to <em>http://localhost:3000</em>. One deploy without the environment variable set would have published localhost as the canonical, in every Open Graph tag and across the whole sitemap. Caught the day before the move; the production default is now the real domain.</p>
-                    </div>
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>A fake event could have collected the money</h3>
-                        <p class="cs-kano-subtitle">Symptom: a passing test suite</p>
-                        <p>Payouts were released when the start date had passed — not when the event had actually taken place. Create an event, let the calendar do its thing, get paid. Now release depends on the event ending, a holding period, no open report and no cancellation. Found while writing the payment flow, before a single real franc touched it.</p>
-                    </div>
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Housekeeping was deleting the evidence</h3>
-                        <p class="cs-kano-subtitle">Symptom: a tidy database</p>
-                        <p>A cleanup job hard-deleted bookings a day after their deadline. Harmless with demo data; with real payments it would have destroyed refund proof and chargeback records that Swiss law expects you to keep for ten years. Replaced with a soft delete. "Tidy" is not a requirement — retrievable is.</p>
+                    <div class="sh-arch-shared">
+                        <span>Shared contracts</span>
+                        Thresholds, deadlines and filter logic live in one folder imported by both sides. One implementation, two runtimes — the server can never enforce a rule the interface does not show.
                     </div>
                 </div>
 
-                <div class="sh-callout">
-                    <p><strong>Honourable mention.</strong> One server file contained a real NUL byte used to mask HTML comments. It worked perfectly, and it made every tool treat the file as binary — so <em>grep</em> returned nothing at all instead of complaining. I lost a good half hour to a file that was lying by staying silent.</p>
+                <div class="sh-callout sh-callout--coral">
+                    <p>The part I did not expect to matter: I gave a personal project a proper design system, out of habit. It paid for itself the first time the entire mobile experience had to be rebuilt — the rebuild was a layout problem, not a repainting job.</p>
                 </div>
             </section>
 
@@ -331,66 +326,42 @@
                     <span class="cs-section-line"></span>
                     <h2>Money I deliberately never hold</h2>
                 </div>
-                <div class="cs-two-column">
+                <p class="cs-intro-text">Paid events meant deciding where ticket money sits between purchase and event. The comfortable answer is "our account". The correct answer, in Switzerland, is nowhere near it: holding other people's money can count as taking deposits or as financial intermediation, and that is a regulated activity with a regulator attached. So the money never lands anywhere I control.</p>
+
+                <div class="sh-money">
+                    <div class="sh-money-step">
+                        <span>Step 01</span>
+                        <strong>Buyer pays</strong>
+                        <p>Charged on the platform account through a hosted card field, so raw card numbers never touch my own pages.</p>
+                    </div>
+                    <div class="sh-money-rail" aria-hidden="true">→</div>
+                    <div class="sh-money-step is-hold">
+                        <span>Step 02</span>
+                        <strong>Held by the provider</strong>
+                        <p>The funds sit in the payment provider's balance — never on a Social Hub bank account. The regulated party stays the provider.</p>
+                    </div>
+                    <div class="sh-money-rail" aria-hidden="true">→</div>
+                    <div class="sh-money-outs">
+                        <div class="sh-money-out is-refund">
+                            <strong>Refunded</strong>
+                            <p>The event missed its minimum, was cancelled, or a participant filed a report.</p>
+                        </div>
+                        <div class="sh-money-out is-payout">
+                            <strong>Paid out</strong>
+                            <p>Only after the event ended, a holding period passed, and nothing was disputed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-two-column" style="margin-top: 46px;">
                     <div class="cs-column">
-                        <p>Paid events meant deciding where ticket money sits between purchase and event. The comfortable answer is "our account". The correct answer, in Switzerland, is nowhere near it: holding other people's money can count as taking deposits or as financial intermediation, and that is a regulated activity with a regulator attached.</p>
-                        <p>So the architecture is <em>separate charges and transfers</em>. Buyers are charged on the platform account, the funds stay in the payment provider's balance, and they only ever move in two directions: refunded to the buyer, or transferred to the organiser after the event has actually happened. The regulated party stays the payment provider.</p>
-                        <p>Three invariants hold the whole thing together: only a signed webhook can turn a booking into a paid ticket, the demo checkout disables itself the moment real keys exist, and every operation is idempotent because webhooks arrive more than once. The card form itself was replaced with a hosted payment element, so raw card numbers never touch my DOM.</p>
+                        <p>Three invariants hold the whole thing together: only a signed webhook can turn a booking into a paid ticket, the demo checkout disables itself the moment real keys exist, and every operation is idempotent, because webhooks arrive more than once and a payment system that double-counts is worse than one that does not run at all.</p>
                     </div>
                     <div class="cs-column">
                         <div class="sh-callout" style="margin-top: 0;">
                             <p><strong>Built, then switched off.</strong> The entire payment layer — onboarding, payment intents, signed webhooks, refunds, payout batches, dispute reporting — ships in the codebase and stays dormant without a secret key. Until the company registration number comes through, the platform runs a clearly labelled demo checkout instead.</p>
-                            <p>Shipping a finished feature in the off position is an underrated move. The alternative is a half-built integration that has to be remembered six weeks later.</p>
+                            <p>Shipping a finished feature in the off position is underrated. The alternative is a half-built integration that has to be remembered six weeks later.</p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SEO -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>Search and sharing for an app that renders in the browser</h2>
-                </div>
-                <p class="cs-intro-text">A single-page app has a specific blind spot: the crawlers that generate link previews do not run JavaScript. Paste an event link into a chat and you get an empty box — which, for a product whose entire growth loop is "invite one more person", is not a cosmetic problem.</p>
-
-                <div class="cs-kano-grid">
-                    <div class="cs-kano-card">
-                        <h3>Meta injected per route</h3>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">The server writes title, description, canonical and Open Graph tags into the HTML shell before it leaves, so every route has a real preview without giving up client rendering.</p>
-                    </div>
-                    <div class="cs-kano-card">
-                        <h3>Event structured data</h3>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">Event pages carry JSON-LD in the schema.org Event format — the prerequisite for event rich results, and the single largest organic lever this product category has.</p>
-                    </div>
-                    <div class="cs-kano-card">
-                        <h3>Robots, sitemap, share card</h3>
-                        <p style="font-size: 14px; line-height: 1.75; color: var(--color-text); margin-top: 12px;">A dynamic bilingual sitemap with hreflang, finished <em>before</em> the first crawl so the structure never had to be relearned, plus a hand-built 1200×630 share image.</p>
-                    </div>
-                </div>
-
-                <p style="margin-top: 34px;">One find in this block was pure comedy: requests that did not send <em>text/html</em> in their accept header received a JSON 404. Several link unfurlers send wildcards, so the previews that mattered most were being handed an error page by a server doing exactly what it was told.</p>
-            </section>
-
-            <!-- i18n -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>German owns the short URLs</h2>
-                </div>
-                <div class="cs-two-column">
-                    <div class="cs-column">
-                        <p>The market is German-speaking, so the product had to be. The tempting shortcut is a few German landing pages bolted onto an English app. I went for full internationalisation instead, with one opinionated decision: <strong>German owns the bare paths and English moved to <em>/en/</em></strong>. The short, shareable URL should be the one most readers can actually read.</p>
-                        <p>The move that kept it small: React Router's <em>basename</em> carries the language prefix, so not a single link in the application had to be touched. Eleven hard-coded date formatters were taught to read the active language — until then, the German site cheerfully printed English weekday names and twelve-hour times on every card.</p>
-                    </div>
-                    <div class="cs-column">
-                        <h3>What I would tell myself earlier</h3>
-                        <ul>
-                            <li><strong>Keys, not sentences.</strong> Shared logic should return translation keys. Anything that returns a sentence has quietly chosen a language for the whole system.</li>
-                            <li><strong>Hard-coded English hides in states.</strong> Not in headlines — in toasts, empty states, dialogs and error messages. Those are the last screens anyone reviews.</li>
-                            <li><strong>Ship hreflang before the crawl.</strong> Teaching a search engine the right structure once is cheaper than making it unlearn the wrong one.</li>
-                            <li><strong>Review every change twice.</strong> Once in each language. A translation audit is not done when the home page looks right.</li>
-                        </ul>
                     </div>
                 </div>
             </section>
@@ -430,40 +401,9 @@
                 <div class="sh-callout">
                     <p>Verification did not happen by squinting at screenshots. I measured it in the browser: zero overflowing elements, document width exactly 375 pixels, every filter segment inside the visible area. After the deploy I searched the delivered bundle on the live domain instead of trusting the build log — production is only correct when you have checked what actually shipped.</p>
                 </div>
-            </section>
 
-            <!-- Where it stands -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>Where it stands, honestly</h2>
-                </div>
-                <p class="cs-intro-text">It is live, bilingual, indexable and payment-ready. It is also a private project with demo data in it, and pretending otherwise would defeat the point of writing this down.</p>
-
-                <div class="cs-two-column">
-                    <div class="cs-column">
-                        <h3>Done and running</h3>
-                        <ul class="sh-status-list">
-                            <li>Live on its own domain, German by default, English under <em>/en/</em></li>
-                            <li>Email and Google sign-in, both verified server-side</li>
-                            <li>Event creation with image upload, groups, RSVPs, threshold cancellation</li>
-                            <li>Server-side meta, event structured data, bilingual sitemap</li>
-                            <li>Purpose-built mobile experience, consent-gated analytics, privacy and terms in both languages</li>
-                        </ul>
-                    </div>
-                    <div class="cs-column">
-                        <h3>Deliberately not done</h3>
-                        <ul class="sh-status-list">
-                            <li>Payments stay dormant until the company registration number arrives</li>
-                            <li>Around 570 strings in signed-in and admin areas are still English — a running audit, not a finished one</li>
-                            <li>City and category landing pages, the actual ranking lever, do not exist yet</li>
-                            <li>Demo seed data still shares a database with development; a wipe comes before real traffic</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sh-callout">
-                    <p><strong>What I took away.</strong> Not the frameworks — those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed". I brief engineers better now, mostly because I have finally been the one on the other end of my own briefs.</p>
+                <div class="sh-callout sh-callout--coral">
+                    <p><strong>What I took away.</strong> Not the frameworks — those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed".</p>
                 </div>
             </section>
 
