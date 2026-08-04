@@ -6354,6 +6354,12 @@ ul {
         align-items: start;
     }
 
+    /* this column holds the section lead, so it starts on the container edge
+       like every other lead rather than hugging the phone */
+    .bl-split--anim .bl-split-body {
+        justify-self: start;
+    }
+
     .bl-split--reverse .bl-split-media {
         order: 2;
     }
@@ -6471,6 +6477,25 @@ ul {
 .bl-anim-tap--rec {
     top: 128.875cqw;
     animation: bl-tap-rec 14s linear infinite;
+}
+
+/* ---- vertical rhythm -------------------------------------------------
+   Two paragraph roles on this page: a lead that opens a section, and the
+   annotation copy that sits beside a phone. The lead is one step larger and
+   shares a single measure wherever it appears, so the section openings all
+   read the same whether the lead is a block or a column.
+   header -> lead 30px  |  lead -> visual 40px  |  visual -> callout 40px  */
+.bl-case-study .cs-intro-text {
+    max-width: 680px;
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 40px;
+}
+
+/* the callout stays full width, but its text keeps the same measure as
+   everything else rather than running the whole container */
+.bl-case-study .sh-callout p {
+    max-width: 780px;
 }
 
 /* section lead copy sitting beside the walkthrough */
