@@ -6355,30 +6355,19 @@ ul {
 /* ---- Animated dashboard walkthrough ----
    Slices of the real screenshots, reassembled so the two AI panels
    can actually open. 1cqw = 8 source px (screenshots are 800px wide). */
-.bl-anim {
-    margin: 44px 0 0;
-    overflow: hidden;
+/* the walkthrough has no intrinsic width (its screen is a size container),
+   so the shrink-to-fit media column has to be told to fill instead */
+.bl-split-media--anim {
+    width: 100%;
 }
 
 .bl-anim-stage {
-    width: 100%;
-    max-width: 306px;
-    margin: 0 auto;
     position: relative;
-}
-
-.bl-anim-stage::before {
-    content: "";
-    position: absolute;
-    inset: -12% -14% -8%;
-    background: radial-gradient(58% 46% at 50% 34%, rgba(146, 222, 60, 0.28), transparent 70%);
-    filter: blur(34px);
-    z-index: 0;
+    width: 100%;
 }
 
 .bl-anim-phone {
     position: relative;
-    z-index: 1;
     background: linear-gradient(158deg, #2c2637 0%, #17121f 100%);
     border-radius: 36px;
     padding: 6px;
@@ -6477,14 +6466,14 @@ ul {
     animation: bl-tap-rec 14s linear infinite;
 }
 
-.bl-anim figcaption {
-    margin: 30px auto 0;
-    max-width: 560px;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--hub-muted);
+/* section lead copy sitting beside the walkthrough */
+.bl-split-body.bl-anim-copy p {
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.bl-split-body.bl-anim-copy p + p {
+    margin-top: 24px;
 }
 
 @keyframes bl-scroll {
