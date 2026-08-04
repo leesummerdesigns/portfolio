@@ -6347,6 +6347,13 @@ ul {
         justify-self: end;
     }
 
+    /* the walkthrough runs narrower than the still phones, and its copy starts
+       at the top so it reads straight on from the section heading */
+    .bl-split--anim {
+        grid-template-columns: minmax(0, 1fr) 289px;
+        align-items: start;
+    }
+
     .bl-split--reverse .bl-split-media {
         order: 2;
     }
