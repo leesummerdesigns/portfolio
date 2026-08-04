@@ -5787,6 +5787,24 @@ ul {
     text-align: center;
 }
 
+/* ---- Live product recording (real GIF, not a mockup) ---- */
+.sh-live-demo {
+    margin-top: 44px;
+    text-align: center;
+}
+
+.sh-live-demo-gif {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid var(--hub-line);
+    box-shadow:
+        0 30px 52px -20px rgba(34, 28, 43, 0.35),
+        0 6px 16px -6px rgba(34, 28, 43, 0.14);
+}
+
 /* ---- Architecture infographic ---- */
 .sh-arch {
     margin-top: 10px;
