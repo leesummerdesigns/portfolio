@@ -6279,3 +6279,75 @@ ul {
 .bl-case-study .sh-devices::after {
     background: rgba(124, 92, 246, 0.24);
 }
+
+/* Split layout: one phone beside its explanation */
+.bl-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.bl-split-media {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.bl-split-media img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow:
+        0 36px 62px -20px rgba(13, 13, 13, 0.55),
+        0 12px 24px -8px rgba(13, 13, 13, 0.2);
+}
+
+.bl-split-body h3 {
+    font-family: var(--font-mono);
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--hub-ink);
+    margin: 0 0 10px;
+}
+
+.bl-split-body p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.bl-split-body > div + div {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--hub-line);
+}
+
+@media (min-width: 900px) {
+    .bl-split {
+        grid-template-columns: 340px minmax(0, 1fr);
+        gap: 68px;
+    }
+
+    .bl-split-media {
+        max-width: none;
+        margin: 0;
+    }
+
+    /* keep the measure readable on wide screens */
+    .bl-split-body {
+        max-width: 680px;
+    }
+
+    .bl-split--reverse {
+        grid-template-columns: minmax(0, 1fr) 340px;
+    }
+
+    .bl-split--reverse .bl-split-body {
+        justify-self: end;
+    }
+
+    .bl-split--reverse .bl-split-media {
+        order: 2;
+    }
+}

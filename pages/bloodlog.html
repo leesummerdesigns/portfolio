@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=13">
+    <link rel="stylesheet" href="../css/style.css?v=15">
     <link rel="stylesheet" href="../css/theme.css?v=1">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
@@ -146,51 +146,60 @@
                 </div>
             </section>
 
-            <!-- The rebuild -->
+            <!-- Parameter detail -->
             <section class="cs-section">
                 <div class="cs-section-header">
                     <span class="cs-section-line"></span>
-                    <h2>Two complaints that rebuilt the app</h2>
+                    <h2>One parameter, explained</h2>
                 </div>
-                <p class="cs-intro-text">V1 shipped and two pieces of feedback came back: deleting a test did not work, and scrolling through the parameters was miserable. Both turned out to be my own cleverness rather than missing features, and both were worth the rewrite.</p>
+                <p class="cs-intro-text">Tapping any value opens its own page, and this is the screen that justifies the app over the PDF. A lab report gives you a number and a range and leaves you to do the rest. This page answers the three questions that actually follow: where the value sits, whether it is moving, and what the thing being measured even is.</p>
 
-                <div class="cs-kano-grid cs-kano-grid--two">
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>The delete gesture nobody could find</h3>
-                        <p class="cs-kano-subtitle">Roughly ninety lines, deleted</p>
-                        <p>I had built a custom swipe-to-delete: a three-layer ZStack, a DragGesture, and <em>allowsHitTesting</em> juggling. It was disabled while a folder was open — and the newest folder is always open, so for most people there was no delete at all. The gesture that did work fought the scroll view and jittered. It came out and was replaced by a visible ⋯ menu in the folder header, plus a five-second undo toast that hides the row immediately and only commits the delete when the timer runs out.</p>
+                <div class="bl-split">
+                    <div class="bl-split-media">
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/parameter-detail.jpg" alt="Parameter detail page: a semicircular gauge placing 47.1 percent inside its 43 to 49 reference range, a change-over-time chart across two tests, and a plain-language description of what hematocrit measures">
                     </div>
-                    <div class="cs-kano-card sh-bug-card">
-                        <h3>Forty cards in a flat grid</h3>
-                        <p class="cs-kano-subtitle">Scrolling as a symptom</p>
-                        <p>"Scrolling is annoying" was a hierarchy complaint wearing a scrolling costume. Forty-plus parameter cards were rendered in one flat grid with no ranking, so finding the two that mattered meant reading all of them. Grouping them into Needs Attention plus collapsed categories removed most of the scroll entirely. Collapsing now also holds its position — a ScrollViewReader scrolls back to the folder ID instead of letting the list jump.</p>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>Where the value sits in its range</h3>
+                            <p>The gauge draws the reference range as an arc and puts the reading on it. "47.1" and "43 – 49" stop being two numbers you have to compare in your head and become one shape — the marker's position carries the answer before you have read either figure. The colour repeats the status, so the screen still works at a glance.</p>
+                        </div>
+                        <div>
+                            <h3>Whether it is moving</h3>
+                            <p>If the same parameter appears in an earlier test, the chart below plots it across all of them with the reference band behind the line. One test gives you a value; two give you a direction, which is usually the more useful of the two. When there is only a single measurement the chart is left out rather than drawn empty.</p>
+                        </div>
+                        <div>
+                            <h3>What the parameter actually is</h3>
+                            <p>Most people do not know what Hämatokrit measures, and a number you cannot interpret is not information. Every parameter carries a plain-language explanation of what it is and what high or low tends to indicate — served with the analysis, with a local dictionary of around sixty markers as the fallback so the page still reads offline or when the request fails.</p>
+                        </div>
                     </div>
-                </div>
-
-                <p class="cs-intro-text" style="margin-top: 46px;">The third fix was smaller and more embarrassing. Submitting a test dismissed the sheet before the analysis ran, so every backend error was raised into a view that no longer existed. Failures looked like nothing happening. The error now surfaces as a banner on the dashboard with a retry button attached, which is the only place the user is actually looking.</p>
-            </section>
-
-            <!-- Detail and tracking -->
-            <section class="cs-section">
-                <div class="cs-section-header">
-                    <span class="cs-section-line"></span>
-                    <h2>One value, in context and over time</h2>
-                </div>
-                <p class="cs-intro-text">Tapping a parameter is where the app earns its place over the PDF. The gauge puts the reading inside its reference range instead of beside it, so "47.1" and "43 – 49" become one shape rather than two numbers. Below it, the same value across previous tests. Below that, a plain description of what the marker is — served by the analysis backend, with a local dictionary of sixty-odd parameters as the fallback so the screen is never empty offline.</p>
-
-                <div class="bl-shots">
-                    <figure>
-                        <img loading="lazy" decoding="async" src="../images/bloodlog/parameter-detail.jpg" alt="Parameter detail sheet: a semicircular gauge showing the value inside its reference range, a change-over-time chart, and an explanatory description">
-                        <figcaption>Parameter detail — a sheet with detents and a drag indicator, not a full-screen dead end</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" decoding="async" src="../images/bloodlog/tracking.jpg" alt="Tracking tab with selectable parameter chips and a line chart showing hemoglobin across two tests with min and max reference lines">
-                        <figcaption>Tracking — pinned parameters, with the reference band drawn into the chart</figcaption>
-                    </figure>
                 </div>
 
                 <div class="sh-callout sh-callout--coral">
-                    <p><strong>A navigation decision worth naming.</strong> Parameter detail was originally a <em>fullScreenCover</em> with a back arrow, which reads as a page you have travelled to and must travel back from. Swapping it for a sheet with detents made it a glance you dismiss — one swipe, no aiming at a target in the top-left corner. Same content, considerably less friction, and it is the change people noticed most.</p>
+                    <p><strong>A navigation decision worth naming.</strong> This page was originally a <em>fullScreenCover</em> with a back arrow, which reads as somewhere you have travelled to and must travel back from. Swapping it for a sheet with detents and a drag indicator made it a glance you dismiss — one swipe, no aiming at a target in the top-left corner. Same content, considerably less friction.</p>
+                </div>
+            </section>
+
+            <!-- Tracking -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Following a value across tests</h2>
+                </div>
+
+                <div class="bl-split bl-split--reverse">
+                    <div class="bl-split-media">
+                        <img loading="lazy" decoding="async" src="../images/bloodlog/tracking.jpg" alt="Tracking tab: a row of pinned parameter chips with status dots, above a line chart showing hemoglobin across two tests with dashed minimum and maximum reference lines">
+                    </div>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>Pinned, not searched for</h3>
+                            <p>A marker worth watching gets pinned to its own tab. The chips carry the current status as a coloured dot and the number of tests it appears in, so the question stops being "what was my haemoglobin" and becomes "is it where it was". The reference minimum and maximum are dashed straight across the chart, which means a line drifting toward the edge is visible without reading a single axis label.</p>
+                        </div>
+                        <div>
+                            <h3>Two tests, side by side</h3>
+                            <p>Comparing any two tests returns a written briefing rather than a second table — what improved, what got worse, and what is worth raising at the next appointment. It arrives as Markdown and is rendered into headings, lists and tables. An early version printed the raw pipes and asterisks straight onto the screen, which is a good reminder that a working feature and a broken-looking one are separated by the parsing layer nobody budgets for.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
