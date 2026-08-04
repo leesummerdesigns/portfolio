@@ -5787,6 +5787,17 @@ ul {
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .sh-threshold {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 22px;
+    }
+
+    .sh-threshold-arrow {
+        padding: 0 14px;
+    }
+}
+
 /* ---- Collage: three insight cards pinned around the live GIF ----
    Echoes the tilted, overlapping event cards from the product's own
    hero — same visual language, applied to the case study itself. */
