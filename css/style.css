@@ -117,11 +117,17 @@ ul {
 .nav-toggle {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
+    /* 44px touch target; negative margin keeps the bars visually where they were */
+    min-width: 44px;
+    min-height: 44px;
+    margin-right: -6px;
     z-index: 1001;
 }
 
@@ -160,10 +166,13 @@ ul {
 }
 
 .nav-menu li {
-    margin-bottom: 25px;
+    margin-bottom: 8px;
 }
 
 .nav-menu a {
+    /* block + padding gives each row a 44px touch target at the same visual rhythm */
+    display: block;
+    padding: 13px 0;
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 400;
@@ -973,7 +982,8 @@ ul {
     width: 100%;
     padding: 8px 0 4px 0;
     font-family: var(--font-mono);
-    font-size: 12px;
+    /* 16px keeps iOS Safari from zooming the page on focus */
+    font-size: 16px;
     color: var(--color-text);
     background: transparent;
     border: none;
@@ -986,7 +996,7 @@ ul {
 .contact-form textarea::placeholder {
     color: var(--color-gray-dark);
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .contact-form input:focus,
@@ -1231,12 +1241,21 @@ ul {
     }
 
     .nav-menu a {
+        display: inline;
+        padding: 0;
         font-size: 12px;
         letter-spacing: 1px;
     }
 
     .nav-menu a:hover {
         color: #000000;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        font-size: 12px;
     }
 
     .nav-highlight {
@@ -3091,10 +3110,11 @@ ul {
 
 .cs-slider-dots {
     display: flex;
-    gap: 8px;
+    gap: 14px;
 }
 
 .cs-slider-dot {
+    position: relative;
     padding: 0;
     border: 0;
     width: 10px;
@@ -3103,6 +3123,13 @@ ul {
     background: var(--color-gray-light);
     cursor: pointer;
     transition: var(--transition);
+}
+
+/* widen the touch target without changing the dot itself */
+.cs-slider-dot::after {
+    content: '';
+    position: absolute;
+    inset: -11px -7px;
 }
 
 .cs-slider-dot.active {
@@ -3277,7 +3304,7 @@ ul {
     display: block;
     margin-top: 8px;
     font-family: var(--font-mono);
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.45;
     text-align: center;
 }
@@ -3549,7 +3576,7 @@ ul {
     background: rgba(198, 255, 92, 0.3);
     color: #333333;
     font-family: var(--font-mono);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.5px;
     border-radius: 20px;
 }
