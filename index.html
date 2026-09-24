@@ -652,15 +652,20 @@
                 <div class="contact-text">
                     <p>If you think that I would be a good match for your project then drop me a line! I would love to hear about it.</p>
                 </div>
-                <form class="contact-form" action="mailto:info@louishenrich.com" method="post" enctype="text/plain">
+                <form class="contact-form" action="https://formsubmit.co/info@louishenrich.com" method="post">
+                    <input type="hidden" name="_subject" value="New portfolio enquiry">
+                    <input type="hidden" name="_next" value="https://louishenrich.com/pages/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form-row">
-                        <input type="text" name="name" placeholder="Enter Your Name">
-                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                        <input type="text" name="name" placeholder="Enter Your Name" aria-label="Your name" autocomplete="name">
+                        <input type="email" name="email" placeholder="Enter Your Email" aria-label="Your email" autocomplete="email" required>
                     </div>
                     <div class="form-row">
-                        <textarea name="message" placeholder="How Can I Help You?" rows="3" required></textarea>
+                        <textarea name="message" placeholder="How Can I Help You?" aria-label="Your message" rows="3" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-submit">Send It To Me!</button>
+                    <p style="font-size: 14px;">Your message is delivered via <a href="https://formsubmit.co/privacy.pdf" style="text-decoration: underline;">FormSubmit</a>. You can also email <a href="mailto:info@louishenrich.com" style="text-decoration: underline;">info@louishenrich.com</a> directly.</p>
                 </form>
             </div>
         </div>
