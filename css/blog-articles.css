@@ -1,0 +1,39 @@
+.blog-post-header .article-byline {
+    margin: 20px auto 0;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: #555;
+}
+
+.blog-post-header .blog-card-meta {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.blog-post-cover figcaption {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #555;
+}
+
+.blog-post-body a:not(.blog-back-link) {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.blog-post-body a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.blog-post-body ul {
+    list-style: disc;
+}
+
+.blog-post-body .article-note {
+    padding: 20px;
+    border-left: 3px solid var(--color-black);
+    background: rgba(0, 0, 0, 0.035);
+    font-size: 14px;
+}

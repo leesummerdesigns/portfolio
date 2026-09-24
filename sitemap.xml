@@ -59,7 +59,7 @@
 
   <url>
     <loc>https://louishenrich.com/pages/blog.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -159,6 +159,20 @@
     <loc>https://louishenrich.com/pages/blog/design-systems-with-ai.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://louishenrich.com/pages/blog/eu-ai-act-what-companies-need-to-do-now.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://louishenrich.com/pages/blog/caio-head-of-ai-company-growth.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 

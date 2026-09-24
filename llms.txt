@@ -33,6 +33,11 @@
 - [Resume](https://louishenrich.com/pages/resume.html): Career history
 - [Blog](https://louishenrich.com/pages/blog.html): Articles on AI, design systems, and AI strategy
 
+## Recent articles
+
+- [EU AI Act: What Companies Need to Do Now](https://louishenrich.com/pages/blog/eu-ai-act-what-companies-need-to-do-now.html): The updated EU AI Act timeline, current transparency duties and a practical 30-day action plan for companies in Europe and Switzerland.
+- [CAIO, Head of AI and the Team Behind AI Growth](https://louishenrich.com/pages/blog/caio-head-of-ai-company-growth.html): What a Chief AI Officer, Head of AI and supporting AI roles should own, which skills they need and how their work can support company growth.
+
 ## Contact
 
 - Website: https://louishenrich.com/
