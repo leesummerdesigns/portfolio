@@ -21,30 +21,45 @@ function initNavigation() {
 
     if (!navToggle || !navMenu) return;
 
+    navToggle.setAttribute('aria-expanded', 'false');
+
+    function closeMenu() {
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
     navToggle.addEventListener('click', function() {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
         document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
 
     // Close menu when clicking a link
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
-            // Don't interfere with mailto: or external links
-            if (this.href.startsWith('mailto:') || this.target === '_blank') return;
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenu();
+            navToggle.focus();
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992) closeMenu();
     });
 }
 
@@ -233,13 +248,21 @@ function initSmoothScroll() {
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
+                // Jump straight to contact so lazy-loaded case-study images
+                // don't shift the destination during a long animated scroll.
+                if (targetId === '#contact') {
+                    target.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    target.focus({ preventScroll: true });
+                    return;
+                }
                 const navHeight = document.querySelector('.main-nav')?.offsetHeight || 0;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
                 });
+                if (target.hasAttribute('tabindex')) target.focus({ preventScroll: true });
             }
         });
     });

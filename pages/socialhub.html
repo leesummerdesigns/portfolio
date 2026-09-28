@@ -45,8 +45,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=26">
+    <link rel="stylesheet" href="../css/style.css?v=27">
     <link rel="stylesheet" href="../css/theme.css?v=1">
+    <link rel="stylesheet" href="../css/case-study-footer.css?v=2">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
     <style>
       /* Live threshold demo card (ported from thesocialhub/threshold-demo.html, scoped) */
@@ -109,7 +110,7 @@
                 <li><a href="projects.html" class="active">Case Studies</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -405,28 +406,28 @@
                     <p><strong>What I took away.</strong> Not the frameworks — those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed".</p>
                 </div>
             </section>
-
-            <!-- Project Navigation -->
-            <nav class="project-nav">
-                <a href="telekom.html">
-                    <span>Previous</span>
-                    Deutsche Telekom
-                </a>
-                <a href="bloodlog.html">
-                    <span>Next</span>
-                    BloodLog
-                </a>
-            </nav>
         </div>
     </main>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- More work and contact -->
+    <div class="case-study-outro">
         <div class="container">
-            <h2>Let's have a coffee and talk about your idea</h2>
-            <a href="mailto:info@louishenrich.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+            <nav class="project-pagination" aria-label="Project navigation">
+                <a class="project-link project-link--prev" href="telekom.html" rel="prev">
+                    <span class="project-link-arrow" aria-hidden="true">←</span>
+                    <span class="project-link-copy"><span class="project-link-label">Previous project</span><span class="project-link-title">Deutsche Telekom</span></span>
+                </a>
+                <a href="projects.html" class="all-projects-link">All case studies</a>
+                <a class="project-link project-link--next" href="bloodlog.html" rel="next">
+                    <span class="project-link-copy"><span class="project-link-label">Next project</span><span class="project-link-title">BloodLog</span></span>
+                    <span class="project-link-arrow" aria-hidden="true">→</span>
+                </a>
+            </nav>
         </div>
-    </section>
+        <section class="case-study-contact" id="contact" aria-label="Contact" tabindex="-1">
+            <a class="case-study-email-button" href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Get in touch with me</a>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -486,6 +487,6 @@
       tl.to({}, { duration: 0.1 }, 11);
     })();
     </script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=3"></script>
 </body>
 </html>

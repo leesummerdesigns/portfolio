@@ -40,8 +40,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=26">
+    <link rel="stylesheet" href="../css/style.css?v=27">
     <link rel="stylesheet" href="../css/theme.css?v=1">
+    <link rel="stylesheet" href="../css/case-study-footer.css?v=2">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
 </head>
 <body>
@@ -64,7 +65,7 @@
                 <li><a href="projects.html" class="active">Case Studies</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -338,32 +339,28 @@
                     <p style="font-size: 15px; line-height: 1.8;">All interface elements designed for mobile and desktop using atomic design principles. Stakeholders participated in agile feedback through InVision, enabling real-time commentary and iterative refinement.</p>
                 </div>
             </section>
-
-            <!-- Project Navigation -->
-            <nav class="project-nav">
-                <a href="rabobank.html">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6"/>
-                    </svg>
-                    Previous Project
-                </a>
-                <a href="rakuten.html">
-                    Next Project
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </a>
-            </nav>
         </div>
     </main>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- More work and contact -->
+    <div class="case-study-outro">
         <div class="container">
-            <h2>Let's have a coffee and talk about your idea</h2>
-            <a href="mailto:info@louishenrich.com?subject=Hey%20Louis!" class="btn btn-primary">Get in Touch!</a>
+            <nav class="project-pagination" aria-label="Project navigation">
+                <a class="project-link project-link--prev" href="rabobank.html" rel="prev">
+                    <span class="project-link-arrow" aria-hidden="true">←</span>
+                    <span class="project-link-copy"><span class="project-link-label">Previous project</span><span class="project-link-title">Rabobank</span></span>
+                </a>
+                <a href="projects.html" class="all-projects-link">All case studies</a>
+                <a class="project-link project-link--next" href="rakuten.html" rel="next">
+                    <span class="project-link-copy"><span class="project-link-label">Next project</span><span class="project-link-title">Rakuten Kobo</span></span>
+                    <span class="project-link-arrow" aria-hidden="true">→</span>
+                </a>
+            </nav>
         </div>
-    </section>
+        <section class="case-study-contact" id="contact" aria-label="Contact" tabindex="-1">
+            <a class="case-study-email-button" href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Get in touch with me</a>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -373,7 +370,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=3"></script>
     <script>
         document.querySelectorAll('[data-slider]').forEach((slider) => {
             const slides = Array.from(slider.querySelectorAll('.cs-slider-slide'));
