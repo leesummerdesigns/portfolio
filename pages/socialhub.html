@@ -4,34 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary SEO -->
-    <title>The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich</title>
-    <meta name="description" content="Self-initiated case study: designing and shipping The Social Hub, a community platform for people who need a crowd to do the thing they love — every event has a minimum, or it cancels. By Louis Henrich, AI Product Specialist in Zürich.">
+    <title>The Social Hub, Building a Full-Stack Community Platform Solo | Louis Henrich</title>
+    <meta name="description" content="Self-initiated case study: designing and shipping The Social Hub, a community platform for people who need a crowd to do the thing they love, every event has a minimum, or it cancels. By Louis Henrich, AI Product Specialist in Zürich.">
     <meta name="author" content="Louis Henrich">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://louishenrich.com/pages/socialhub.html">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://louishenrich.com/pages/socialhub.html">
-    <meta property="og:title" content="The Social Hub — Building a Full-Stack Community Platform Solo | Louis Henrich">
-    <meta property="og:description" content="An idea from 2014 that failed twice seeking investors. Now built solo with AI superpowers. The platform that changes event discovery — with minimum attendees built in from the start.">
+    <meta property="og:title" content="The Social Hub, Building a Full-Stack Community Platform Solo | Louis Henrich">
+    <meta property="og:description" content="An idea from 2014 that failed twice seeking investors. Now built solo with AI superpowers. The platform that changes event discovery, with minimum attendees built in from the start.">
     <meta property="og:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
     <meta property="og:site_name" content="Louis Henrich">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Social Hub — Building a Full-Stack Community Platform Solo">
-    <meta name="twitter:description" content="A 10-year idea finally built. From Frankfurt shower thoughts to shipped product — how I built The Social Hub as a solopreneur using modern AI tools.">
+    <meta name="twitter:title" content="The Social Hub, Building a Full-Stack Community Platform Solo">
+    <meta name="twitter:description" content="A 10-year idea finally built. From Frankfurt shower thoughts to shipped product, how I built The Social Hub as a solopreneur using modern AI tools.">
     <meta name="twitter:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "The Social Hub — Self-Initiated Product Case Study",
-      "description": "Designing and building The Social Hub, a community platform for hobbies that need a crowd: every event carries a minimum attendance and cancels itself if the deadline passes without it.",
-      "url": "https://louishenrich.com/pages/socialhub.html",
-      "image": "https://louishenrich.com/images/socialhub/home-desktop.jpg",
-      "author": { "@id": "https://louishenrich.com/#louis-henrich" },
-      "datePublished": "2026-08-03",
-      "dateModified": "2026-08-03",
-      "about": ["Product Design", "Full-Stack Development", "React", "tRPC", "Design Systems", "Internationalization", "Technical SEO"]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "The Social Hub, Self-Initiated Product Case Study",
+  "description": "Designing and building The Social Hub, a community platform for hobbies that need a crowd: every event carries a minimum attendance and cancels itself if the deadline passes without it.",
+  "url": "https://louishenrich.com/pages/socialhub.html",
+  "image": "https://louishenrich.com/images/socialhub/home-desktop.jpg",
+  "author": {
+    "@id": "https://louishenrich.com/#louis-henrich"
+  },
+  "datePublished": "2026-08-03",
+  "dateModified": "2026-10-14",
+  "about": [
+    "Product Design",
+    "Full-Stack Development",
+    "React",
+    "tRPC",
+    "Design Systems",
+    "Internationalization",
+    "Technical SEO",
+    "AI-assisted Product Development",
+    "Product Design"
+  ]
+}
     </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
@@ -125,7 +137,7 @@
                         <p class="sh-eyebrow">Self-initiated product · design, code and operations</p>
                         <h1 class="cs-title">The Social Hub</h1>
                         <p class="cs-subtitle">The Event Platform that changes everything</p>
-                        <p class="cs-description">In 2014, while having a shower in my Frankfurt apartment, I had the amazing idea of a platform in which users could post any type of event for free to meet new people. I'm talking about an era pre-Meetup. My idea from the beginning was minimum and maximum attendees for activities. Since today, no other platform has created such a concept. I tried two times to roll out this project, but I always failed at getting investors to develop such a platform. After many years and my newly acquired superpowers in AI development, I just went for it as a solopreneur, and this is how I did it.</p>
+                        <p class="cs-description">I first had the idea for The Social Hub in 2014: a place to organise activities that need a minimum number of people to happen. After two attempts to find investment, I returned to the idea and developed it myself with Claude and Kimi K3. The platform is now live on Render. This case study explains the product decisions, design system and implementation.</p>
 
                         <dl class="sh-facts">
                             <div>
@@ -134,7 +146,7 @@
                             </div>
                             <div>
                                 <dt>Role</dt>
-                                <dd>Everything — product, design system, frontend, backend, database, payments, deployment.</dd>
+                                <dd>Everything, product, design system, frontend, backend, database, payments, deployment.</dd>
                             </div>
                             <div>
                                 <dt>Why</dt>
@@ -172,14 +184,14 @@
                     <span class="cs-section-line"></span>
                     <h2>Because you cannot play a football match with two people</h2>
                 </div>
-                <p class="cs-intro-text">Some hobbies have a floor. A football match needs about ten people. A board-game night needs four. A language exchange needs at least one person who speaks the other language. Below that number the activity does not get worse — it stops existing. And the people who feel that most are exactly the ones with the least room to fix it: you moved to a new city, or changed jobs, or your old crowd all have kids now, and the three friends you have left are busy on Saturday.</p>
+                <p class="cs-intro-text">Some hobbies have a floor. A football match needs about ten people. A board-game night needs four. A language exchange needs at least one person who speaks the other language. Below that number the activity does not get worse, it stops existing. And the people who feel that most are exactly the ones with the least room to fix it: you moved to a new city, or changed jobs, or your old crowd all have kids now, and the three friends you have left are busy on Saturday.</p>
 
-                <p class="cs-intro-text">What you need in that moment is not a bigger social network. It is seven more people who also want to play at three o'clock on Saturday, in the same part of town, this week. That is a very specific kind of matchmaking, and almost nobody builds for it — because it is much easier to build a platform where attendance is a number that goes up than one where attendance is a condition that has to be met.</p>
+                <p class="cs-intro-text">What you need in that moment is not a bigger social network. It is seven more people who also want to play at three o'clock on Saturday, in the same part of town, this week. That is a very specific kind of matchmaking, and almost nobody builds for it, because it is much easier to build a platform where attendance is a number that goes up than one where attendance is a condition that has to be met.</p>
 
                 <div class="sh-collage">
                     <div class="sh-collage-card sh-collage-top">
                         <h3>Joining stops being a gamble</h3>
-                        <p>Turning up alone to a thing that might not happen is a lot to ask of a stranger. Here you can see whether it is going to happen before you commit — and if it does not, it is cancelled properly instead of quietly shrinking to four awkward people in a park.</p>
+                        <p>Turning up alone to a thing that might not happen is a lot to ask of a stranger. Here you can see whether it is going to happen before you commit, and if it does not, it is cancelled properly instead of quietly shrinking to four awkward people in a park.</p>
                     </div>
                     <div class="sh-collage-media">
                         <div class="sh-threshold-demo" id="sh-threshold-demo" role="img" aria-label="Live demo of a Social Hub event card: the attendee count rises from 3 of 8 to full, the badge flips from 'Needs 5 more' to 'Happening' and confetti celebrates">
@@ -216,7 +228,7 @@
                     </div>
                     <div class="sh-collage-card sh-collage-left">
                         <h3>Hosting stops being lonely</h3>
-                        <p>The host says up front: this only works with ten. From then on everyone who has already said yes has a reason to invite one more person — the countdown is on their evening too. Recruiting stops being one person's unpaid job.</p>
+                        <p>The host says up front: this only works with ten. From then on everyone who has already said yes has a reason to invite one more person, the countdown is on their evening too. Recruiting stops being one person's unpaid job.</p>
                     </div>
                     <div class="sh-collage-card sh-collage-right">
                         <h3>The maybe disappears</h3>
@@ -263,7 +275,7 @@
                 </div>
 
                 <div class="sh-callout">
-                    <p>The whole product is that one sentence, taken seriously: <strong>a gathering has a minimum crowd, and everybody can see how close it is.</strong> Everything else in this case study — the interface, the database, the payments — exists to make that sentence true for a stranger on a phone.</p>
+                    <p>The whole product is that one sentence, taken seriously: <strong>a gathering has a minimum crowd, and everybody can see how close it is.</strong> Everything else in this case study, the interface, the database, the payments, exists to make that sentence true for a stranger on a phone.</p>
                 </div>
             </section>
 
@@ -273,7 +285,7 @@
                     <span class="cs-section-line"></span>
                     <h2>One rule, visible everywhere</h2>
                 </div>
-                <p class="cs-intro-text">The threshold is not a setting buried in a form. It is the interface. A card does not say "3 attending", it says how many people are still missing and how long they have. An event page leads with the same sentence. The progress bar is the product promise rendered in eight pixels of colour, and every state in the system — needs people, almost there, happening, cancelled — is a state a visitor can read at a glance.</p>
+                <p class="cs-intro-text">The threshold is not a setting buried in a form. It is the interface. A card does not say "3 attending", it says how many people are still missing and how long they have. An event page leads with the same sentence. The progress bar is the product promise rendered in eight pixels of colour, and every state in the system, needs people, almost there, happening, cancelled, is a state a visitor can read at a glance.</p>
 
                 <div class="cs-comparison-grid">
                     <div class="cs-comparison-item">
@@ -329,15 +341,16 @@
                     </div>
                     <div class="sh-arch-shared">
                         <span>Shared contracts</span>
-                        Thresholds, deadlines and filter logic live in one folder imported by both sides. One implementation, two runtimes — the server can never enforce a rule the interface does not show.
+                        Thresholds, deadlines and filter logic live in one folder imported by both sides. One implementation, two runtimes, the server can never enforce a rule the interface does not show.
                     </div>
                 </div>
 
                 <div class="sh-callout sh-callout--coral">
-                    <p>The part I did not expect to matter: I gave a personal project a proper design system, out of habit. It paid for itself the first time the entire mobile experience had to be rebuilt — the rebuild was a layout problem, not a repainting job.</p>
+                    <p>The part I did not expect to matter: I gave a personal project a proper design system, out of habit. It paid for itself the first time the entire mobile experience had to be rebuilt, the rebuild was a layout problem, not a repainting job.</p>
                 </div>
             </section>
 
+<section class="cs-section"><div class="cs-section-header"><span class="cs-section-line"></span><h2>AI-assisted development and live delivery</h2></div><p>I designed and developed The Social Hub with assistance from <strong>Claude and Kimi K3</strong>. The product is live and hosted on <strong>Render</strong>. My work brings together the product concept, UX, interface design, design system and implementation.</p><p>Explore my <a href="ai-expert-zurich.html">AI, product and design expertise in Zurich</a> or my <a href="services.html">consulting and product development services</a>.</p></section>
             <!-- Money -->
             <section class="cs-section">
                 <div class="cs-section-header">
@@ -356,7 +369,7 @@
                     <div class="sh-money-step is-hold">
                         <span>Step 02</span>
                         <strong>Held by the provider</strong>
-                        <p>The funds sit in the payment provider's balance — never on a Social Hub bank account. The regulated party stays the provider.</p>
+                        <p>The funds sit in the payment provider's balance, never on a Social Hub bank account. The regulated party stays the provider.</p>
                     </div>
                     <div class="sh-money-rail" aria-hidden="true">→</div>
                     <div class="sh-money-outs">
@@ -377,7 +390,7 @@
                     </div>
                     <div class="cs-column">
                         <div class="sh-callout" style="margin-top: 0;">
-                            <p><strong>Built, then switched off.</strong> The entire payment layer — onboarding, payment intents, signed webhooks, refunds, payout batches, dispute reporting — ships in the codebase and stays dormant without a secret key. Until the company registration number comes through, the platform runs a clearly labelled demo checkout instead.</p>
+                            <p><strong>Built, then switched off.</strong> The entire payment layer, onboarding, payment intents, signed webhooks, refunds, payout batches, dispute reporting, ships in the codebase and stays dormant without a secret key. Until the company registration number comes through, the platform runs a clearly labelled demo checkout instead.</p>
                         </div>
                     </div>
                 </div>
@@ -403,7 +416,7 @@
                 </div>
 
                 <div class="sh-callout sh-callout--coral">
-                    <p><strong>What I took away.</strong> Not the frameworks — those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed".</p>
+                    <p><strong>What I took away.</strong> Not the frameworks, those change every eighteen months anyway. What stuck is how differently you review a design when you are also the person who has to migrate the database at eleven at night: fewer states invented for their own sake, more decisions made once and shared, and a much shorter path between "that looks wrong" and "that is fixed".</p>
                 </div>
             </section>
         </div>
@@ -469,7 +482,7 @@
       tl.set(q('[data-demo="deadline-3"]'), { display: 'inline' }, 6.4);
       tl.to(q('[data-demo="bar"]'), { width: '100%', duration: 2.2 }, 6.8);
 
-      // t=9: the flip — green, badge pop, confetti
+      // t=9: the flip, green, badge pop, confetti
       tl.to(q('[data-demo="bar"]'), { backgroundColor: '#15803D', duration: 0.2 }, 9);
       tl.set(q('[data-demo="counter-2"]'), { display: 'none' }, 9);
       tl.set(q('[data-demo="counter-3"]'), { display: 'inline' }, 9);

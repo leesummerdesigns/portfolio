@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary SEO -->
-    <title>BloodLog — Designing and Shipping an iOS Health App Solo | Louis Henrich</title>
-    <meta name="description" content="Self-initiated iOS case study: BloodLog turns a lab PDF into something a patient can actually read. SwiftUI, SwiftData, on-device storage — researched, designed and built solo by Louis Henrich.">
+    <title>BloodLog, Designing and Shipping an iOS Health App Solo | Louis Henrich</title>
+    <meta name="description" content="Self-initiated iOS case study: BloodLog turns a lab PDF into something a patient can actually read. SwiftUI, SwiftData, on-device storage, researched, designed and built solo by Louis Henrich.">
     <meta name="author" content="Louis Henrich">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://louishenrich.com/pages/bloodlog.html">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://louishenrich.com/pages/bloodlog.html">
-    <meta property="og:title" content="BloodLog — Designing and Shipping an iOS Health App Solo">
+    <meta property="og:title" content="BloodLog, Designing and Shipping an iOS Health App Solo">
     <meta property="og:description" content="A lab report tells you 38 numbers and nothing else. BloodLog turns it into a reading. An iOS case study in SwiftUI and SwiftData, built end to end by one person.">
     <meta property="og:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
     <meta property="og:site_name" content="Louis Henrich">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BloodLog — Designing and Shipping an iOS Health App Solo">
+    <meta name="twitter:title" content="BloodLog, Designing and Shipping an iOS Health App Solo">
     <meta name="twitter:description" content="Turning a lab PDF into something a patient can read. SwiftUI, SwiftData, shipped to the App Store by one person.">
     <meta name="twitter:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "BloodLog — iOS Health App Case Study",
-      "description": "Designing and building BloodLog, an iOS app that turns a blood test PDF into a readable, trackable health record. Built solo in SwiftUI and SwiftData with on-device storage.",
-      "url": "https://louishenrich.com/pages/bloodlog.html",
-      "image": "https://louishenrich.com/images/bloodlog/dashboard.jpg",
-      "author": { "@id": "https://louishenrich.com/#louis-henrich" },
-      "datePublished": "2026-08-04",
-      "dateModified": "2026-08-04",
-      "about": ["iOS Development", "SwiftUI", "Product Design", "Health Technology", "Mobile UX", "Information Design"]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "BloodLog, iOS Health App Case Study",
+  "description": "Designing and building BloodLog, an iOS app that turns a blood test PDF into a readable, trackable health record. Built solo in SwiftUI and SwiftData with on-device storage.",
+  "url": "https://louishenrich.com/pages/bloodlog.html",
+  "image": "https://louishenrich.com/images/bloodlog/dashboard.jpg",
+  "author": {
+    "@id": "https://louishenrich.com/#louis-henrich"
+  },
+  "datePublished": "2026-08-04",
+  "dateModified": "2026-10-14",
+  "about": [
+    "iOS Development",
+    "SwiftUI",
+    "Product Design",
+    "Health Technology",
+    "Mobile UX",
+    "Information Design",
+    "AI-assisted Product Development",
+    "Product Design"
+  ]
+}
     </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
@@ -84,12 +95,12 @@
                         <p class="sh-eyebrow">Self-initiated product · iOS, design and development</p>
                         <h1 class="cs-title">BloodLog</h1>
                         <p class="cs-subtitle">BloodLog helps you understand your bloodwork.</p>
-                        <p class="cs-description">The idea for this app came to me because I wanted to understand my bloodwork results. I thought that I may not be the only one with that wish so I took on the project. The app allows users to take a picture or upload their analysis results. With the help of a trained AI with lots of health data and studies, the parameters are analyzed and the app explains in easy language what the whole picture shows along with some recommendations to improve.</p>
+                        <p class="cs-description">I wanted a clearer way to read and track bloodwork results, so I designed and developed BloodLog. The live iOS app combines a readable record of parameters with AI-assisted explanations. I used Claude connected to Xcode through MCP for development and handled App Store submission manually.</p>
 
                         <dl class="sh-facts">
                             <div>
                                 <dt>Role</dt>
-                                <dd>Everything — research, product, design system, SwiftUI, data layer, App Store submission.</dd>
+                                <dd>Everything, research, product, design system, SwiftUI, data layer, App Store submission.</dd>
                             </div>
                             <div>
                                 <dt>Why</dt>
@@ -171,7 +182,7 @@
                 </div>
 
                 <div class="sh-callout">
-                    <p>The screenshots run on demo data. Real results stay on the device in SwiftData and are never uploaded anywhere I control — which is also why the paywall and the analysis backend had to be designed around a payload that carries values but no identity.</p>
+                    <p>The screenshots run on demo data. Real results stay on the device in SwiftData and are never uploaded anywhere I control, which is also why the paywall and the analysis backend had to be designed around a payload that carries values but no identity.</p>
                 </div>
             </section>
 
@@ -190,7 +201,7 @@
                     <div class="bl-split-body">
                         <div>
                             <h3>Where the value sits in its range</h3>
-                            <p>The gauge draws the reference range as an arc and puts the reading on it. "47.1" and "43 – 49" stop being two numbers you have to compare in your head and become one shape — the marker's position carries the answer before you have read either figure. The colour repeats the status, so the screen still works at a glance.</p>
+                            <p>The gauge draws the reference range as an arc and puts the reading on it. "47.1" and "43 – 49" stop being two numbers you have to compare in your head and become one shape, the marker's position carries the answer before you have read either figure. The colour repeats the status, so the screen still works at a glance.</p>
                         </div>
                         <div>
                             <h3>Whether it is moving</h3>
@@ -198,13 +209,13 @@
                         </div>
                         <div>
                             <h3>What the parameter actually is</h3>
-                            <p>Most people do not know what Hämatokrit measures, and a number you cannot interpret is not information. Every parameter carries a plain-language explanation of what it is and what high or low tends to indicate — served with the analysis, with a local dictionary of around sixty markers as the fallback so the page still reads offline or when the request fails.</p>
+                            <p>Most people do not know what Hämatokrit measures, and a number you cannot interpret is not information. Every parameter carries a plain-language explanation of what it is and what high or low tends to indicate, served with the analysis, with a local dictionary of around sixty markers as the fallback so the page still reads offline or when the request fails.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="sh-callout sh-callout--coral">
-                    <p><strong>A navigation decision worth naming.</strong> This page was originally a <em>fullScreenCover</em> with a back arrow, which reads as somewhere you have travelled to and must travel back from. Swapping it for a sheet with detents and a drag indicator made it a glance you dismiss — one swipe, no aiming at a target in the top-left corner. Same content, considerably less friction.</p>
+                    <p><strong>A navigation decision worth naming.</strong> This page was originally a <em>fullScreenCover</em> with a back arrow, which reads as somewhere you have travelled to and must travel back from. Swapping it for a sheet with detents and a drag indicator made it a glance you dismiss, one swipe, no aiming at a target in the top-left corner. Same content, considerably less friction.</p>
                 </div>
             </section>
 
@@ -226,12 +237,13 @@
                         </div>
                         <div>
                             <h3>Two tests, side by side</h3>
-                            <p>Comparing any two tests returns a written briefing rather than a second table — what improved, what got worse, and what is worth raising at the next appointment. It arrives as Markdown and is rendered into headings, lists and tables. An early version printed the raw pipes and asterisks straight onto the screen, which is a good reminder that a working feature and a broken-looking one are separated by the parsing layer nobody budgets for.</p>
+                            <p>Comparing any two tests returns a written briefing rather than a second table, what improved, what got worse, and what is worth raising at the next appointment. It arrives as Markdown and is rendered into headings, lists and tables. An early version printed the raw pipes and asterisks straight onto the screen, which is a good reminder that a working feature and a broken-looking one are separated by the parsing layer nobody budgets for.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+<section class="cs-section"><div class="cs-section-header"><span class="cs-section-line"></span><h2>AI-assisted development and App Store delivery</h2></div><p>I developed BloodLog with <strong>Claude connected to Xcode through MCP</strong>. The app is live. I handled the <strong>App Store submission manually</strong>, bringing the product from development through distribution.</p><p>Explore my <a href="ai-expert-zurich.html">AI, product and design expertise in Zurich</a> or my <a href="services.html">consulting and product development services</a>.</p></section>
             <!-- Build -->
             <section class="cs-section">
                 <div class="cs-section-header">
