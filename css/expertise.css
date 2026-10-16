@@ -27,3 +27,7 @@
 .contact-source { display: block; font-size: 14px; margin: 8px 0; }
 .contact-form select { width: 100%; border: 1px solid #777; padding: 12px; font: inherit; background: white; color: #333; border-radius: 0; margin-bottom: 16px; }
 @media (max-width: 740px) { .expertise-grid { grid-template-columns: 1fr; } .expertise-page { padding-top: 100px; } .expertise-lead { font-size: 18px; } .expertise-cta { padding: 24px; } }
+
+.expertise-project-icon { display: block; width: 88px; height: 88px; margin-bottom: 24px; }
+.expertise-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 740px) { .expertise-projects { grid-template-columns: 1fr; } }
