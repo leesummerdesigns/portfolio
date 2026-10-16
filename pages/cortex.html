@@ -3,100 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cortex: AI Memory and MCP Integration | Louis Henrich</title>
-    <meta name="description" content="Cortex, an open-source macOS AI memory project published by Louis Henrich. Markdown storage, semantic recall, MCP integration and a review workflow.">
+    <!-- Primary SEO -->
+    <title>Cortex — An Open-Source Memory for Your AI, Built Solo | Louis Henrich</title>
+    <meta name="description" content="Self-initiated, open-source macOS app: Cortex turns a folder of Markdown notes into a memory that Claude, ChatGPT, Cursor and Codex can read, shown as a living neural network. Designed and built by Louis Henrich.">
     <meta name="author" content="Louis Henrich">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://louishenrich.com/pages/cortex.html">
     <link rel="alternate" hreflang="en" href="https://louishenrich.com/pages/cortex.html">
     <link rel="alternate" hreflang="de-CH" href="https://louishenrich.com/pages/de/cortex-ki-gedaechtnis.html">
     <link rel="alternate" hreflang="x-default" href="https://louishenrich.com/pages/cortex.html">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://louishenrich.com/pages/cortex.html">
-    <meta property="og:title" content="Cortex: AI Memory and MCP Integration | Louis Henrich">
-    <meta property="og:description" content="Cortex, an open-source macOS AI memory project published by Louis Henrich. Markdown storage, semantic recall, MCP integration and a review workflow.">
-    <meta property="og:image" content="https://louishenrich.com/images/cortex-icon.png">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Cortex: AI Memory and MCP Integration | Louis Henrich">
-    <meta name="twitter:description" content="Cortex, an open-source macOS AI memory project published by Louis Henrich. Markdown storage, semantic recall, MCP integration and a review workflow.">
-    <meta name="twitter:image" content="https://louishenrich.com/images/cortex-icon.png">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
+    <meta property="og:title" content="Cortex — An Open-Source Memory for Your AI">
+    <meta property="og:description" content="Every AI chat starts from zero. Cortex gives your AI a memory you own: plain Markdown on your Mac, shared with Claude, ChatGPT and Cursor, drawn as a neural network.">
+    <meta property="og:image" content="https://louishenrich.com/images/cortex/hero.jpg">
+    <meta property="og:site_name" content="Louis Henrich">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cortex — An Open-Source Memory for Your AI">
+    <meta name="twitter:description" content="Plain Markdown on your Mac, shared with every AI you use, drawn as a neural network. Free and open source.">
+    <meta name="twitter:image" content="https://louishenrich.com/images/cortex/hero.jpg">
+    <script type="application/ld+json">
     {
-      "@type": "WebPage",
-      "@id": "https://louishenrich.com/pages/cortex.html#page",
-      "name": "Cortex: AI Memory and MCP Integration | Louis Henrich",
-      "url": "https://louishenrich.com/pages/cortex.html",
-      "description": "Cortex, an open-source macOS AI memory project published by Louis Henrich. Markdown storage, semantic recall, MCP integration and a review workflow.",
-      "inLanguage": "en",
-      "datePublished": "2026-10-16",
-      "dateModified": "2026-10-16",
-      "author": {
-        "@id": "https://louishenrich.com/#louis-henrich"
-      },
-      "mainEntity": {
-        "@id": "https://louishenrich.com/pages/cortex.html#app"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://louishenrich.com/pages/cortex.html#app",
-      "name": "Cortex",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "macOS 15 or later",
-      "softwareVersion": "0.4.0",
-      "url": "https://github.com/leesummerdesigns/cortex",
-      "releaseNotes": "https://github.com/leesummerdesigns/cortex/releases/tag/v0.4.0",
-      "license": "https://github.com/leesummerdesigns/cortex/blob/29b404288a24084a0c897c74a80159111a57affe/LICENSE",
-      "publisher": {
-        "@id": "https://louishenrich.com/#louis-henrich"
-      }
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "@id": "https://louishenrich.com/pages/cortex.html#source",
-      "name": "Cortex source code",
-      "codeRepository": "https://github.com/leesummerdesigns/cortex",
-      "programmingLanguage": [
-        "Swift",
-        "JavaScript"
-      ],
-      "version": "0.4.0",
-      "license": "https://github.com/leesummerdesigns/cortex/blob/29b404288a24084a0c897c74a80159111a57affe/LICENSE",
-      "targetProduct": {
-        "@id": "https://louishenrich.com/pages/cortex.html#app"
-      },
-      "publisher": {
-        "@id": "https://louishenrich.com/#louis-henrich"
-      }
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "name": "Cortex — Open-Source AI Memory App Case Study",
+          "description": "Designing and building Cortex, an open-source macOS app that turns Markdown notes into a shared memory for AI tools via the Model Context Protocol, with a 3D neural-network visualisation.",
+          "url": "https://louishenrich.com/pages/cortex.html",
+          "image": "https://louishenrich.com/images/cortex/hero.jpg",
+          "author": { "@id": "https://louishenrich.com/#louis-henrich" },
+          "datePublished": "2026-10-16",
+          "dateModified": "2026-10-16",
+          "about": ["AI Memory", "Model Context Protocol", "macOS", "SwiftUI", "Personal Knowledge Management", "Product Design", "Open Source"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Cortex",
+          "operatingSystem": "macOS 15 or later",
+          "applicationCategory": "ProductivityApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "downloadUrl": "https://github.com/leesummerdesigns/cortex/releases/latest/download/Cortex.zip",
+          "codeRepository": "https://github.com/leesummerdesigns/cortex",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": { "@id": "https://louishenrich.com/#louis-henrich" }
+        }
+      ]
     }
-  ]
-}</script>
+    </script>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-8CJV18QFG6');</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css?v=27">
     <link rel="stylesheet" href="../css/theme.css?v=1">
-    <link rel="stylesheet" href="../css/expertise.css?v=2">
+    <link rel="stylesheet" href="../css/case-study-footer.css?v=2">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
+    <style>
+        /* Cortex: wide macOS screenshots and download actions, on top of the shared case-study styles */
+        .cx-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+        .cx-actions .btn { display: inline-flex; align-items: center; gap: 10px; }
+        .cx-actions .btn-dark { background: #333; color: #fff; border-color: #333; }
+        .cx-actions .btn-dark:hover { background: transparent; color: #333; }
+        .cx-actions svg { width: 16px; height: 16px; flex: none; }
+        .cx-note { font-family: var(--font-mono); font-size: 12px; letter-spacing: .4px; color: var(--hub-ink-faint, #777); margin-top: 14px; }
+        .cx-shot { margin: 34px 0 0; }
+        .cx-shot img, .cx-presets img {
+            width: 100%; display: block; border-radius: 12px;
+            box-shadow: 0 36px 62px -24px rgba(13, 13, 13, .55), 0 12px 24px -8px rgba(13, 13, 13, .2);
+        }
+        .cx-shot figcaption, .cx-presets figcaption {
+            font-family: var(--font-mono); font-size: 12px; letter-spacing: .6px; line-height: 1.6;
+            color: var(--hub-ink-faint, #777); text-align: center; margin-top: 18px;
+        }
+        .cx-presets { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 34px; }
+        .cx-presets figure { margin: 0; }
+        @media (min-width: 760px) { .cx-presets { grid-template-columns: repeat(3, 1fr); } }
+        .cx-layers { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+        .cx-layer { border: 1px solid rgba(51, 51, 51, .14); border-radius: 12px; padding: 22px 24px; background: rgba(255, 255, 255, .5); }
+        .cx-layer strong { font-family: var(--font-mono); font-weight: 400; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+        .cx-layer strong::before { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--dot); box-shadow: inset -2px -2px 3px rgba(0,0,0,.25); }
+        .cx-layer p { font-size: 14px; line-height: 1.7; margin: 8px 0 0; }
+        @media (min-width: 760px) { .cx-layers { grid-template-columns: repeat(3, 1fr); } }
+        .cx-hero-shot img { border-radius: 4px; }
+    </style>
 </head>
 <body>
-    <nav class="main-nav"><div class="nav-container">
-        <a href="../index.html" class="logo"><span class="logo-text">Louis Henrich</span><span class="logo-line"></span></a>
-        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-menu"><span class="nav-highlight"></span><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Case Studies</a></li><li><a href="resume.html">Resume</a></li><li><a href="blog.html">Blog</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
-    </div></nav>
-    <main class="page-content expertise-page"><div class="container">
-        <nav class="language-switch" aria-label="Language"><a href="cortex.html" lang="en" aria-current="page">English</a><a href="de/cortex-ki-gedaechtnis.html" lang="de-CH">Deutsch</a></nav>
-        <header class="expertise-header"><img class="expertise-project-icon" src="../images/cortex-icon.png" alt="Cortex" width="88" height="88"><p class="expertise-kicker">Louis Henrich · Zürich · Switzerland</p><h1>Cortex: persistent memory for AI assistants</h1><p class="expertise-lead">An open-source macOS project published on my GitHub. Cortex brings a user-owned Markdown knowledge base into AI workflows, with retrieval, a visual note graph and MCP connections.</p><p class="expertise-availability">Public source and macOS release 0.4.0, published 16 October 2026.</p></header>
-        <section class="content-section"><h2>The product problem: useful context across conversations</h2><p>Useful context should survive the end of a chat. Cortex starts with a folder of plain Markdown notes, including an existing Obsidian vault, and makes selected context available to connected AI assistants. The same notes remain readable and editable outside the app.</p></section><section class="content-section"><h2>From notes to usable AI context</h2><div class="expertise-grid"><article class="expertise-card"><h3>Memory the user owns</h3><p>Knowledge stays in ordinary Markdown files. A graph shows explicit note links and connections derived from local embeddings.</p></article><article class="expertise-card"><h3>Retrieval for the task</h3><p>The recall engine combines keyword relevance and semantic similarity. Core notes provide persistent context; other notes can be retrieved when relevant.</p></article><article class="expertise-card"><h3>Human review of new memories</h3><p>An assistant can propose a memory through MCP. The proposal goes to an inbox for review before it becomes accepted memory.</p></article></div></section><section class="content-section"><h2>Connecting the product to AI assistants</h2><p>Cortex exposes memory through the Model Context Protocol (MCP), with tools for loading core context, recalling information, reading a note, proposing a memory and switching a persona. The repository documents connections for Claude Desktop, Claude Code, Cursor and Codex, plus an optional Bridge for web and mobile connections.</p><p>The native app uses SwiftUI, the memory engine and server are written in Swift, and a JavaScript graph runs inside the app. This connects interface design, retrieval behaviour and an actual assistant integration in one inspectable product.</p></section><section class="content-section"><h2>Product decisions and boundaries</h2><ul class="expertise-list"><li><strong>Portable knowledge:</strong> use Markdown files instead of locking the underlying notes into an application database.</li><li><strong>Different kinds of context:</strong> separate core memory, relevant notes, personas and knowledge packs.</li><li><strong>Review before acceptance:</strong> keep proposed memories visible so the user decides what becomes durable context.</li><li><strong>Explicit sharing:</strong> the implementation filters notes marked private and pending proposals from AI recall. Sharing note context with a connected assistant still involves that assistant's service. The optional Bridge changes how memory is accessed.</li></ul><p>The public release currently requires macOS 15 or later. Installation requirements, the unsigned build and the Bridge's current limitations are documented in the repository.</p></section><section class="content-section"><h2>Public evidence you can inspect</h2><p>I publish Cortex from my GitHub account. The public repository and release history document the implementation; version 0.4.0 was released on 16 October 2026. The commit history also records AI co-author contributions.</p><ul class="expertise-list"><li><a href="https://github.com/leesummerdesigns/cortex">Repository and product documentation</a></li><li><a href="https://github.com/leesummerdesigns/cortex/releases/tag/v0.4.0">Version 0.4.0 release and installation notes</a></li><li><a href="https://github.com/leesummerdesigns/cortex/blob/29b404288a24084a0c897c74a80159111a57affe/Sources/CortexCLI/MCPServer.swift">MCP server and the available memory tools</a></li><li><a href="https://github.com/leesummerdesigns/cortex/blob/29b404288a24084a0c897c74a80159111a57affe/Sources/CortexKit/Index.swift">Retrieval and note graph implementation</a></li><li><a href="https://github.com/leesummerdesigns/cortex/blob/29b404288a24084a0c897c74a80159111a57affe/Tests/CortexKitTests/EngineTests.swift">Repository tests covering memory proposals and private-note filtering</a></li></ul></section><section class="content-section"><h2>What this brings to AI implementation work</h2><p>Cortex provides a concrete example of turning an AI interaction problem into a product with data storage, retrieval, assistant connections and a review workflow. These are practical decisions that also matter when integrating AI into an organisation's tools.</p><p>Read about my <a href="ai-expert-zurich.html">AI consulting in Zurich and Switzerland</a>, explore <a href="socialhub.html">The Social Hub</a> and <a href="bloodlog.html">BloodLog</a>, or see my <a href="projects.html">other product work</a>.</p></section>
-        <section class="expertise-cta"><h2>Let's talk about your AI project</h2><p>I help businesses with AI strategy, implementation and product development. In person across Switzerland and remote worldwide, in native English and German.</p><a href="mailto:info@louishenrich.com" class="btn btn-primary">Get in touch</a></section>
-    </div></main>
-    <footer class="main-footer"><div class="container"><p>&copy; Louis Henrich 2026</p><img loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart"></div></footer>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Louis Henrich</span>
+                <span class="logo-line"></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Case Studies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page sh-case-study bl-case-study">
+        <div class="container">
+            <!-- Hero -->
+            <header class="cs-header cs-header-hero sh-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <p class="sh-eyebrow">Self-initiated product · macOS app, open source</p>
+                        <h1 class="cs-title">Cortex</h1>
+                        <p class="cs-subtitle">A second brain your AI can actually read.</p>
+                        <p class="cs-description">Every morning I introduced myself to an AI. Who I am, what I am working on, that I prefer short answers. Then the chat closed and we were strangers again. My notes were never the problem — they have lived in a Markdown vault for years. The problem was that the AI could not open them. Cortex is the bridge: a Mac app that turns the same folder of notes into a memory that Claude, ChatGPT, Cursor and Codex can search, and draws it as a neural network you can watch think.</p>
+
+                        <dl class="sh-facts">
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Everything — concept, interaction design, SwiftUI app, 3D graph, MCP server, OAuth bridge, packs and release.</dd>
+                            </div>
+                            <div>
+                                <dt>Why</dt>
+                                <dd>To stop repeating myself to every AI tool, and to find out what an AI memory looks like when the user stays in charge of it.</dd>
+                            </div>
+                            <div>
+                                <dt>Platform</dt>
+                                <dd>macOS 15+ · SwiftUI · three.js · Model Context Protocol · on-device embeddings.</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Free and open source under the MIT license. Version 0.4, October 2026.</dd>
+                            </div>
+                        </dl>
+
+                        <div class="cx-actions">
+                            <a class="btn btn-dark" href="https://github.com/leesummerdesigns/cortex/releases/latest/download/Cortex.zip">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 11.5 3.5 7l1.06-1.06 2.69 2.69V1h1.5v7.63l2.69-2.69L12.5 7zM2 13.5h12V15H2z"/></svg>
+                                Download for Mac
+                            </a>
+                            <a class="btn btn-primary" href="https://github.com/leesummerdesigns/cortex" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                        <p class="cx-note">macOS 15 or later · Apple Silicon and Intel · MIT license</p>
+                    </div>
+                    <div class="cs-hero-right">
+                        <div class="sh-devices">
+                            <div class="sh-laptop">
+                                <div class="sh-laptop-lid">
+                                    <span class="sh-laptop-screen cx-hero-shot">
+                                        <img loading="eager" decoding="async" fetchpriority="high" src="../images/cortex/hero.jpg" alt="Cortex showing a memory of 77 notes as a 3D neural network: glossy spheres for notes, lines for links, white core notes in the centre and red project notes around them">
+                                    </span>
+                                </div>
+                                <div class="sh-laptop-base"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- The problem -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>The reader has changed</h2>
+                </div>
+                <p class="cs-intro-text">Note-taking tools like Obsidian are excellent at what they were built for: a human reading their own notes. But most of what I write now gets read by an AI first, and that reader has three problems. It cannot open the vault. It cannot follow me to my phone or to a second laptop. And it has no idea which version of me it is talking to — the designer, the runner, or the person trying to understand their pension.</p>
+                <p class="cs-intro-text">The obvious answer is the one every AI company is building: a memory inside their product. I wanted the opposite. One memory that I own, in plain files, that every AI can borrow — and that I can read, edit, delete or move without asking anyone.</p>
+
+                <figure class="cx-shot">
+                    <img loading="lazy" decoding="async" src="../images/cortex/overview.jpg" alt="The Cortex window: a sidebar listing layers (Core, Context, Memory, Packs), two memories waiting for review, and notes grouped by layer, next to the neural-network graph">
+                    <figcaption>The whole memory at a glance. The sidebar sorts notes by how an AI should use them; the graph shows how they connect.</figcaption>
+                </figure>
+
+                <div class="sh-callout">
+                    <p>All screenshots run on a demo memory with made-up notes. A personal memory is exactly the kind of thing that should not end up on a portfolio — which is also the design principle of the product.</p>
+                </div>
+            </section>
+
+            <!-- Layers -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Not everything deserves the same attention</h2>
+                </div>
+                <p class="cs-intro-text">Dumping every note into every conversation is the fastest way to make an AI worse. So the central design decision is a hierarchy: three layers that decide when the AI gets to see a note. The layers come from the folder a note already lives in, so an existing vault works on day one without reorganising anything.</p>
+
+                <div class="cx-layers">
+                    <div class="cx-layer" style="--dot:#f2eeea">
+                        <strong>Core</strong>
+                        <p>Always loaded. Who I am, how I want answers, my writing style, my goals. A handful of notes that every AI reads before it says anything.</p>
+                    </div>
+                    <div class="cx-layer" style="--dot:#d9534f">
+                        <strong>Context</strong>
+                        <p>Active projects and areas. Recalled first when a question touches them, and dropped automatically when a project is marked done.</p>
+                    </div>
+                    <div class="cx-layer" style="--dot:#b9b0a8">
+                        <strong>Memory</strong>
+                        <p>Everything else — books, recipes, trips, old decisions. Found by meaning when it becomes relevant, invisible when it is not.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recall -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Recall you can watch</h2>
+                </div>
+                <p class="cs-intro-text">Search runs by meaning, not by keyword, using Apple's on-device language model — nothing is sent anywhere to compute it. Ask "how do I get faster at running?" and Cortex finds the 10k plan, the nutrition note and the strength routine that fixed a knee, even though none of them contains the word "faster".</p>
+
+                <figure class="cx-shot">
+                    <img loading="lazy" decoding="async" src="../images/cortex/recall.jpg" alt="A recall for 'how do I get faster at running?': the matching notes light up gold in the graph and the camera flies to them, with a ranked list of eight memories in the corner">
+                    <figcaption>The same thing happens when Claude or ChatGPT searches your memory: the graph lights up and shows what the AI just looked at.</figcaption>
+                </figure>
+
+                <div class="sh-callout sh-callout--coral">
+                    <p><strong>Why the graph is not decoration.</strong> An AI that quietly reads your notes is uncomfortable, however useful. When Claude searches from a chat window, the matching spheres light up in Cortex in real time. The visualisation turns an invisible retrieval step into something you can see and therefore trust — or catch when it is looking in the wrong place.</p>
+                </div>
+            </section>
+
+            <!-- Note -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Every sphere is a file</h2>
+                </div>
+
+                <figure class="cx-shot">
+                    <img loading="lazy" decoding="async" src="../images/cortex/note.jpg" alt="The note Design System v3 selected: its sphere enlarged in the graph, and a panel listing the notes it links to, the notes that link back, and two related notes found automatically with a similarity score">
+                    <figcaption>Selecting a sphere shows its links, its backlinks and the connections Cortex found on its own, each with a similarity score.</figcaption>
+                </figure>
+
+                <div class="bl-split" style="margin-top: 50px;">
+                    <div class="bl-split-body" style="grid-column: 1 / -1;">
+                        <div>
+                            <h3>Markdown stays the source of truth</h3>
+                            <p>Cortex never converts, imports or locks anything. Notes stay plain .md files that open in any editor, sync through iCloud like any other folder, and survive the day Cortex stops existing. The app is a lens on the folder, not a container for it.</p>
+                        </div>
+                        <div>
+                            <h3>Links you write, and links it finds</h3>
+                            <p>Wikilinks are drawn as solid connections. On top of that, Cortex compares every note by meaning and adds the five closest neighbours as quieter lines — which is how two notes about the same idea find each other, even when nobody thought to link them.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Connect -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>One memory, every AI</h2>
+                </div>
+                <div class="bl-split">
+                    <div class="bl-split-media">
+                        <img loading="lazy" decoding="async" src="../images/cortex/connect-panel.jpg" alt="The Connect panel: the memory folder, one-click connections for Claude Desktop, Claude Code, Cursor and Codex with their status, a copyable config for other apps, and the Bridge switch for phone and web">
+                    </div>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>An open standard instead of an integration per app</h3>
+                            <p>Cortex speaks the Model Context Protocol, the standard AI apps use to plug in tools. That means one small server gives the AI five abilities — load the core, recall, read a note, propose a memory, switch persona — and every app that speaks MCP gets them for free.</p>
+                        </div>
+                        <div>
+                            <h3>Connect is a button, not a config file</h3>
+                            <p>Wiring an MCP server usually means editing JSON in a hidden folder. Here it is one click for Claude Desktop, Claude Code, Cursor and Codex. Configs are merged, never overwritten, and every connection can be undone the same way it was made.</p>
+                        </div>
+                        <div>
+                            <h3>The phone problem</h3>
+                            <p>A memory that only exists on one Mac fails the moment you pick up your phone. The Bridge publishes the memory through a secure tunnel so Claude and ChatGPT on the web and on the phone can use it too. Every new device must be approved with a pairing code shown in the app — the address alone opens nothing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personas -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Same memory, different attitude</h2>
+                </div>
+                <div class="bl-split bl-split--reverse">
+                    <div class="bl-split-media">
+                        <img loading="lazy" decoding="async" src="../images/cortex/packs-panel.jpg" alt="The Packs panel: installed personas Devil's Advocate, Finance Guide (active) and Socratic Coach, a knowledge pack called Product Strategy Essentials, and more starter packs to install">
+                    </div>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>Personas change how the AI works with you</h3>
+                            <p>A persona is a small set of notes about behaviour: how to respond, what to ask first, what never to do. When one is active it joins the core, so every connected AI adopts it at once. Saying "be my devil's advocate" in any chat switches it — the AI calls Cortex and changes its own instructions.</p>
+                        </div>
+                        <div>
+                            <h3>Twelve starter packs, written to be useful</h3>
+                            <p>Finance Guide shows the maths, names the fees and refuses hot tips. Devil's Advocate steelmans your idea before attacking its weakest assumption. Language Tutor corrects after it answers, never during. There are knowledge packs too — product strategy, context engineering, modern SwiftUI — that join your own notes in recall.</p>
+                        </div>
+                        <div>
+                            <h3>A pack is just a folder</h3>
+                            <p>A manifest and a few Markdown files. Anyone can write one, export their own notes as one, and share it — which keeps the format as open as the memory itself.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Review -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>The AI proposes, you decide</h2>
+                </div>
+                <p class="cs-intro-text">AI tools can write to the memory, but never directly. When Claude or ChatGPT wants to remember something, it lands in an inbox as a proposal, marked with where it came from. Until it is accepted, no AI can see it. One click accepts or discards it — the same habit as reviewing a pull request, applied to what a machine believes about you.</p>
+
+                <figure class="cx-shot">
+                    <img loading="lazy" decoding="async" src="../images/cortex/review.jpg" alt="A memory proposed by ChatGPT about an espresso ratio, shown with a banner saying it is not part of the memory yet, with Accept and Discard buttons, and its sphere labelled NEW in the graph">
+                    <figcaption>A proposed memory breathes in the graph and waits in the sidebar until you accept it. Notes can also be marked private, which hides them from every AI.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Appearance -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>A graph you want to look at</h2>
+                </div>
+                <p class="cs-intro-text">If a tool asks you to maintain something every day, it had better be pleasant to open. The graph is drawn in three.js with glossy spheres, soft reflections and small pulses travelling along the connections. Colours, gloss, glow, line thickness and curvature are all adjustable, with four presets as starting points.</p>
+
+                <div class="cx-presets">
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/cortex/appearance-coral.jpg" alt="The Coral preset: white and coral spheres on a dark grey gradient">
+                        <figcaption>Coral</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/cortex/appearance-blueprint.jpg" alt="The Blueprint preset: pale blue spheres and curved lines on a deep navy background">
+                        <figcaption>Blueprint</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" decoding="async" src="../images/cortex/appearance-paper.jpg" alt="The Paper preset: black and red spheres on a light paper background">
+                        <figcaption>Paper</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Build -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>How it is built</h2>
+                </div>
+                <p class="cs-intro-text">A native SwiftUI app with the graph rendered in a web view, plus a small command-line helper that does the talking to AI apps. Designed and built in three days, with Claude Code as my pair programmer — which, given the subject, felt like the only honest way to build it.</p>
+
+                <div class="sh-arch">
+                    <div class="sh-arch-row">
+                        <div class="sh-arch-node">
+                            <span class="sh-arch-kicker">Your Mac</span>
+                            <strong>Markdown folder</strong>
+                            <ul>
+                                <li>Plain .md files, any editor</li>
+                                <li>Layers from folders or frontmatter</li>
+                                <li>iCloud or Dropbox for other Macs</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>read locally</span></div>
+                        <div class="sh-arch-node sh-arch-node--server">
+                            <span class="sh-arch-kicker">Cortex</span>
+                            <strong>App + MCP server</strong>
+                            <ul>
+                                <li>SwiftUI app, three.js graph</li>
+                                <li>On-device embeddings for recall</li>
+                                <li>OAuth 2.1 bridge with pairing codes</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>Model Context Protocol</span></div>
+                        <div class="sh-arch-node sh-arch-node--data">
+                            <span class="sh-arch-kicker">Your AI tools</span>
+                            <strong>Any MCP client</strong>
+                            <ul>
+                                <li>Claude, ChatGPT, Cursor, Codex</li>
+                                <li>Desktop, web and phone</li>
+                                <li>Private notes never leave</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sh-arch-shared">
+                        <span>What I actually learned</span>
+                        That the hard part of AI memory is not storage or search — both are solved problems. It is deciding what the AI should see, when, and who gets the last word. Every interesting decision in Cortex is about permission and attention, not about technology.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Try it -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Try it</h2>
+                </div>
+                <p class="cs-intro-text">Cortex is free and open source. Download the app, point it at a folder of notes (an Obsidian vault works as is), and click Connect next to the AI apps you use. The source, the starter packs and the setup guide are on GitHub.</p>
+                <div class="cx-actions">
+                    <a class="btn btn-dark" href="https://github.com/leesummerdesigns/cortex/releases/latest/download/Cortex.zip">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 11.5 3.5 7l1.06-1.06 2.69 2.69V1h1.5v7.63l2.69-2.69L12.5 7zM2 13.5h12V15H2z"/></svg>
+                        Download for Mac
+                    </a>
+                    <a class="btn btn-primary" href="https://github.com/leesummerdesigns/cortex" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+                <p class="cx-note">The app is not yet signed with an Apple Developer ID, so macOS asks once before the first launch. The README explains how to allow it.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- More work and contact -->
+    <div class="case-study-outro">
+        <div class="container">
+            <nav class="project-pagination" aria-label="Project navigation">
+                <a class="project-link project-link--prev" href="telekom.html" rel="prev">
+                    <span class="project-link-arrow" aria-hidden="true">←</span>
+                    <span class="project-link-copy"><span class="project-link-label">Previous project</span><span class="project-link-title">Deutsche Telekom</span></span>
+                </a>
+                <a href="projects.html" class="all-projects-link">All case studies</a>
+                <a class="project-link project-link--next" href="socialhub.html" rel="next">
+                    <span class="project-link-copy"><span class="project-link-label">Next project</span><span class="project-link-title">The Social Hub</span></span>
+                    <span class="project-link-arrow" aria-hidden="true">→</span>
+                </a>
+            </nav>
+        </div>
+        <section class="case-study-contact" id="contact" aria-label="Contact" tabindex="-1">
+            <a class="case-study-email-button" href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Get in touch with me</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart">
+            <p>&copy; Louis Henrich - 2026</p>
+        </div>
+    </footer>
+
     <script src="../js/main.js?v=3"></script>
 </body>
 </html>
