@@ -46,6 +46,8 @@
 ## Recent articles
 
 - [AI Expert, AI Strategy Consultant or AI Business Specialist: Who Do You Need?](https://louishenrich.com/pages/blog/ai-expert-vs-strategy-consultant.html): how to choose by where your AI work is stuck
+- [Was KI-Beratung in der Schweiz kostet (Deutsch)](https://louishenrich.com/pages/de/ki-beratung-kosten-schweiz.html): veröffentlichte Schweizer Preise und wie man Offerten vergleicht
+- [KI-Experte, KI-Strategieberater oder AI Business Specialist (Deutsch)](https://louishenrich.com/pages/de/ki-experte-oder-strategieberater.html): die Wahl nach dem Haltepunkt
 - [What AI Consulting Costs in Switzerland](https://louishenrich.com/pages/blog/ai-consulting-cost-switzerland.html): published Swiss prices and how to compare quotes
 - [EU AI Act: What Companies Need to Do Now](https://louishenrich.com/pages/blog/eu-ai-act-what-companies-need-to-do-now.html): The updated EU AI Act timeline, current transparency duties and a practical 30-day action plan for companies in Europe and Switzerland.
 - [CAIO, Head of AI and the Team Behind AI Growth](https://louishenrich.com/pages/blog/caio-head-of-ai-company-growth.html): What a Chief AI Officer, Head of AI and supporting AI roles should own, which skills they need and how their work can support company growth.
