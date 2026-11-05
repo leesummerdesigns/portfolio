@@ -52,10 +52,8 @@ body,
 .main-nav.scrolled{background:var(--paper)}
 
 /* ============================================================
-   HERO — "constructivist cut"
-   The photo is sliced on a hard diagonal, a triangle answers it
-   from below, a circle sits over the top corner and a hairline
-   runs off the left edge.
+   HERO
+   The photo is sliced on a hard diagonal.
    ============================================================ */
 .hero h1 .highlight{background:var(--color-black);color:var(--color-white);padding:2px 10px;
   -webkit-box-decoration-break:clone;box-decoration-break:clone}
@@ -68,39 +66,8 @@ body,
   clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
 }
 
-/* triangle counterform */
-.hero-shape{
-  position:absolute;
-  left:-80px;bottom:-30px;
-  width:250px;height:250px;
-  background:var(--color-black);
-  clip-path:polygon(0 100%,100% 100%,0 0);
-  z-index:1;
-}
-
-/* outlined circle over the top corner */
-.hero-image-container::after{
-  content:'';
-  position:absolute;
-  top:-22px;left:-58px;
-  right:auto;bottom:auto;
-  width:150px;height:150px;
-  background:none;
-  background-image:none;
-  border:2.5px solid var(--color-black);
-  border-radius:50%;
-  z-index:3;
-}
-
-/* hairline running off to the left */
-.hero-image::before{
-  content:'';
-  position:absolute;
-  left:-190px;top:34%;
-  width:190px;height:2px;
-  background:var(--color-black);
-  z-index:1;
-}
+/* the base stylesheet decorates this element; the homepage hero has no shapes */
+.hero-image-container::after{content:none}
 
 /* ============================================================
    SECTIONS
