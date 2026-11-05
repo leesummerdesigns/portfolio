@@ -26,6 +26,8 @@
 ## Pages
 
 - [Home](https://louishenrich.com/): Overview, AI working process, case studies, FAQ
+- [AI Consultant in Zurich](https://louishenrich.com/pages/ai-consultant-zurich.html): AI consulting services, process and FAQ
+- [KI-Beratung in Zürich (Deutsch)](https://louishenrich.com/pages/de/ki-beratung-zuerich.html): KI-Beratung für Unternehmen und KMU in der Schweiz
 - [AI Expert in Zurich](https://louishenrich.com/pages/ai-expert-zurich.html): AI consulting and expertise in Zurich, Switzerland
 - [AI Expert with Product Leadership](https://louishenrich.com/pages/ai-product-leadership.html): AI expertise combined with 20+ years in product design and leadership
 - [AI Strategy Consultant](https://louishenrich.com/pages/ai-business-strategy.html): How Louis helps companies build an AI strategy
