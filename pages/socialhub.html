@@ -54,10 +54,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&family=Inconsolata:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@500;600;700;800&display=swap"></noscript>
     <link rel="stylesheet" href="../css/style.css?v=27">
-    <link rel="stylesheet" href="../css/theme.css?v=1">
+    <link rel="stylesheet" href="../css/theme.css?v=2">
     <link rel="stylesheet" href="../css/case-study-footer.css?v=2">
     <link rel="icon" type="image/png" href="../images/favico_lh.png">
     <style>
@@ -162,14 +166,14 @@
                             <div class="sh-laptop">
                                 <div class="sh-laptop-lid">
                                     <span class="sh-laptop-screen">
-                                        <img loading="eager" decoding="async" fetchpriority="high" src="../images/socialhub/home-desktop.jpg" alt="The Social Hub home page on a laptop: German hero headline, search bar and tilted event cards showing how many people are still missing">
+                                        <img width="1800" height="1125" loading="eager" decoding="async" fetchpriority="high" src="../images/socialhub/home-desktop.jpg" alt="The Social Hub home page on a laptop: German hero headline, search bar and tilted event cards showing how many people are still missing">
                                     </span>
                                 </div>
                                 <div class="sh-laptop-base"></div>
                             </div>
                             <div class="sh-phone">
                                 <span class="sh-phone-screen">
-                                    <img loading="eager" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The same home page on a phone, with a condensed hero and stacked search fields">
+                                    <img width="416" height="900" loading="eager" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The same home page on a phone, with a condensed hero and stacked search fields">
                                 </span>
                             </div>
                         </div>
@@ -196,7 +200,7 @@
                         <div class="sh-threshold-demo" id="sh-threshold-demo" role="img" aria-label="Live demo of a Social Hub event card: the attendee count rises from 3 of 8 to full, the badge flips from 'Needs 5 more' to 'Happening' and confetti celebrates">
 <div class="card">
     <div class="card-media">
-      <img src="../images/socialhub/threshold-demo-card.jpg" alt="Saturday Sunrise Hike" />
+      <img width="840" height="521" src="../images/socialhub/threshold-demo-card.jpg" alt="Saturday Sunrise Hike" />
       <div class="badge-stack">
         <span class="badge badge-amber" data-demo="badge-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Needs 5 more</span>
         <span class="badge badge-amber" data-demo="badge-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Needs 3 more</span>
@@ -288,11 +292,11 @@
 
                 <div class="cs-comparison-grid">
                     <div class="cs-comparison-item">
-                        <img class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/home-nearby-desktop.jpg" alt="Event cards near you, each showing how many more people are needed and a progress bar toward the minimum">
+                        <img width="1800" height="1125" class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/home-nearby-desktop.jpg" alt="Event cards near you, each showing how many more people are needed and a progress bar toward the minimum">
                         <p class="cs-comparison-label">Browsing: every card counts down to its minimum</p>
                     </div>
                     <div class="cs-comparison-item">
-                        <img class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/event-desktop.jpg" alt="Event detail page with the headline this event still needs nine people to happen, plus date, location and RSVP deadline">
+                        <img width="1800" height="1125" class="cs-media--framed" loading="lazy" decoding="async" src="../images/socialhub/event-desktop.jpg" alt="Event detail page with the headline this event still needs nine people to happen, plus date, location and RSVP deadline">
                         <p class="cs-comparison-label">Deciding: the event page says exactly what is missing</p>
                     </div>
                 </div>
@@ -405,11 +409,11 @@
 
                 <div class="sh-mobile-shots">
                     <figure>
-                        <img loading="lazy" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The Social Hub mobile home screen with a compact hero, stacked search fields and category chips">
+                        <img width="416" height="900" loading="lazy" decoding="async" src="../images/socialhub/home-mobile.jpg" alt="The Social Hub mobile home screen with a compact hero, stacked search fields and category chips">
                         <p class="cs-comparison-label">Rebuilt mobile home: search pulled up, hero condensed</p>
                     </figure>
                     <figure>
-                        <img loading="lazy" decoding="async" src="../images/socialhub/event-mobile.jpg" alt="Mobile event detail page with a fact card for date, location and attendance, and a fixed RSVP bar at the bottom">
+                        <img width="416" height="900" loading="lazy" decoding="async" src="../images/socialhub/event-mobile.jpg" alt="Mobile event detail page with a fact card for date, location and attendance, and a fixed RSVP bar at the bottom">
                         <p class="cs-comparison-label">Event detail: facts consolidated, RSVP bar pinned in reach</p>
                     </figure>
                 </div>
@@ -444,7 +448,7 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <img loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart">
+            <img width="100" height="92" loading="lazy" decoding="async" src="../images/footer-heart.png" alt="" class="footer-heart">
             <p>&copy; Louis Henrich 2026</p>
         </div>
     </footer>
