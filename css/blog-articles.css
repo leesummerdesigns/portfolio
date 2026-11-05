@@ -37,3 +37,9 @@
     background: rgba(0, 0, 0, 0.035);
     font-size: 14px;
 }
+
+/* Comparison tables in articles */
+.blog-post-body table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; line-height: 1.5; }
+.blog-post-body th, .blog-post-body td { padding: 12px 14px 12px 0; text-align: left; vertical-align: top; border-bottom: 1px solid #d8d6d0; }
+.blog-post-body th { border-bottom: 2px solid var(--color-black); font-weight: 700; }
+@media (max-width: 640px) { .blog-post-body table { display: block; overflow-x: auto; font-size: 14px; } .blog-post-body th, .blog-post-body td { min-width: 130px; } }
