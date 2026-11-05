@@ -31,3 +31,6 @@
 .expertise-project-icon { display: block; width: 88px; height: 88px; margin-bottom: 24px; }
 .expertise-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 740px) { .expertise-projects { grid-template-columns: 1fr; } }
+
+/* Sets of four cards: two columns, so none sits alone on a row */
+@media (min-width: 741px) { .expertise-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

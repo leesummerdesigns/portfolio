@@ -8,6 +8,9 @@
 - Role: AI Expert and AI Business Consultant
 - Location: Zurich (Zürich), Switzerland
 - Experience: 20+ years in product design, UX, and AI
+- Product leadership: Lead Product Designer at Swiss Marketplace Group, reporting to the Managing Director, leading 10 designers across three brands; earlier Head of User Experience at Cocomore
+- Training: completing the AI Business Specialist program at IFA in Zurich, due 2027; does not yet hold the federal diploma
+- Award: Red Dot Design Award 2018 (tolino epos)
 - Serves: companies and teams across Switzerland and Europe (on-site and remote)
 - Languages: English, German, Spanish
 - Founder of: UX Academy
@@ -24,7 +27,9 @@
 
 - [Home](https://louishenrich.com/): Overview, AI working process, case studies, FAQ
 - [AI Expert in Zurich](https://louishenrich.com/pages/ai-expert-zurich.html): AI consulting and expertise in Zurich, Switzerland
-- [AI Business Strategy](https://louishenrich.com/pages/ai-business-strategy.html): How Louis helps companies build an AI strategy
+- [AI Expert with Product Leadership](https://louishenrich.com/pages/ai-product-leadership.html): AI expertise combined with 20+ years in product design and leadership
+- [AI Strategy Consultant](https://louishenrich.com/pages/ai-business-strategy.html): How Louis helps companies build an AI strategy
+- [AI Business Specialist in Switzerland](https://louishenrich.com/pages/ai-business-specialist.html): What the role does and how Louis applies it
 - [Services](https://louishenrich.com/pages/services.html): Full list of services
 - [AI Leadership Coaching](https://louishenrich.com/pages/ai-leadership-coaching.html): 1:1 coaching for executives, product and design leaders and startups
 - [About](https://louishenrich.com/pages/about.html): Background and biography
