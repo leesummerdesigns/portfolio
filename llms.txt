@@ -1,11 +1,11 @@
 # Louis Henrich
 
-> Louis Henrich is an AI Expert and Design System Specialist based in Zurich, Switzerland, with 20+ years of experience. He helps companies with AI business strategy, AI-driven product design, and building scalable design systems. He has worked with Immoscout24, Rabobank, Deutsche Telekom, BD Rowa, and Rakuten Kobo, and founded the UX Academy.
+> Louis Henrich is an AI expert and AI business consultant based in Zurich, Switzerland, with over 20 years in product, design and technology. He helps companies with AI strategy and roadmaps, AI product features, team enablement and agentic workflows.
 
 ## Key facts
 
 - Name: Louis Henrich
-- Role: AI Expert & Design System Specialist
+- Role: AI Expert and AI Business Consultant
 - Location: Zurich (Zürich), Switzerland
 - Experience: 20+ years in product design, UX, and AI
 - Serves: companies and teams across Switzerland and Europe (on-site and remote)
@@ -16,7 +16,6 @@
 ## What he does
 
 - AI business strategy: AI readiness assessment, tool and platform evaluation, AI roadmapping, using frameworks like PESTEL and the AI Strategy Canvas
-- Design systems: building and scaling component libraries, design tokens, documentation, and governance, accelerated with AI
 - AI product design: discovery, research synthesis, prototyping, and delivery with AI in the loop
 - Process automation with AI: agentic workflows for marketing, lead generation, reporting, and operations
 - AI adoption and team enablement: training product and design teams to work AI-first
@@ -25,18 +24,25 @@
 
 - [Home](https://louishenrich.com/): Overview, AI working process, case studies, FAQ
 - [AI Expert in Zurich](https://louishenrich.com/pages/ai-expert-zurich.html): AI consulting and expertise in Zurich, Switzerland
-- [Design System Specialist](https://louishenrich.com/pages/design-system-specialist.html): Design system services and case studies
 - [AI Business Strategy](https://louishenrich.com/pages/ai-business-strategy.html): How Louis helps companies build an AI strategy
 - [Services](https://louishenrich.com/pages/services.html): Full list of services
 - [About](https://louishenrich.com/pages/about.html): Background and biography
 - [Case Studies](https://louishenrich.com/pages/projects.html): Client work
 - [Resume](https://louishenrich.com/pages/resume.html): Career history
-- [Blog](https://louishenrich.com/pages/blog.html): Articles on AI, design systems, and AI strategy
+- [Blog](https://louishenrich.com/pages/blog.html): Articles on AI strategy and adoption
 
 ## Recent articles
 
 - [EU AI Act: What Companies Need to Do Now](https://louishenrich.com/pages/blog/eu-ai-act-what-companies-need-to-do-now.html): The updated EU AI Act timeline, current transparency duties and a practical 30-day action plan for companies in Europe and Switzerland.
 - [CAIO, Head of AI and the Team Behind AI Growth](https://louishenrich.com/pages/blog/caio-head-of-ai-company-growth.html): What a Chief AI Officer, Head of AI and supporting AI roles should own, which skills they need and how their work can support company growth.
+
+## Case studies
+
+- [AI features at Swiss Marketplace Group](https://louishenrich.com/pages/smg-ai.html): listing description generator with 90% adoption, Picture to Listing on Ricardo, hackathon-winning listing robot
+- [Cortex](https://louishenrich.com/pages/cortex.html): open-source AI memory app for macOS
+- [The Social Hub](https://louishenrich.com/pages/socialhub.html): live community platform built completely with AI
+- [BloodLog](https://louishenrich.com/pages/bloodlog.html): live iOS app with AI-assisted explanations
+- [Gestalt, an ADHD diagnostic workflow tool](https://louishenrich.com/pages/adhd-diagnostics.html): in development
 
 ## Contact
 
