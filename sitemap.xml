@@ -96,11 +96,11 @@
   </url>
   <url>
     <loc>https://louishenrich.com/pages/de/ki-strategie-schweiz.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://louishenrich.com/pages/de/ki-produktentwicklung.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://louishenrich.com/pages/de/ueber-louis-henrich.html</loc>
@@ -164,5 +164,17 @@
     <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://louishenrich.com/pages/ai-consultant-zurich.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://louishenrich.com/pages/de/ki-beratung-zuerich.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
