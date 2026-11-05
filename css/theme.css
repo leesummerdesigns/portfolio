@@ -167,3 +167,9 @@ body,
   border:2.5px solid var(--color-black);
   border-radius:0;
   box-shadow:6px 6px 0 var(--color-black)}
+
+/* Keep images proportional now that they carry width and height attributes */
+:where(img[width][height]){height:auto}
+.hero-image picture{display:block}
+/* Readable contrast on small grey text */
+.main-footer p,.blog-card-date,.blog-post-header .subtitle{color:#666}
