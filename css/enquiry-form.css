@@ -1,0 +1,25 @@
+.enquiry-section { scroll-margin-top: 120px; }
+.expertise-header .enquiry-intro { margin-top: 24px; }
+.enquiry-form { margin-top: 28px; max-width: 760px; }
+.enquiry-form label { display: block; font-weight: 700; }
+.enquiry-form label span { font-weight: 400; }
+.enquiry-form input,
+.enquiry-form textarea {
+    margin-top: 8px;
+    border: 2px solid var(--color-black);
+    background: var(--paper, #f4f3ef);
+    padding: 12px 14px;
+    border-radius: 0;
+}
+.enquiry-form textarea { min-height: 140px; resize: vertical; }
+.enquiry-form input:focus-visible,
+.enquiry-form textarea:focus-visible,
+.enquiry-form select:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 3px;
+}
+.enquiry-form .form-note { font-size: 14px; margin-bottom: 0; }
+.enquiry-form .form-note a { text-decoration: underline; }
+@media (min-width: 640px) {
+    .enquiry-form .form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
