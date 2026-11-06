@@ -1,0 +1,136 @@
+/* Services page: the one-to-one coaching panel.
+   Same language as the rest of the site (soft black, square corners,
+   hard offset shadow), inverted so it reads as a different kind of offer. */
+.coaching-feature{
+  margin-top:56px;
+  background:var(--color-black);
+  color:var(--color-white);
+  border:2.5px solid var(--color-black);
+  box-shadow:10px 10px 0 -2.5px var(--paper),10px 10px 0 0 var(--color-black)}
+
+.coaching-main{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:48px;
+  padding:40px 28px}
+
+.coaching-eyebrow,
+.coaching-list-title,
+.coaching-facts dt{
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:400;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.65)}
+
+.coaching-eyebrow{margin:0}
+
+.coaching-numeral{
+  margin:18px 0 22px;
+  font-family:var(--font-heading);
+  font-size:clamp(104px,14vw,176px);
+  line-height:.9;
+  color:var(--color-white)}
+
+.coaching-feature h2{
+  margin:0 0 12px;
+  font-family:var(--font-heading);
+  font-size:30px;
+  font-weight:400;
+  line-height:1.2;
+  color:var(--color-white)}
+
+.coaching-lead{
+  margin:0 0 18px;
+  font-family:var(--font-body);
+  font-size:19px;
+  font-weight:400;
+  line-height:1.5;
+  color:var(--color-white)}
+
+.coaching-body{
+  margin:0 0 32px;
+  font-family:var(--font-body);
+  font-size:15px;
+  font-weight:400;
+  line-height:1.8;
+  color:rgba(255,255,255,.8)}
+
+.coaching-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:18px 26px}
+
+.coaching-feature .coaching-btn{
+  background:var(--color-white);
+  color:var(--color-black);
+  border-color:var(--color-white);
+  box-shadow:none}
+.coaching-feature .coaching-btn:hover{
+  background:transparent;
+  color:var(--color-white);
+  transform:none;
+  box-shadow:none}
+
+.coaching-link{
+  font-family:var(--font-body);
+  font-size:15px;
+  color:var(--color-white);
+  text-decoration:underline;
+  text-underline-offset:4px}
+.coaching-link:hover{color:rgba(255,255,255,.7)}
+
+.coaching-list-title{margin:0 0 6px}
+
+.coaching-list{list-style:none;margin:0;padding:0}
+.coaching-list li{
+  padding:20px 0;
+  border-top:1px solid rgba(255,255,255,.25)}
+.coaching-list li:first-child{border-top:0}
+.coaching-list li:last-child{padding-bottom:0}
+.coaching-list h3{
+  margin:0 0 6px;
+  font-family:var(--font-heading);
+  font-size:19px;
+  font-weight:400;
+  line-height:1.3;
+  color:var(--color-white)}
+.coaching-list p{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:15px;
+  font-weight:400;
+  line-height:1.6;
+  color:rgba(255,255,255,.8)}
+
+.coaching-facts{
+  display:grid;
+  grid-template-columns:1fr;
+  margin:0;
+  border-top:1px solid rgba(255,255,255,.25)}
+.coaching-facts div{padding:20px 28px}
+.coaching-facts div + div{border-top:1px solid rgba(255,255,255,.25)}
+.coaching-facts dt{margin-bottom:6px}
+.coaching-facts dd{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:15px;
+  font-weight:400;
+  line-height:1.5;
+  color:var(--color-white)}
+
+@media (min-width:560px){
+  .coaching-facts{grid-template-columns:1fr 1fr}
+  .coaching-facts div:nth-child(2){border-top:0}
+  .coaching-facts div:nth-child(even){border-left:1px solid rgba(255,255,255,.25)}
+}
+
+@media (min-width:900px){
+  .coaching-main{grid-template-columns:1.05fr 1fr;gap:72px;padding:64px 56px}
+  .coaching-facts{grid-template-columns:repeat(4,1fr)}
+  .coaching-facts div{padding:24px 28px}
+  .coaching-facts div:first-child{padding-left:56px}
+  .coaching-facts div + div{border-top:0;border-left:1px solid rgba(255,255,255,.25)}
+}
