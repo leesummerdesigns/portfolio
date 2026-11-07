@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- GitHub Pages serves both homepage URLs; consolidate legacy links at the root. -->
+    <script>
+        if (window.location.pathname === '/index.html') {
+            window.location.replace('/' + window.location.search + window.location.hash);
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary SEO -->
     <title>Louis Henrich | AI Consulting &amp; Product Leadership</title>
@@ -250,7 +256,7 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-text">Louis Henrich</span>
                 <span class="logo-line"></span>
             </a>
