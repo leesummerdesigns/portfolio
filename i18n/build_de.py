@@ -399,7 +399,7 @@ def patch_common(text, en_path, de_path, lang):
         text = text[:m.end()] + '\n            ' + switcher(en_path, de_path, lang) + text[m.end():]
     if m and 'lang-switch.css' not in text:
         depth = norm_path(en_path if lang == 'en' else de_path).count('/') - 1
-        href = '../' * depth + 'css/lang-switch.css?v=1'
+        href = '../' * depth + 'css/lang-switch.css?v=2'
         text, n = re.subn(r'(\n(\s*)<link rel="stylesheet" href="[^"]*theme\.css[^"]*">)',
                           lambda mm: f'{mm.group(1)}\n{mm.group(2)}<link rel="stylesheet" href="{href}">', text, count=1)
         if not n:

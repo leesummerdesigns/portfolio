@@ -139,7 +139,7 @@ body,
 .contact-form textarea{min-height:120px;padding-top:14px}
 .contact-form input:focus,.contact-form textarea:focus{border-color:var(--color-black);
   box-shadow:4px 4px 0 var(--color-black)}
-.btn-submit{background:var(--color-black);color:var(--color-white);
+.btn-submit{background:var(--color-white);color:var(--color-black);
   border:2.5px solid var(--color-black);border-radius:0;
   box-shadow:6px 6px 0 var(--color-black);
   transition:transform .18s ease,box-shadow .18s ease,background .18s ease}

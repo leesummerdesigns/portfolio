@@ -22,6 +22,7 @@
 .expertise-cta p { max-width: 700px; margin-bottom: 24px; }
 .contact-source { display: block; font-size: 14px; margin: 8px 0; }
 .contact-form select { width: 100%; border: 1px solid #777; padding: 12px; font: inherit; background: white; color: #333; border-radius: 0; margin-bottom: 16px; }
+.contact-form select, .enquiry-form select { -webkit-appearance: none; appearance: none; padding-right: 44px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; background-size: 12px 8px; }
 @media (max-width: 740px) { .expertise-grid { grid-template-columns: 1fr; } .expertise-page { padding-top: 100px; } .expertise-lead { font-size: 18px; } .expertise-cta { padding: 24px; } }
 
 .expertise-project-icon { display: block; width: 88px; height: 88px; margin-bottom: 24px; }
