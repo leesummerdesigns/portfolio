@@ -1,0 +1,43 @@
+{
+  "domain": "https://louishenrich.com",
+  "pages": {
+    "/": "/de/",
+    "/pages/services.html": "/pages/de/ki-produktentwicklung.html",
+    "/pages/about.html": "/pages/de/ueber-louis-henrich.html",
+    "/pages/projects.html": "/pages/de/projekte.html",
+    "/pages/resume.html": "/pages/de/lebenslauf.html",
+    "/pages/blog.html": "/pages/de/blog.html",
+    "/pages/blog/ai-consulting-cost-switzerland.html": "/pages/de/ki-beratung-kosten-schweiz.html",
+    "/pages/blog/ai-expert-vs-strategy-consultant.html": "/pages/de/ki-experte-oder-strategieberater.html",
+    "/pages/blog/ai-strategy-pestel-canvas.html": "/pages/de/ki-strategie-pestel-canvas.html",
+    "/pages/blog/caio-head-of-ai-company-growth.html": "/pages/de/caio-head-of-ai-unternehmenswachstum.html",
+    "/pages/blog/emotional-intelligence-human-advantage.html": "/pages/de/emotionale-intelligenz-menschlicher-vorsprung.html",
+    "/pages/blog/eu-ai-act-what-companies-need-to-do-now.html": "/pages/de/eu-ai-act-was-unternehmen-jetzt-tun-muessen.html",
+    "/pages/cortex.html": "/pages/de/cortex-ki-gedaechtnis.html",
+    "/pages/socialhub.html": "/pages/de/socialhub.html",
+    "/pages/bloodlog.html": "/pages/de/bloodlog.html",
+    "/pages/smg-ai.html": "/pages/de/smg-ki.html",
+    "/pages/adhd-diagnostics.html": "/pages/de/adhs-diagnostik.html",
+    "/pages/ai-consultant-zurich.html": "/pages/de/ki-beratung-zuerich.html",
+    "/pages/ai-expert-zurich.html": "/pages/de/ki-experte-zuerich.html",
+    "/pages/ai-business-strategy.html": "/pages/de/ki-strategie-schweiz.html",
+    "/pages/ai-business-specialist.html": "/pages/de/ai-business-specialist-schweiz.html",
+    "/pages/ai-product-leadership.html": "/pages/de/ki-produktfuehrung.html",
+    "/pages/ai-leadership-coaching.html": "/pages/de/ki-coaching-fuehrungskraefte.html",
+    "/pages/thank-you.html": "/pages/de/anfrage-erhalten.html"
+  },
+  "existing": [
+    "/pages/de/ki-produktentwicklung.html",
+    "/pages/de/ueber-louis-henrich.html",
+    "/pages/de/ki-beratung-kosten-schweiz.html",
+    "/pages/de/ki-experte-oder-strategieberater.html",
+    "/pages/de/cortex-ki-gedaechtnis.html",
+    "/pages/de/ki-beratung-zuerich.html",
+    "/pages/de/ki-experte-zuerich.html",
+    "/pages/de/ki-strategie-schweiz.html",
+    "/pages/de/ai-business-specialist-schweiz.html",
+    "/pages/de/ki-produktfuehrung.html",
+    "/pages/de/ki-coaching-fuehrungskraefte.html",
+    "/pages/de/anfrage-erhalten.html"
+  ]
+}

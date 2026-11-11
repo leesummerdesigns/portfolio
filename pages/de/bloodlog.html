@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="de-CH">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>BloodLog: eine iOS-App für Gesundheit, allein gebaut | Louis Henrich</title>
+    <meta name="description" content="BloodLog ist eine iOS-App von Louis Henrich, die aus einem Labor-PDF etwas macht, das Patientinnen und Patienten lesen können, allein gebaut mit SwiftUI und Speicherung auf dem Gerät.">
+    <meta name="author" content="Louis Henrich">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://louishenrich.com/pages/de/bloodlog.html">
+<link rel="alternate" hreflang="en" href="https://louishenrich.com/pages/bloodlog.html">
+<link rel="alternate" hreflang="de-CH" href="https://louishenrich.com/pages/de/bloodlog.html">
+<link rel="alternate" hreflang="x-default" href="https://louishenrich.com/pages/bloodlog.html">
+    
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://louishenrich.com/pages/de/bloodlog.html">
+    <meta property="og:title" content="BloodLog: eine iOS-App für Gesundheit allein gestaltet und lanciert">
+    <meta property="og:description" content="Ein Laborbericht nennt dir 38 Zahlen und sonst nichts. BloodLog macht daraus eine Auswertung. Eine iOS-Case-Study in SwiftUI und SwiftData, von einer Person durchgehend gebaut.">
+    <meta property="og:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
+    <meta property="og:site_name" content="Louis Henrich">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BloodLog: eine iOS-App für Gesundheit allein gestaltet und lanciert">
+    <meta name="twitter:description" content="Aus einem Labor-PDF etwas machen, das Patienten lesen können. SwiftUI, SwiftData, von einer Person in den App Store gebracht.">
+    <meta name="twitter:image" content="https://louishenrich.com/images/bloodlog/dashboard.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "BloodLog, Case Study einer iOS-App für Gesundheit",
+  "description": "Design und Bau von BloodLog, einer iOS-App, die ein Bluttest-PDF in eine lesbare, verfolgbare Gesundheitsakte verwandelt. Allein gebaut in SwiftUI und SwiftData, mit Speicherung auf dem Gerät.",
+  "url": "https://louishenrich.com/pages/de/bloodlog.html",
+  "image": "https://louishenrich.com/images/bloodlog/dashboard.jpg",
+  "author": {
+    "@id": "https://louishenrich.com/#louis-henrich"
+  },
+  "datePublished": "2026-08-04",
+  "dateModified": "2026-10-14",
+  "about": [
+    "iOS Development",
+    "SwiftUI",
+    "Product Design",
+    "Health Technology",
+    "Mobile UX",
+    "Information Design",
+    "AI-assisted Product Development",
+    "Product Design"
+  ]
+}
+</script>
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap"></noscript>
+    <link rel="stylesheet" href="/css/style.css?v=28">
+    <link rel="stylesheet" href="/css/product-case-studies.css?v=1">
+    <link rel="stylesheet" href="/css/theme.css?v=2">
+    <link rel="stylesheet" href="/css/lang-switch.css?v=1">
+    <link rel="stylesheet" href="/css/case-study-footer.css?v=2">
+    <link rel="icon" type="image/png" href="/images/favico_lh.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/de/" class="logo"><span class="logo-text">Louis Henrich</span> <span class="logo-line"></span></a>
+            <button class="nav-toggle" aria-label="Navigation ein- und ausblenden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="/pages/de/ki-produktentwicklung.html">Leistungen</a></li>
+                <li><a href="/pages/de/ueber-louis-henrich.html">Über mich</a></li>
+                <li><a href="/pages/de/projekte.html" class="active">Case Studies</a></li>
+                <li><a href="/pages/de/lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="/pages/de/blog.html">Blog</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <details class="lang-switch"><summary class="lang-switch-toggle" aria-label="Sprache: Deutsch. Sprache wechseln" title="Sprache: Deutsch. Sprache wechseln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5"/><path d="M12 2.75c2.4 2.55 3.6 5.63 3.6 9.25s-1.2 6.7-3.6 9.25c-2.4-2.55-3.6-5.63-3.6-9.25s1.2-6.7 3.6-9.25z"/></svg></summary><ul class="lang-switch-menu"><li><a href="/pages/bloodlog.html" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/pages/de/bloodlog.html" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a></li></ul></details>
+            
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page sh-case-study bl-case-study">
+        <div class="container">
+            <!-- Hero -->
+            <header class="cs-header cs-header-hero sh-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <p class="sh-eyebrow">Eigenes Produkt · iOS, Design und Entwicklung</p>
+                        <h1 class="cs-title">BloodLog</h1>
+                        <p class="cs-subtitle">BloodLog hilft dir, deine Blutwerte zu verstehen.</p>
+                        <p class="cs-description">Ich wollte meine Blutwerte klarer lesen und verfolgen können, also habe ich BloodLog gestaltet und entwickelt. Die iOS-App ist live und verbindet eine lesbare Übersicht aller Parameter mit Erklärungen, die KI unterstützt. Für die Entwicklung habe ich Claude über MCP mit Xcode verbunden; die Einreichung im App Store habe ich von Hand erledigt.</p>
+
+                        <dl class="sh-facts">
+                            <div>
+                                <dt>Rolle</dt>
+                                <dd>Alles: Research, Produkt, Design-System, SwiftUI, Datenschicht, Einreichung im App Store.</dd>
+                            </div>
+                            <div>
+                                <dt>Warum</dt>
+                                <dd>Um iOS-Entwickler nicht länger von aussen zu briefen, sondern selbst zu spüren, wie sich die Einschränkungen anfühlen.</dd>
+                            </div>
+                            <div>
+                                <dt>Plattform</dt>
+                                <dd>iOS · SwiftUI · SwiftData · nur dunkle Oberfläche.</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Live im App Store. V2 freigegeben im Juli 2026.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="cs-hero-right">
+                        <div class="sh-devices">
+                            <div class="sh-phone" style="position: static; width: 53%; margin: 0 auto;">
+                                <span class="sh-phone-screen">
+                                    <img width="800" height="1644" loading="eager" decoding="async" fetchpriority="high" src="/images/bloodlog/dashboard.jpg" alt="BloodLog-Dashboard: ein Gesundheitsring mit 84% im Normbereich, eine eingeklappte KI-Zusammenfassung und ein Raster mit auffälligen Parametern unter «Braucht Aufmerksamkeit»">
+                                </span>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 1.5rem;">
+                            <a href="https://apps.apple.com/ch/app/bloodlog-health-tracker/id6760544375?l=en-GB" target="_blank" rel="noopener">
+                                <img width="120" height="40" src="/images/bloodlog/app-store-badge.svg" alt="BloodLog - Health Tracker im App Store laden" style="height: 40px; width: auto; margin: 0 auto;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- The problem -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Das Problem der Informationsgestaltung</h2>
+                </div>
+                <div class="bl-split bl-split--reverse bl-split--anim">
+                    <div class="bl-split-media bl-split-media--anim">
+                        <div class="bl-anim">
+                            <div class="bl-anim-stage">
+                                <div class="bl-anim-phone">
+                                    <div class="bl-anim-screen" role="img" aria-label="Das BloodLog-Dashboard scrollt vom Gesundheitswert über die Karten der auffälligen Parameter bis zu den eingeklappten Kategoriezeilen und zurück nach oben, wo die KI-Gesundheitsübersicht aufgetippt wird und eine Zusammenfassung in einfacher Sprache zeigt; danach öffnen sich die Empfehlungen mit drei nummerierten Massnahmen.">
+                                        <div class="bl-anim-scroll">
+                                            <img loading="lazy" decoding="async" width="800" height="271" src="/images/bloodlog/anim/head.jpg" alt="">
+                                            <img loading="lazy" decoding="async" width="800" height="178" src="/images/bloodlog/anim/score.jpg" alt="">
+                                            <div class="bl-anim-swap bl-anim-swap--ai">
+                                                <img class="is-closed" loading="lazy" decoding="async" width="800" height="96" src="/images/bloodlog/anim/ai-row-closed.jpg" alt="">
+                                                <img class="is-open" loading="lazy" decoding="async" width="800" height="96" src="/images/bloodlog/anim/ai-row-open.jpg" alt="">
+                                            </div>
+                                            <div class="bl-anim-reveal bl-anim-reveal--ai">
+                                                <img loading="lazy" decoding="async" width="800" height="385" src="/images/bloodlog/anim/ai-text.jpg" alt="">
+                                            </div>
+                                            <img loading="lazy" decoding="async" width="800" height="47" src="/images/bloodlog/anim/ai-cap.jpg" alt="">
+                                            <div class="bl-anim-swap bl-anim-swap--rec">
+                                                <img class="is-closed" loading="lazy" decoding="async" width="800" height="108" src="/images/bloodlog/anim/rec-closed.jpg" alt="">
+                                                <img class="is-open" loading="lazy" decoding="async" width="800" height="108" src="/images/bloodlog/anim/rec-open.jpg" alt="">
+                                            </div>
+                                            <div class="bl-anim-reveal bl-anim-reveal--rec">
+                                                <img loading="lazy" decoding="async" width="800" height="470" src="/images/bloodlog/anim/rec-items.jpg" alt="">
+                                            </div>
+                                            <img loading="lazy" decoding="async" width="800" height="40" src="/images/bloodlog/anim/rec-cap.jpg" alt="">
+                                            <img loading="lazy" decoding="async" width="800" height="622" src="/images/bloodlog/anim/needs.jpg" alt="">
+                                            <img loading="lazy" decoding="async" width="800" height="1235" src="/images/bloodlog/anim/more.jpg" alt="">
+                                        </div>
+                                        <img class="bl-anim-tabbar" loading="lazy" decoding="async" width="800" height="194" src="/images/bloodlog/anim/tabbar.jpg" alt="">
+                                        <span class="bl-anim-tap bl-anim-tap--ai"></span>
+                                        <span class="bl-anim-tap bl-anim-tap--rec"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bl-split-body bl-anim-copy">
+                        <p>Wir kennen das alle: Man war für ein Blutbild beim Arzt, und danach erklärt er die Werte, die auffallen, und das war's. Man bekommt ein kryptisches Blatt mit ein paar Zahlen in die Hand gedrückt und wird nach Hause geschickt. Genau da setzt BloodLog an und hilft dir, jeden einzelnen Parameter deines Blutbilds zu verstehen.</p>
+                        <p>Die App hat also eine Aufgabe, und es ist eine Aufgabe der Hierarchie. Werte ausserhalb des Normbereichs kommen zuerst, mit Namen, und der Abstand zum Normbereich erscheint als Position auf einem Balken statt als zweite Zahl, die man im Kopf behalten muss. Alles Normale klappt in eine Kategoriezeile zusammen, die du öffnen kannst, wenn du willst. Einen Parameter, der dir wichtig ist, kannst du anheften und über mehrere Tests verfolgen.</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p>Die Screenshots laufen mit Demodaten. Echte Ergebnisse bleiben in SwiftData auf dem Gerät und werden nie irgendwohin hochgeladen, wo ich die Kontrolle habe. Deshalb mussten auch die Paywall und das Backend für die Analyse um Daten herum gebaut werden, die Werte enthalten, aber keine Identität.</p>
+                </div>
+            </section>
+
+            <!-- Parameter detail -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Ein Parameter, erklärt</h2>
+                </div>
+                <p class="cs-intro-text">Ein Tipp auf einen Wert öffnet seine eigene Seite, und dieser Screen ist der Grund, warum die App besser ist als das PDF. Ein Laborbericht gibt dir eine Zahl und einen Bereich und überlässt dir den Rest. Diese Seite beantwortet die drei Fragen, die danach tatsächlich kommen: wo der Wert liegt, ob er sich bewegt und was da überhaupt gemessen wird.</p>
+
+                <div class="bl-split">
+                    <div class="bl-split-media">
+                        <img width="800" height="1636" loading="lazy" decoding="async" src="/images/bloodlog/parameter-detail.jpg" alt="Detailseite eines Parameters: eine halbkreisförmige Anzeige setzt 47,1 Prozent in den Referenzbereich von 43 bis 49, eine Verlaufsgrafik über zwei Tests und eine Erklärung in einfacher Sprache, was Hämatokrit misst">
+                    </div>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>Wo der Wert in seinem Bereich liegt</h3>
+                            <p>Die Anzeige zeichnet den Referenzbereich als Bogen und setzt den Messwert darauf. «47,1» und «43 – 49» sind dann nicht mehr zwei Zahlen, die du im Kopf vergleichen musst, sondern eine Form: Die Position der Markierung liefert die Antwort, bevor du eine der Zahlen gelesen hast. Die Farbe wiederholt den Status, damit der Screen auch auf einen Blick funktioniert.</p>
+                        </div>
+                        <div>
+                            <h3>Ob er sich bewegt</h3>
+                            <p>Wenn derselbe Parameter in einem früheren Test vorkommt, zeigt die Grafik darunter seinen Verlauf über alle Tests, mit dem Referenzband hinter der Linie. Ein Test gibt dir einen Wert; zwei geben dir eine Richtung, und die ist meistens das Nützlichere. Gibt es nur eine Messung, wird die Grafik weggelassen statt leer gezeichnet.</p>
+                        </div>
+                        <div>
+                            <h3>Was der Parameter eigentlich ist</h3>
+                            <p>Die meisten Menschen wissen nicht, was Hämatokrit misst, und eine Zahl, die man nicht deuten kann, ist keine Information. Jeder Parameter hat eine Erklärung in einfacher Sprache, was er ist und worauf hohe oder tiefe Werte meist hindeuten. Sie kommt mit der Analyse, und ein lokales Verzeichnis mit rund sechzig Markern dient als Rückfallebene, damit die Seite auch offline oder bei einer fehlgeschlagenen Anfrage lesbar bleibt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sh-callout sh-callout--coral">
+                    <p><strong>Eine Entscheidung zur Navigation, die einen Namen verdient.</strong> Diese Seite war ursprünglich ein <em>fullScreenCover</em> mit Zurück-Pfeil, und das fühlt sich an wie ein Ort, an den man gereist ist und von dem man wieder zurückreisen muss. Seit sie ein Sheet mit Detents und Ziehgriff ist, ist sie ein kurzer Blick, den man wegwischt: ein Swipe, ohne auf ein Ziel oben links zielen zu müssen. Derselbe Inhalt, deutlich weniger Reibung.</p>
+                </div>
+            </section>
+
+            <!-- Tracking -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Einen Wert über mehrere Tests verfolgen</h2>
+                </div>
+
+                <div class="bl-split bl-split--reverse">
+                    <div class="bl-split-media">
+                        <img width="800" height="1629" loading="lazy" decoding="async" src="/images/bloodlog/tracking.jpg" alt="Tab «Verlauf»: eine Reihe angehefteter Parameter-Chips mit Statuspunkten über einer Liniengrafik, die das Hämoglobin über zwei Tests zeigt, mit gestrichelten Linien für Minimum und Maximum">
+                    </div>
+                    <div class="bl-split-body">
+                        <div>
+                            <h3>Angeheftet statt gesucht</h3>
+                            <p>Ein Marker, den man im Auge behalten will, bekommt einen Platz in einem eigenen Tab. Die Chips zeigen den aktuellen Status als farbigen Punkt und die Zahl der Tests, in denen der Wert vorkommt. Die Frage lautet dann nicht mehr «Wie war mein Hämoglobin?», sondern «Ist es noch da, wo es war?». Referenzminimum und -maximum laufen gestrichelt quer über die Grafik, sodass eine Linie, die Richtung Rand driftet, sichtbar ist, ohne dass man eine einzige Achsenbeschriftung lesen muss.</p>
+                        </div>
+                        <div>
+                            <h3>Zwei Tests nebeneinander</h3>
+                            <p>Der Vergleich zweier Tests liefert ein geschriebenes Briefing statt einer zweiten Tabelle: was besser wurde, was schlechter wurde und was man beim nächsten Termin ansprechen sollte. Es kommt als Markdown an und wird zu Überschriften, Listen und Tabellen gerendert. Eine frühe Version druckte die rohen Pipes und Sternchen direkt auf den Screen. Eine gute Erinnerung daran, dass zwischen einer funktionierenden Funktion und einer, die kaputt aussieht, die Parsing-Schicht liegt, für die niemand Zeit einplant.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<section class="cs-section"><div class="cs-section-header"><span class="cs-section-line"></span><h2>KI-gestützte Entwicklung und Lieferung in den App Store</h2></div><p>Ich habe BloodLog mit <strong>Claude, verbunden mit Xcode über MCP</strong>, entwickelt. Die App ist live. Die <strong>Einreichung im App Store habe ich von Hand</strong> erledigt und das Produkt so von der Entwicklung bis zur Verteilung gebracht.</p><p>Mehr zu meiner <a href="/pages/de/ki-experte-zuerich.html">Expertise in KI, Produkt und Design in Zürich</a> oder zu meinen <a href="/pages/de/ki-produktentwicklung.html">Leistungen in Beratung und Produktentwicklung</a>.</p></section>
+            <!-- Build -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Wie es gebaut ist</h2>
+                </div>
+                <p class="cs-intro-text">Durchgehend SwiftUI, SwiftData für die Speicherung und eine einzige Theme-Datei mit jeder Farbe, jedem Radius und jeder Schriftstufe. Dadurch war das dunkle Redesign von V2 eine Änderung an Tokens statt eines Neuanstrichs jedes Screens. Die Analyse läuft auf einem kleinen Serverless-Endpunkt; alles andere, inklusive der ganzen Historie, bleibt auf dem Handy. StoreKit wickelt das Abo ab, der erste Test ist gratis.</p>
+
+                <div class="sh-arch">
+                    <div class="sh-arch-row">
+                        <div class="sh-arch-node">
+                            <span class="sh-arch-kicker">Auf dem Handy</span>
+                            <strong>SwiftUI</strong>
+                            <ul>
+                                <li>Eine Theme-Datei, nur dunkel</li>
+                                <li>Vier Tabs und ein schwebender Aktionsbutton</li>
+                                <li>Grafiken mit Swift Charts</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>lokal gespeichert</span></div>
+                        <div class="sh-arch-node sh-arch-node--server">
+                            <span class="sh-arch-kicker">Verlässt nie das Gerät</span>
+                            <strong>SwiftData</strong>
+                            <ul>
+                                <li>Tests, Parameter und Bereiche</li>
+                                <li>Löschen mit Rückgängig-Hinweis</li>
+                                <li>Kein Konto, keine Synchronisierung, keine Kopie auf einem Server</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>nur Werte</span></div>
+                        <div class="sh-arch-node sh-arch-node--data">
+                            <span class="sh-arch-kicker">Serverless</span>
+                            <strong>Analyse</strong>
+                            <ul>
+                                <li>Zusammenfassung und Empfehlungen</li>
+                                <li>Vergleichsbriefing zwischen Tests</li>
+                                <li>Lokale Beschreibungen als Rückfallebene</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sh-arch-shared"><span>Was ich wirklich gelernt habe</span> Dass das Schwierige an einer kleinen App meistens nicht die Programmiersprache ist. Es ist Zustand, der länger lebt als die View, der er gehört, Gesten, die um dieselben Pixel konkurrieren, und Fehlerpfade, die auf Screens gerendert werden, die die Nutzerin längst geschlossen hat. Nichts davon sieht man in einer Designdatei.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- More work and contact -->
+    <div class="case-study-outro">
+        <div class="container">
+            <nav class="project-pagination" aria-label="Projektnavigation"><a class="project-link project-link--prev" href="/pages/de/socialhub.html" rel="prev"> <span class="project-link-arrow" aria-hidden="true">←</span> <span class="project-link-copy"><span class="project-link-label">Vorheriges Projekt</span><span class="project-link-title">The Social Hub</span></span> </a> <a href="/pages/de/projekte.html" class="all-projects-link">Alle Case Studies</a> <a class="project-link project-link--next" href="/pages/de/smg-ki.html" rel="next"> <span class="project-link-copy"><span class="project-link-label">Nächstes Projekt</span><span class="project-link-title">KI-Funktionen bei SMG</span></span> <span class="project-link-arrow" aria-hidden="true">→</span> </a></nav>
+        </div>
+        <section class="case-study-contact" id="contact" aria-label="Kontakt" tabindex="-1">
+            <a class="case-study-email-button" href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Nimm Kontakt mit mir auf</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img width="100" height="92" loading="lazy" decoding="async" src="/images/footer-heart.png" alt="" class="footer-heart">
+            <p>© Louis Henrich 2026</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js?v=4"></script>
+    <script>
+        // The dashboard walkthrough loops forever; only let it run while it is on screen.
+        (function () {
+            var screen = document.querySelector('.bl-anim-screen');
+            if (!screen || !('IntersectionObserver' in window)) return;
+            var parts = screen.querySelectorAll('.bl-anim-scroll, .bl-anim-swap .is-open, .bl-anim-reveal, .bl-anim-tap');
+            new IntersectionObserver(function (entries) {
+                var state = entries[0].isIntersecting ? 'running' : 'paused';
+                Array.prototype.forEach.call(parts, function (el) {
+                    el.style.animationPlayState = state;
+                });
+            }, { rootMargin: '150px' }).observe(screen);
+        })();
+    </script>
+</body>
+</html>

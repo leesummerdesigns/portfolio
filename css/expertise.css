@@ -1,11 +1,7 @@
 /* Expertise pages share the portfolio typography and colour palette. */
 .expertise-page { padding-top: 120px; }
 .expertise-page > .container { max-width: 1040px; }
-.language-switch { display: flex; gap: 18px; justify-content: flex-end; margin: 16px 0 28px; font-size: 14px; font-weight: 700; }
-.language-switch a { padding: 5px 0; border-bottom: 2px solid transparent; }
-.language-switch a[aria-current="page"] { border-color: var(--color-primary); }
-.language-switch a:hover { border-color: var(--color-black); }
-.language-switch a:focus-visible, .expertise-page a:focus-visible, .expertise-faq summary:focus-visible { outline: 2px solid var(--color-black); outline-offset: 5px; }
+.expertise-page a:focus-visible, .expertise-faq summary:focus-visible { outline: 2px solid var(--color-black); outline-offset: 5px; }
 .expertise-header { margin-bottom: 60px; max-width: 840px; }
 .expertise-kicker { font-family: var(--font-mono); font-size: 14px; margin-bottom: 18px; }
 .expertise-header h1 { font-family: var(--font-mono); font-size: clamp(28px, 4.6vw, 46px); font-weight: 400; line-height: 1.2; margin-bottom: 24px; }

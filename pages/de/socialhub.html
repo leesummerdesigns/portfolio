@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="de-CH">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>The Social Hub: eine mit KI gebaute Plattform | Louis Henrich</title>
+    <meta name="description" content="The Social Hub ist eine Live-Community-Plattform, die Louis Henrich komplett mit KI gebaut hat: eine Case Study über Design und Lancierung eines Full-Stack-Produkts im Alleingang.">
+    <meta name="author" content="Louis Henrich">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://louishenrich.com/pages/de/socialhub.html">
+<link rel="alternate" hreflang="en" href="https://louishenrich.com/pages/socialhub.html">
+<link rel="alternate" hreflang="de-CH" href="https://louishenrich.com/pages/de/socialhub.html">
+<link rel="alternate" hreflang="x-default" href="https://louishenrich.com/pages/socialhub.html">
+    
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://louishenrich.com/pages/de/socialhub.html">
+    <meta property="og:title" content="The Social Hub: eine mit KI gebaute Plattform | Louis Henrich">
+    <meta property="og:description" content="Eine Idee von 2014, die zweimal an der Investorensuche scheiterte. Jetzt allein gebaut, mit KI-Superkräften. Die Plattform, die verändert, wie man Anlässe findet, mit einer Mindestzahl an Teilnehmenden von Anfang an.">
+    <meta property="og:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
+    <meta property="og:site_name" content="Louis Henrich">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Social Hub: eine Full-Stack-Community-Plattform im Alleingang gebaut">
+    <meta name="twitter:description" content="Eine Idee, die zehn Jahre gewartet hat. Von Gedanken unter der Dusche in Frankfurt bis zum fertigen Produkt: wie ich The Social Hub als Solopreneur mit modernen KI-Tools gebaut habe.">
+    <meta name="twitter:image" content="https://louishenrich.com/images/socialhub/home-desktop.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "The Social Hub, Case Study eines eigenen Produkts",
+  "description": "Design und Bau von The Social Hub, einer Community-Plattform für Hobbys, die eine Gruppe brauchen: Jeder Anlass hat eine Mindestzahl an Teilnehmenden und sagt sich selbst ab, wenn sie bis zur Frist nicht erreicht ist.",
+  "url": "https://louishenrich.com/pages/de/socialhub.html",
+  "image": "https://louishenrich.com/images/socialhub/home-desktop.jpg",
+  "author": {
+    "@id": "https://louishenrich.com/#louis-henrich"
+  },
+  "datePublished": "2026-08-03",
+  "dateModified": "2026-10-14",
+  "about": [
+    "Product Design",
+    "Full-Stack Development",
+    "React",
+    "tRPC",
+    "Internationalization",
+    "Technical SEO",
+    "AI-assisted Product Development",
+    "Product Design"
+  ]
+}
+</script>
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8CJV18QFG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJV18QFG6');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&amp;family=Inconsolata:wght@400;700&amp;family=Lato:wght@300;400;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"></noscript>
+    <link rel="stylesheet" href="/css/style.css?v=28">
+    <link rel="stylesheet" href="/css/product-case-studies.css?v=1">
+    <link rel="stylesheet" href="/css/theme.css?v=2">
+    <link rel="stylesheet" href="/css/lang-switch.css?v=1">
+    <link rel="stylesheet" href="/css/case-study-footer.css?v=2">
+    <link rel="icon" type="image/png" href="/images/favico_lh.png">
+    <style>
+      /* Live threshold demo card (ported from thesocialhub/threshold-demo.html, scoped) */
+      #sh-threshold-demo{
+        --hub-ink:#221C2B; --hub-ink-soft:#5C5468; --hub-line:#EAE0D4;
+        --hub-sand:#F3EBE0; --hub-violet:#6C4CF1;
+        --amber:#D97706; --amber-bg:#FDF0DC; --green:#15803D; --green-bg:#E2F4E8;
+        width:100%; max-width:360px; margin:0 auto;
+        font-family:'Manrope',sans-serif; text-align:left;
+      }
+      #sh-threshold-demo .card{width:100%; background:#fff; border:1px solid var(--hub-line); border-radius:20px; overflow:hidden;
+        box-shadow:0 12px 32px -12px rgba(34,28,43,.18)}
+      #sh-threshold-demo .card-media{position:relative; margin:8px 8px 0; border-radius:16px; overflow:hidden}
+      #sh-threshold-demo .card-media img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover}
+      #sh-threshold-demo .badge-stack{position:absolute; left:10px; top:10px}
+      #sh-threshold-demo .badge{display:inline-flex; align-items:center; gap:6px; border-radius:9999px; padding:4px 10px; font-size:12px; font-weight:700}
+      #sh-threshold-demo .badge svg{width:12px; height:12px}
+      #sh-threshold-demo .badge-amber{background:var(--amber-bg); color:var(--amber)}
+      #sh-threshold-demo .badge-green{background:var(--green-bg); color:var(--green)}
+      #sh-threshold-demo [data-demo="badge-2"], #sh-threshold-demo [data-demo="badge-3"]{position:absolute; left:0; top:0; opacity:0}
+      #sh-threshold-demo .confetti{position:absolute; left:50%; top:50%; width:6px; height:6px; border-radius:9999px; opacity:0}
+      #sh-threshold-demo .date-chip{position:absolute; bottom:10px; left:10px; background:#fff; border-radius:9999px; padding:4px 10px;
+        font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:var(--hub-ink); box-shadow:0 2px 8px rgba(34,28,43,.12)}
+      #sh-threshold-demo .card-body{display:flex; flex-direction:column; gap:6px; padding:12px 16px}
+      #sh-threshold-demo .card-cat{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--hub-violet)}
+      #sh-threshold-demo .card-title{font-family:'Bricolage Grotesque',sans-serif; font-size:20px; font-weight:600; letter-spacing:-.01em; color:var(--hub-ink); margin:0}
+      #sh-threshold-demo .card-group{font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .avatar-row{display:flex; align-items:center; margin-top:6px}
+      #sh-threshold-demo .avatar{display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:9999px;
+        font-size:11px; font-weight:700; color:#fff; box-shadow:0 0 0 2px #fff; flex-shrink:0}
+      #sh-threshold-demo .going{margin-left:8px; font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .card-foot{border-top:1px solid var(--hub-line); padding:12px 16px}
+      #sh-threshold-demo .foot-row{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+      #sh-threshold-demo .counter{font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:var(--hub-ink)}
+      #sh-threshold-demo .deadline{display:inline-flex; align-items:center; gap:6px; background:var(--hub-sand); border-radius:9999px; padding:4px 10px;
+        font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; color:var(--hub-ink-soft)}
+      #sh-threshold-demo .deadline svg{width:14px; height:14px}
+      #sh-threshold-demo .track{height:6px; width:100%; border-radius:9999px; background:var(--hub-sand); overflow:hidden}
+      #sh-threshold-demo .bar{height:100%; width:37.5%; border-radius:9999px; background:var(--amber)}
+      #sh-threshold-demo .hidden{display:none}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/de/" class="logo"><span class="logo-text">Louis Henrich</span> <span class="logo-line"></span></a>
+            <button class="nav-toggle" aria-label="Navigation ein- und ausblenden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <span class="nav-highlight"></span>
+                <li><a href="/pages/de/ki-produktentwicklung.html">Leistungen</a></li>
+                <li><a href="/pages/de/ueber-louis-henrich.html">Über mich</a></li>
+                <li><a href="/pages/de/projekte.html" class="active">Case Studies</a></li>
+                <li><a href="/pages/de/lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="/pages/de/blog.html">Blog</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <details class="lang-switch"><summary class="lang-switch-toggle" aria-label="Sprache: Deutsch. Sprache wechseln" title="Sprache: Deutsch. Sprache wechseln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5"/><path d="M12 2.75c2.4 2.55 3.6 5.63 3.6 9.25s-1.2 6.7-3.6 9.25c-2.4-2.55-3.6-5.63-3.6-9.25s1.2-6.7 3.6-9.25z"/></svg></summary><ul class="lang-switch-menu"><li><a href="/pages/socialhub.html" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/pages/de/socialhub.html" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a></li></ul></details>
+            
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study-page sh-case-study">
+        <div class="container">
+            <!-- Hero -->
+            <header class="cs-header cs-header-hero sh-hero">
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-left">
+                        <p class="sh-eyebrow">Eigenes Produkt · Design, Code und Betrieb</p>
+                        <h1 class="cs-title">The Social Hub</h1>
+                        <p class="cs-subtitle">Die Event-Plattform, die alles verändert</p>
+                        <p class="cs-description">Die Idee zu The Social Hub hatte ich zum ersten Mal 2014: ein Ort, um Aktivitäten zu organisieren, die eine Mindestzahl an Leuten brauchen, damit sie stattfinden. Nach zwei Versuchen, Investoren zu finden, habe ich die Idee wieder aufgenommen und sie komplett mit KI gebaut, mit Claude und Kimi K3, während ich Produkt und Design gesteuert habe. Die Plattform läuft jetzt live auf Render. Diese Case Study erklärt die Produktentscheidungen, das Design-System und die Umsetzung.</p>
+
+                        <dl class="sh-facts">
+                            <div>
+                                <dt>Für</dt>
+                                <dd>Alle, die in eine neue Stadt gezogen sind, den Job gewechselt haben oder denen die Freunde ausgegangen sind, die am Samstag Zeit haben.</dd>
+                            </div>
+                            <div>
+                                <dt>Rolle</dt>
+                                <dd>Alles: Produkt, Design-System, Frontend, Backend, Datenbank, Zahlungen, Deployment.</dd>
+                            </div>
+                            <div>
+                                <dt>Warum</dt>
+                                <dd>Ein privates Projekt, um mich einmal komplett durch einen unbekannten Stack zu kämpfen, mit einem echten Produkt als Prüfung.</dd>
+                            </div>
+                            <div>
+                                <dt>Status</dt>
+                                <dd>Live auf <a href="https://joinsocialhub.app" target="_blank" rel="noopener noreferrer">joinsocialhub.app</a> · zweisprachig · Demodaten bis zum Launch.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="cs-hero-right">
+                        <div class="sh-devices">
+                            <div class="sh-laptop">
+                                <div class="sh-laptop-lid">
+                                    <span class="sh-laptop-screen">
+                                        <img width="1800" height="1125" loading="eager" decoding="async" fetchpriority="high" src="/images/socialhub/home-desktop.jpg" alt="Die Startseite von The Social Hub auf einem Laptop: deutsche Hero-Headline, Suchleiste und schräg gestellte Eventkarten, die zeigen, wie viele Leute noch fehlen">
+                                    </span>
+                                </div>
+                                <div class="sh-laptop-base"></div>
+                            </div>
+                            <div class="sh-phone">
+                                <span class="sh-phone-screen">
+                                    <img width="416" height="900" loading="eager" decoding="async" src="/images/socialhub/home-mobile.jpg" alt="Dieselbe Startseite auf einem Handy, mit verdichtetem Hero und gestapelten Suchfeldern">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- The human problem -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Weil man zu zweit kein Fussballspiel machen kann</h2>
+                </div>
+                <p class="cs-intro-text">Manche Hobbys haben eine Untergrenze. Ein Fussballspiel braucht etwa zehn Leute. Ein Spieleabend braucht vier. Ein Sprachtandem braucht mindestens eine Person, die die andere Sprache spricht. Unter dieser Zahl wird die Aktivität nicht schlechter, sie findet einfach nicht statt. Und am stärksten spüren das genau die, die am wenigsten daran ändern können: Du bist in eine neue Stadt gezogen, hast den Job gewechselt, oder dein alter Freundeskreis hat inzwischen Kinder, und die drei Freunde, die dir bleiben, haben am Samstag keine Zeit.</p>
+
+                <p class="cs-intro-text">Was du in diesem Moment brauchst, ist kein grösseres soziales Netzwerk. Du brauchst sieben weitere Leute, die auch am Samstag um drei spielen wollen, im selben Quartier, diese Woche. Das ist eine sehr spezielle Art von Matchmaking, und fast niemand baut dafür. Denn es ist viel einfacher, eine Plattform zu bauen, auf der die Teilnahme eine Zahl ist, die steigt, als eine, auf der die Teilnahme eine Bedingung ist, die erfüllt sein muss.</p>
+
+                <div class="sh-collage">
+                    <div class="sh-collage-card sh-collage-top">
+                        <h3>Mitmachen ist kein Glücksspiel mehr</h3>
+                        <p>Allein zu etwas zu gehen, das vielleicht gar nicht stattfindet, ist viel verlangt von einer fremden Person. Hier siehst du, ob es stattfindet, bevor du zusagst. Und wenn nicht, wird es sauber abgesagt, statt still und leise auf vier verlegene Leute im Park zu schrumpfen.</p>
+                    </div>
+                    <div class="sh-collage-media">
+                        <div class="sh-threshold-demo" id="sh-threshold-demo" role="img" aria-label="Live-Demo einer Eventkarte von The Social Hub: Die Zahl der Teilnehmenden steigt von 3 von 8 auf voll, das Badge wechselt von «Noch 5 nötig» zu «Findet statt», und Konfetti feiert">
+<div class="card">
+    <div class="card-media">
+      <img width="840" height="521" src="/images/socialhub/threshold-demo-card.jpg" alt="Sonnenaufgangswanderung am Samstag">
+      <div class="badge-stack">
+        <span class="badge badge-amber" data-demo="badge-1"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Noch 5 nötig</span>
+        <span class="badge badge-amber" data-demo="badge-2"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Noch 3 nötig</span>
+        <span class="badge badge-green" data-demo="badge-3"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Findet statt</span>
+        <span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span><span class="confetti" data-demo="confetti" style="background-color:#FF7A59"></span><span class="confetti" data-demo="confetti" style="background-color:#6C4CF1"></span><span class="confetti" data-demo="confetti" style="background-color:#15803D"></span><span class="confetti" data-demo="confetti" style="background-color:#E8B04B"></span>
+      </div>
+      <span class="date-chip">SA · 7:00</span>
+    </div>
+    <div class="card-body">
+      <span class="card-cat">Draussen</span>
+      <h3 class="card-title">Sonnenaufgangswanderung am Samstag</h3>
+      <span class="card-group">Trail Mix Wandergruppe</span>
+      <span class="avatar-row"><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#6C4CF1,#9D86F7);margin-left:0">IR</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#FF7A59,#FFAB90);margin-left:-9px">TB</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#E8B04B,#F2CD8A);margin-left:-9px">AB</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#5537D6,#FF7A59);margin-left:-9px">MS</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#D97706,#E8B04B);margin-left:-9px">JL</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#6C4CF1,#FF7A59);margin-left:-9px">PN</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#15803D,#7BC98F);margin-left:-9px">HS</span><span class="avatar" data-demo="avatar" style="background:linear-gradient(135deg,#8B7BD8,#E8B04B);margin-left:-9px">LF</span><span class="going"><span data-demo="count">3</span> dabei</span></span>
+    </div>
+    <div class="card-foot">
+      <div class="foot-row">
+        <span class="counter"><span data-demo="counter-1">3 von 8 nötig</span><span data-demo="counter-2" class="hidden">5 von 8 nötig</span><span data-demo="counter-3" class="hidden">8 von 8 Minimum</span></span>
+        <span class="deadline"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span data-demo="deadline-1">Schliesst in 2 Tagen</span><span data-demo="deadline-2" class="hidden">Schliesst in 1 Tag</span><span data-demo="deadline-3" class="hidden">Schliesst heute Abend</span>
+        </span>
+      </div>
+      <div class="track"><div class="bar" data-demo="bar"></div></div>
+    </div>
+  </div>
+                        </div>
+                    </div>
+                    <div class="sh-collage-card sh-collage-left">
+                        <h3>Organisieren ist keine einsame Sache mehr</h3>
+                        <p>Wer organisiert, sagt von Anfang an: Das klappt nur mit zehn. Ab dann hat jede Person, die schon zugesagt hat, einen Grund, noch jemanden einzuladen, denn der Countdown läuft auch für ihren Abend. Leute zusammentrommeln ist nicht mehr der unbezahlte Job einer einzigen Person.</p>
+                    </div>
+                    <div class="sh-collage-card sh-collage-right">
+                        <h3>Das Vielleicht verschwindet</h3>
+                        <p>Fünf Leute sagen vielleicht, zwei kommen, und wer organisiert hat, hört auf zu organisieren. So sterben Hobbygruppen. Eine Frist ersetzt das Vielleicht durch eine Antwort, und eine saubere Absage kostet eine Gruppe viel weniger als ein enttäuschender Abend.</p>
+                    </div>
+                </div>
+
+                <div class="sh-threshold">
+                    <div class="sh-threshold-card">
+                        <span class="sh-threshold-label">Donnerstag · Fünf gegen fünf</span>
+                        <div class="sh-dots" role="img" aria-label="Sechs von zehn Plätzen belegt">
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="sh-meter"><i style="width: 60%;"></i></div>
+                        <p class="sh-threshold-state">6 von 10 · noch 4 nötig · schliesst am Mittwoch</p>
+                    </div>
+                    <div class="sh-threshold-arrow" aria-hidden="true">→</div>
+                    <div class="sh-threshold-card is-go">
+                        <span class="sh-threshold-label">Donnerstag · Fünf gegen fünf</span>
+                        <div class="sh-dots" role="img" aria-label="Alle zehn Plätze belegt">
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                            <span class="is-in"></span>
+                        </div>
+                        <div class="sh-meter"><i style="width: 100%;"></i></div>
+                        <p class="sh-threshold-state">10 von 10 · das Spiel findet statt</p>
+                    </div>
+                </div>
+
+                <div class="sh-callout">
+                    <p>Das ganze Produkt ist dieser eine Satz, ernst genommen: <strong>Ein Treffen hat eine Mindestgrösse, und alle sehen, wie nah es dran ist.</strong> Alles andere in dieser Case Study, die Oberfläche, die Datenbank, die Zahlungen, existiert nur, damit dieser Satz für eine fremde Person am Handy stimmt.</p>
+                </div>
+            </section>
+
+            <!-- The mechanic -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Eine Regel, überall sichtbar</h2>
+                </div>
+                <p class="cs-intro-text">Die Mindestzahl ist keine Einstellung, die in einem Formular vergraben ist. Sie ist die Oberfläche. Eine Karte sagt nicht «3 Teilnehmende», sondern wie viele Leute noch fehlen und wie viel Zeit sie haben. Eine Eventseite beginnt mit demselben Satz. Der Fortschrittsbalken ist das Produktversprechen, dargestellt in acht Pixeln Farbe, und jeder Zustand im System (braucht noch Leute, fast geschafft, findet statt, abgesagt) ist ein Zustand, den Besucherinnen und Besucher auf einen Blick lesen können.</p>
+
+                <div class="cs-comparison-grid">
+                    <div class="cs-comparison-item">
+                        <img width="1800" height="1125" class="cs-media--framed" loading="lazy" decoding="async" src="/images/socialhub/home-nearby-desktop.jpg" alt="Eventkarten in deiner Nähe, jede zeigt, wie viele Leute noch nötig sind, mit einem Fortschrittsbalken bis zum Minimum">
+                        <p class="cs-comparison-label">Stöbern: Jede Karte zählt bis zu ihrem Minimum herunter</p>
+                    </div>
+                    <div class="cs-comparison-item">
+                        <img width="1800" height="1125" class="cs-media--framed" loading="lazy" decoding="async" src="/images/socialhub/event-desktop.jpg" alt="Eventdetailseite mit der Headline, dass dieser Anlass noch neun Leute braucht, um stattzufinden, dazu Datum, Ort und Anmeldefrist">
+                        <p class="cs-comparison-label">Entscheiden: Die Eventseite sagt genau, was noch fehlt</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Wie es gebaut ist</h2>
+                </div>
+                <p class="cs-intro-text">Client und Server sind ein einziges TypeScript-Projekt, das als ein Prozess läuft. Der Browser ruft Server-Prozeduren direkt auf. Ein umbenanntes Datenbankfeld wird so zur roten Wellenlinie in einer React-Komponente statt zur Überraschung zur Laufzeit in der Produktion. Es gibt keinen separaten API-Vertrag, den man synchron halten muss, weil es keinen separaten API-Vertrag gibt.</p>
+
+                <div class="sh-arch">
+                    <div class="sh-arch-row">
+                        <div class="sh-arch-node">
+                            <span class="sh-arch-kicker">Im Browser</span>
+                            <strong>React-Oberfläche</strong>
+                            <ul>
+                                <li>Ein Komponentensystem, gesteuert über Tokens</li>
+                                <li>Getrennte Oberflächen für Desktop und Mobile</li>
+                                <li>Deutsch und Englisch aus denselben Screens</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>typisierte Aufrufe</span></div>
+                        <div class="sh-arch-node sh-arch-node--server">
+                            <span class="sh-arch-kicker">Ein Node-Prozess</span>
+                            <strong>Hono + tRPC</strong>
+                            <ul>
+                                <li>Sessions, E-Mail und Anmeldung mit Google</li>
+                                <li>Zahlungen, gebaut und schlafend</li>
+                                <li>Aufräumen per stündlichem Job</li>
+                            </ul>
+                        </div>
+                        <div class="sh-arch-link" aria-hidden="true"><span>Abfragen</span></div>
+                        <div class="sh-arch-node sh-arch-node--data">
+                            <span class="sh-arch-kicker">Gehostet in Frankfurt</span>
+                            <strong>Postgres</strong>
+                            <ul>
+                                <li>Drizzle ORM, neun Tabellen</li>
+                                <li>Generierte, prüfbare Migrationen</li>
+                                <li>Ein Push auf main deployt alles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sh-arch-shared"><span>Gemeinsame Verträge</span> Mindestzahlen, Fristen und Filterlogik liegen in einem Ordner, den beide Seiten importieren. Eine Implementierung, zwei Laufzeiten: Der Server kann nie eine Regel durchsetzen, die die Oberfläche nicht zeigt.</div>
+                </div>
+
+                <div class="sh-callout sh-callout--coral">
+                    <p>Der Teil, von dem ich nicht erwartet hatte, dass er zählt: Ich habe einem privaten Projekt aus reiner Gewohnheit ein richtiges Design-System gegeben. Es hat sich bezahlt gemacht, als zum ersten Mal das ganze mobile Erlebnis neu gebaut werden musste. Der Neubau war ein Layoutproblem, kein Neuanstrich.</p>
+                </div>
+            </section>
+
+<section class="cs-section"><div class="cs-section-header"><span class="cs-section-line"></span><h2>Komplett mit KI gebaut</h2></div><p>Ich habe Produkt und Design gesteuert und The Social Hub komplett mit KI gebaut, mit <strong>Claude und Kimi K3</strong>. Das Produkt ist live und auf <strong>Render</strong> gehostet. Meine Arbeit verbindet Produktkonzept, UX, Interface-Design, Design-System und Umsetzung.</p><p>Mehr zu meiner <a href="/pages/de/ki-experte-zuerich.html">Expertise in KI, Produkt und Design in Zürich</a> oder zu meinen <a href="/pages/de/ki-produktentwicklung.html">Leistungen in Beratung und Produktentwicklung</a>.</p></section>
+            <!-- Money -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Geld, das ich bewusst nie halte</h2>
+                </div>
+                <p class="cs-intro-text">Kostenpflichtige Anlässe hiessen: entscheiden, wo das Ticketgeld zwischen Kauf und Anlass liegt. Die bequeme Antwort ist «auf unserem Konto». Die richtige Antwort ist in der Schweiz: bloss nicht dort. Wer fremdes Geld hält, kann als Entgegennahme von Publikumseinlagen oder als Finanzintermediär gelten, und das ist eine regulierte Tätigkeit mit einer Aufsichtsbehörde dazu. Deshalb landet das Geld nie irgendwo, wo ich die Kontrolle habe.</p>
+
+                <div class="sh-money">
+                    <div class="sh-money-step">
+                        <span>Schritt 01</span>
+                        <strong>Käufer zahlt</strong>
+                        <p>Belastet über das Plattformkonto mit einem gehosteten Kartenfeld, damit rohe Kartennummern nie meine eigenen Seiten berühren.</p>
+                    </div>
+                    <div class="sh-money-rail" aria-hidden="true">→</div>
+                    <div class="sh-money-step is-hold">
+                        <span>Schritt 02</span>
+                        <strong>Beim Anbieter gehalten</strong>
+                        <p>Das Geld liegt im Guthaben des Zahlungsanbieters, nie auf einem Bankkonto von The Social Hub. Die regulierte Partei bleibt der Anbieter.</p>
+                    </div>
+                    <div class="sh-money-rail" aria-hidden="true">→</div>
+                    <div class="sh-money-outs">
+                        <div class="sh-money-out is-refund">
+                            <strong>Zurückerstattet</strong>
+                            <p>Der Anlass hat sein Minimum verfehlt, wurde abgesagt, oder jemand hat eine Meldung eingereicht.</p>
+                        </div>
+                        <div class="sh-money-out is-payout">
+                            <strong>Ausbezahlt</strong>
+                            <p>Erst wenn der Anlass vorbei ist, eine Haltefrist abgelaufen ist und nichts bestritten wurde.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-two-column" style="margin-top: 46px;">
+                    <div class="cs-column">
+                        <p>Drei Invarianten halten das Ganze zusammen: Nur ein signierter Webhook kann aus einer Buchung ein bezahltes Ticket machen, der Demo-Checkout schaltet sich selbst ab, sobald echte Schlüssel existieren, und jede Operation ist idempotent. Denn Webhooks kommen mehr als einmal an, und ein Zahlungssystem, das doppelt zählt, ist schlimmer als eines, das gar nicht läuft.</p>
+                    </div>
+                    <div class="cs-column">
+                        <div class="sh-callout" style="margin-top: 0;">
+                            <p><strong>Gebaut, dann abgeschaltet.</strong> Die ganze Zahlungsschicht (Onboarding, Payment Intents, signierte Webhooks, Rückerstattungen, Auszahlungsläufe, Meldung von Streitfällen) steckt im Code und schläft, solange kein geheimer Schlüssel vorhanden ist. Bis die Firmennummer da ist, läuft auf der Plattform stattdessen ein klar gekennzeichneter Demo-Checkout.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobile -->
+            <section class="cs-section">
+                <div class="cs-section-header">
+                    <span class="cs-section-line"></span>
+                    <h2>Mobile ist kein schmalerer Desktop</h2>
+                </div>
+                <p class="cs-intro-text">Der Auftrag, den ich mir selbst gegeben hatte, lautete: «Wirf kurz einen Blick auf die mobile Ansicht.» Das Audit war weniger kurz als erhofft. Die Navigation kollidierte auf jeder Seite mit sich selbst, eine Eventkarte war rund 450 Pixel hoch, sodass genau ein Anlass auf einen Screen passte, die Filter beim Entdecken scrollten seitwärts ins Unsichtbare, und eine einzige Seite hatte 33 Tippflächen unter dem Minimum von 44 Pixeln. Es war eine Desktop-Seite, die die Luft anhielt.</p>
+
+                <div class="sh-mobile-shots">
+                    <figure>
+                        <img width="416" height="900" loading="lazy" decoding="async" src="/images/socialhub/home-mobile.jpg" alt="Mobile Startseite von The Social Hub mit kompaktem Hero, gestapelten Suchfeldern und Kategorie-Chips">
+                        <p class="cs-comparison-label">Neu gebaute mobile Startseite: Suche nach oben gezogen, Hero verdichtet</p>
+                    </figure>
+                    <figure>
+                        <img width="416" height="900" loading="lazy" decoding="async" src="/images/socialhub/event-mobile.jpg" alt="Mobile Eventdetailseite mit einer Faktenkarte zu Datum, Ort und Teilnahme und einer fixierten Anmeldeleiste unten">
+                        <p class="cs-comparison-label">Eventdetail: Fakten zusammengefasst, Anmeldeleiste in Griffweite fixiert</p>
+                    </figure>
+                </div>
+
+                <div class="sh-callout sh-callout--coral">
+                    <p><strong>Was ich mitnehme.</strong> Nicht die Frameworks, die ändern sich sowieso alle achtzehn Monate. Hängen geblieben ist, wie anders man ein Design prüft, wenn man auch die Person ist, die um elf Uhr nachts die Datenbank migrieren muss: weniger Zustände, die um ihrer selbst willen erfunden werden, mehr Entscheidungen, die einmal getroffen und geteilt werden, und ein viel kürzerer Weg zwischen «das sieht falsch aus» und «das ist behoben».</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- More work and contact -->
+    <div class="case-study-outro">
+        <div class="container">
+            <nav class="project-pagination" aria-label="Projektnavigation"><a class="project-link project-link--prev" href="/pages/de/cortex-ki-gedaechtnis.html" rel="prev"> <span class="project-link-arrow" aria-hidden="true">←</span> <span class="project-link-copy"><span class="project-link-label">Vorheriges Projekt</span><span class="project-link-title">Cortex</span></span> </a> <a href="/pages/de/projekte.html" class="all-projects-link">Alle Case Studies</a> <a class="project-link project-link--next" href="/pages/de/bloodlog.html" rel="next"> <span class="project-link-copy"><span class="project-link-label">Nächstes Projekt</span><span class="project-link-title">BloodLog</span></span> <span class="project-link-arrow" aria-hidden="true">→</span> </a></nav>
+        </div>
+        <section class="case-study-contact" id="contact" aria-label="Kontakt" tabindex="-1">
+            <a class="case-study-email-button" href="mailto:info@louishenrich.com?subject=Hey%20Louis!">Nimm Kontakt mit mir auf</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img width="100" height="92" loading="lazy" decoding="async" src="/images/footer-heart.png" alt="" class="footer-heart">
+            <p>© Louis Henrich 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var root = document.getElementById('sh-threshold-demo');
+      if (!root || !window.gsap) return;
+      var q = function (sel) { return Array.prototype.slice.call(root.querySelectorAll(sel)); };
+
+      var tl = gsap.timeline({ repeat: -1, repeatDelay: 1.6, defaults: { ease: 'power1.inOut' } });
+
+      // phase 1: bar fills to 62.5%, avatars 4-5 arrive
+      tl.to(q('[data-demo="bar"]'), { width: '62.5%', duration: 2.2 }, 0.4);
+      q('[data-demo="avatar"]').forEach(function (el, i) {
+        if (i < 3) return;
+        var at = i < 5 ? 1.4 + (i - 3) * 0.35 : 6.8 + (i - 5) * 0.35;
+        tl.fromTo(el, { scale: 0 }, { scale: 1, duration: 0.4, ease: 'back.out(2.5)' }, at);
+      });
+
+      // t=3: 5 of 8, deadline shortens, badge updates
+      tl.set(q('[data-demo="counter-1"]'), { display: 'none' }, 3);
+      tl.set(q('[data-demo="counter-2"]'), { display: 'inline' }, 3);
+      tl.set(q('[data-demo="count"]'), { innerText: '5' }, 3);
+      tl.set(q('[data-demo="deadline-1"]'), { display: 'none' }, 3);
+      tl.set(q('[data-demo="deadline-2"]'), { display: 'inline' }, 3);
+      tl.to(q('[data-demo="badge-1"]'), { opacity: 0, duration: 0.25 }, 3);
+      tl.fromTo(q('[data-demo="badge-2"]'), { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)' }, 3.1);
+
+      // t=6.4: last call, bar to 100%
+      tl.set(q('[data-demo="deadline-2"]'), { display: 'none' }, 6.4);
+      tl.set(q('[data-demo="deadline-3"]'), { display: 'inline' }, 6.4);
+      tl.to(q('[data-demo="bar"]'), { width: '100%', duration: 2.2 }, 6.8);
+
+      // t=9: the flip, green, badge pop, confetti
+      tl.to(q('[data-demo="bar"]'), { backgroundColor: '#15803D', duration: 0.2 }, 9);
+      tl.set(q('[data-demo="counter-2"]'), { display: 'none' }, 9);
+      tl.set(q('[data-demo="counter-3"]'), { display: 'inline' }, 9);
+      tl.set(q('[data-demo="count"]'), { innerText: '8' }, 9);
+      tl.to(q('[data-demo="badge-2"]'), { opacity: 0, duration: 0.25 }, 9);
+      tl.fromTo(q('[data-demo="badge-3"]'), { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)' }, 9.1);
+      tl.set(q('[data-demo="confetti"]'), { opacity: 1 }, 9);
+      q('[data-demo="confetti"]').forEach(function (el, i) {
+        var angle = (i / 24) * Math.PI * 2 + (i % 5) * 0.13;
+        var dist = 34 + ((i * 17) % 40);
+        tl.to(el, { x: Math.cos(angle) * dist, y: Math.sin(angle) * dist - 10, opacity: 0, scale: 0.4, duration: 0.9, ease: 'power1.out' }, 9);
+      });
+      tl.set(q('[data-demo="confetti"]'), { opacity: 0 }, 10.2);
+
+      tl.to({}, { duration: 0.1 }, 11);
+    })();
+    </script>
+    <script src="/js/main.js?v=4"></script>
+</body>
+</html>

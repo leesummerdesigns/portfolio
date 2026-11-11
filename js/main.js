@@ -388,3 +388,20 @@ window.addEventListener('load', function() {
         el.style.animationDelay = `${i * 0.2}s`;
     });
 });
+
+// ========================================
+// Language Switcher (globe in the nav)
+// The <details> element opens on its own; this closes it on an
+// outside click or Escape.
+// ========================================
+document.querySelectorAll('.lang-switch').forEach(function(langSwitch) {
+    document.addEventListener('click', function(e) {
+        if (langSwitch.open && !langSwitch.contains(e.target)) langSwitch.open = false;
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && langSwitch.open) {
+            langSwitch.open = false;
+            langSwitch.querySelector('summary').focus();
+        }
+    });
+});

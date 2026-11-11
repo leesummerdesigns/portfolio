@@ -18,5 +18,19 @@
         <header class="expertise-header"><p class="expertise-kicker">Louis Henrich · Zürich</p><h1>This page doesn't exist</h1><p class="expertise-lead">The link may be old. These pages will get you back on track.</p></header>
         <section class="content-section"><div class="expertise-grid expertise-grid--two"><article class="expertise-card"><h3><a href="/">Home</a></h3><p>AI strategy and transformation consulting in Zurich.</p></article><article class="expertise-card"><h3><a href="/pages/services.html">Services</a></h3><p>AI strategy, AI product features, team enablement and workflow pilots.</p></article><article class="expertise-card"><h3><a href="/pages/projects.html">Case studies</a></h3><p>AI products and features I have built and shipped.</p></article><article class="expertise-card"><h3><a href="/pages/blog.html">Blog</a></h3><p>Articles on AI strategy and adoption.</p></article></div></section>
     </div></main>
+    <main class="page-content expertise-page" lang="de-CH" hidden><div class="container">
+        <header class="expertise-header"><p class="expertise-kicker">Louis Henrich · Zürich</p><h1>Diese Seite gibt es nicht</h1><p class="expertise-lead">Vielleicht ist der Link veraltet. Über diese Seiten findest du zurück.</p></header>
+        <section class="content-section"><div class="expertise-grid expertise-grid--two"><article class="expertise-card"><h3><a href="/de/">Startseite</a></h3><p>Beratung für KI-Strategie und Transformation in Zürich.</p></article><article class="expertise-card"><h3><a href="/pages/de/ki-produktentwicklung.html">Leistungen</a></h3><p>KI-Strategie, KI-Funktionen für Produkte, Befähigung von Teams und Pilotprojekte für Workflows.</p></article><article class="expertise-card"><h3><a href="/pages/de/projekte.html">Case Studies</a></h3><p>KI-Produkte und -Funktionen, die ich gebaut und lanciert habe.</p></article><article class="expertise-card"><h3><a href="/pages/de/blog.html">Blog</a></h3><p>Artikel über KI-Strategie und KI-Einführung.</p></article></div></section>
+    </div></main>
+    <script>
+        // One 404 serves the whole site: show the German version for German URLs.
+        if (/^\/(pages\/)?de\//.test(location.pathname)) {
+            var mains = document.querySelectorAll('main');
+            mains[0].hidden = true;
+            mains[1].hidden = false;
+            document.documentElement.lang = 'de-CH';
+            document.title = 'Seite nicht gefunden | Louis Henrich';
+        }
+    </script>
 </body>
 </html>

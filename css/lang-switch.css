@@ -1,0 +1,101 @@
+/* ============================================================
+   Language switcher: globe button in the nav, EN / DE dropdown.
+   Built on <details>, so it opens without JavaScript; main.js
+   only adds close-on-outside-click and Escape.
+   ============================================================ */
+
+.lang-switch {
+    position: relative;
+    order: 2;
+    margin-left: auto;
+    margin-right: 4px;
+    z-index: 1;
+}
+
+.nav-toggle {
+    order: 3;
+}
+
+.lang-switch-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--color-black);
+    cursor: pointer;
+    list-style: none;
+}
+
+.lang-switch-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.lang-switch-toggle svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.lang-switch-toggle:hover svg,
+.lang-switch[open] .lang-switch-toggle svg {
+    transform: rotate(-20deg);
+}
+
+.lang-switch-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -4px;
+}
+
+.lang-switch-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 72px;
+    margin: 0;
+    padding: 6px;
+    background: var(--paper, #f4f3ef);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+}
+
+.lang-switch-menu li {
+    margin: 0;
+}
+
+.lang-switch-menu a {
+    display: block;
+    padding: 10px 12px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.lang-switch-menu a:hover {
+    background: #EAEAEA;
+    color: #000000;
+}
+
+.lang-switch-menu a[aria-current="true"] {
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.lang-switch-menu a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+}
+
+@media (min-width: 992px) {
+    .nav-menu {
+        margin-left: auto;
+    }
+
+    .lang-switch {
+        margin-left: 28px;
+        margin-right: -12px;
+    }
+}
