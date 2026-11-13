@@ -1101,6 +1101,31 @@ ul {
     height: auto;
 }
 
+.main-footer .container {
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 28px;
+    margin-bottom: 18px;
+    list-style: none;
+}
+
+.footer-links a {
+    display: block;
+    padding: 6px 0;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-text);
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 /* ========================================
    Animations
 ======================================== */
