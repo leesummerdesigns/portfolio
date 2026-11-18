@@ -179,13 +179,13 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Last updated: March 13, 2026</p>
+    <p class="effective-date">Last updated: November 18, 2026</p>
 
     <section>
         <div class="highlight-box">
             <p>This Privacy Policy describes Our policies and procedures regarding the collection, use, and disclosure of information when You use the BloodLog application (the "Service") and explains Your privacy rights and how the law protects You.</p>
         </div>
-        <p>BloodLog is designed with a privacy-first approach. Health data entered into the Application is stored locally on Your device and is not transmitted to or stored on our servers.</p>
+        <p>BloodLog is designed with a privacy-first approach. Your blood test history is stored locally on Your device. When You use AI Analysis to read or compare blood tests, the data needed for that request is sent through our server to our AI provider, Anthropic, for processing. Our server does not store it.</p>
         <p>By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
         <p>This Privacy Policy is intended to comply with applicable data protection laws, including the Swiss Federal Act on Data Protection (FADP), the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA), and the California Online Privacy Protection Act (CalOPPA), where applicable.</p>
     </section>
@@ -210,7 +210,7 @@
     <section>
         <h2>Data Storage</h2>
         <p>BloodLog is designed to store user data locally on the user's device.</p>
-        <p>Health logs and measurements entered into the Application remain on Your device and are not transmitted to or stored on the Company's servers.</p>
+        <p>Your blood test history and profile are stored on Your device. The Company does not keep a copy of them on its servers. Some features send Health Data off Your device for processing, as described under "AI Analysis" below.</p>
         <p>Because the data is stored locally, You are responsible for managing backups and protecting access to Your device. If the Application is removed from Your device, the locally stored data may also be removed.</p>
     </section>
 
@@ -218,17 +218,25 @@
         <h2>Types of Data Collected</h2>
         <p><strong>Health Data</strong></p>
         <p>The Application allows You to record and store health-related information such as blood measurements, notes, logs, and timestamps.</p>
-        <p>This information may be considered sensitive personal data under applicable privacy laws. BloodLog processes this information locally on Your device solely to provide the core functionality of the Application.</p>
-        <p>The Company does not collect, store, or analyze Your health data on its servers.</p>
+        <p>This information may be considered sensitive personal data under applicable privacy laws. BloodLog uses this information solely to provide the core functionality of the Application.</p>
+        <p>The Company does not store Your Health Data on its servers. When You use AI Analysis, the Health Data needed for the request passes through the Company's server to Anthropic, as described below.</p>
         <p>Health data is never sold or shared with third parties for advertising or marketing purposes.</p>
+
+        <p><strong>AI Analysis</strong></p>
+        <p>When You add a blood test from a photo, a PDF or text You enter, the Application sends it to the Company's server for analysis, together with the test date if You entered one and the sex set in Your profile. Photos are converted to a smaller JPEG image first. A document or photo may contain anything printed on it, such as Your name or date of birth.</p>
+        <p>When You compare blood tests, the Application sends the results and dates of the tests You selected.</p>
+        <p>The Company's server, hosted by Vercel Inc., passes this data to Anthropic, PBC, which uses its Claude AI models to read Your blood values and write a summary, recommendations or a comparison. The result is returned to the Application and stored on Your device. Vercel and Anthropic act as Service Providers and may process the data in the United States. Where data protection law requires it, these transfers are covered by appropriate safeguards, such as the European Commission's Standard Contractual Clauses.</p>
+        <p>The Company's server handles each request only for as long as it takes to return the result. It does not save the content of Your request and does not write it to its logs. Anthropic may keep the data for a limited period, as described in its <a href="https://www.anthropic.com/privacy" target="_blank">privacy policy</a>, and does not use it to train its AI models.</p>
+        <p>Before the Application first sends a blood test for analysis, it explains what is sent and asks for Your consent. If You do not want Your data processed this way, do not use the features that analyse or compare blood tests.</p>
 
         <p><strong>Usage Data</strong></p>
         <p>BloodLog does not collect analytics related to Your health logs or personal entries.</p>
         <p>However, limited technical information may be collected by platform providers (such as Apple App Store or Google Play Store) when You download, install, or purchase the Application. This information is processed according to the privacy policies of those platform providers.</p>
+        <p>When the Application contacts the Company's server, the server and its hosting provider receive technical information needed to deliver the request, such as Your IP address and the time of the request. The server uses Your IP address briefly, in memory, to limit excessive requests. Vercel may keep technical request logs, which do not include the content of Your request, for a short period.</p>
 
         <p><strong>Camera Access</strong></p>
         <p>If You choose to use features that require camera access, the Application may request permission to access Your device's camera or photo library.</p>
-        <p>This access is used solely for the functionality of the Application and the information remains stored on Your device.</p>
+        <p>This access is used solely to let You add blood test results. A photo You submit is sent for analysis as described under "AI Analysis" and is not stored by the Company.</p>
         <p>You can enable or disable camera access at any time through Your device settings.</p>
     </section>
 
@@ -237,6 +245,7 @@
         <p>The Company may use limited Personal Data for the following purposes:</p>
         <ul>
             <li><strong>To provide and maintain the Service</strong> — To enable core application functionality.</li>
+            <li><strong>To analyse Your blood tests</strong> — To read results from the documents, photos or text You submit and to generate summaries and comparisons, with the help of Anthropic as a Service Provider.</li>
             <li><strong>To manage Your account</strong> — To provide access to features within the Application.</li>
             <li><strong>To manage subscriptions</strong> — To verify subscription status and enable premium features.</li>
             <li><strong>To respond to support requests</strong> — To respond to questions or technical support inquiries submitted by users.</li>
@@ -250,6 +259,7 @@
         <p>Payments are processed by third-party platform providers such as Apple App Store or Google Play Store depending on the device used.</p>
         <p>The Company does not store credit card numbers or payment information.</p>
         <p>The Application may receive limited information from the platform provider, such as confirmation of payment and subscription status, in order to manage access to premium features.</p>
+        <p>To apply usage limits, the Application sends the Company's server a signed proof of Your App Store subscription. The server may count Your monthly analyses against Your subscription's transaction ID, using a database provider (Upstash), and keeps each count for no more than 40 days. If You do not have a subscription, the Application instead sends an Apple DeviceCheck token, and the Company may ask Apple to record for that device that its free analysis has been used. These records contain no Health Data.</p>
         <p>Payment processing is governed by the privacy policies of the respective platform providers.</p>
     </section>
 
@@ -258,7 +268,7 @@
         <p>If You are located in the European Economic Area (EEA), We rely on the following legal bases for processing Personal Data:</p>
         <ul>
             <li><strong>Performance of a contract</strong> — Processing is necessary to provide the Service.</li>
-            <li><strong>Consent</strong> — You provide consent for certain features such as camera access.</li>
+            <li><strong>Consent</strong> — You provide consent for certain features such as camera access. Before Health Data is first sent for AI Analysis, You give Your explicit consent to that processing.</li>
             <li><strong>Legitimate interests</strong> — Processing may be necessary to maintain service security or respond to support requests.</li>
             <li><strong>Legal obligations</strong> — Processing may be required to comply with applicable laws.</li>
         </ul>
@@ -310,7 +320,7 @@
 
     <section>
         <h2>Retention of Personal Data</h2>
-        <p>Because health data is stored locally on Your device, the Company does not retain copies of this data on its servers.</p>
+        <p>Health Data is stored locally on Your device, and the Company does not retain copies of it on its servers. Data sent for AI Analysis may be kept by Anthropic for a limited period, as described under "AI Analysis".</p>
         <p>Any information related to subscriptions or support requests may be retained only as long as necessary to comply with legal obligations or resolve disputes.</p>
     </section>
 
